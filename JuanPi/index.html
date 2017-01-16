@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>卷皮</title>
-	<meta charset="UTF-8">
-	<meta name="Author" content="rmk">
-	<link rel="stylesheet" type="text/css" href="" />
-	<script type="text/javascript" src=""></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            margin:0 auto; text-align:center;
+            padding-top:50px;
+        }
+        div{
+            width:100%; height:auto; margin:0 auto;
+        }
+        
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        function main() {
+			$.post("api/login.php", null, function (data,textStatus) {
+				try{
+					if(data=="0"){
+						$("#top").html("<a href=\"login.html\">login</a>|<a href=\"regist.html\">regist</a>");
+					}else{
+						$("#top").html("欢迎:"+data+" 光顾!!");
+                        $("#out").html("<button id='out'>Sign out</button>");
+					}
+				}catch (e){
+					alert("忘记密码了吗?");
+				}
+			});
+        }
+        function out() {
+            $.post("api/signout.php", null, function (data,textStatus) {
+                if (data==0) {
+                    alert("退出成功");
+                    window.location.href="index.html";
+                } 
+            });
+        }
+        $(function(){
+			main();
+            $("#out").click(out);
+		})
+    </script>
 </head>
 <body>
-	这是html内容
+    <div id="top">
+        
+    </div>
+    <div id="out">
+        
+    </div>
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            margin:0 auto; text-align:center;
+            padding-top:50px;
+        }
+        div{
+            width:93%; height:auto; margin:0 auto;
+        }
+        div ul{ width:100%; list-style:none; padding:0px; margin:0px;}
+        div ul li{ width:100%; height:30px; overflow:hidden;}
+        div ul li span{ float:left; display:block; width:80px; text-align:right; color:#555;
+            height:30px; line-height:30px; font-size:14px;
+        }
+        div ul li span.comment{ width:200px;}
+        div ul li input{ margin:3px auto auto 0px; height:22px; outline:none;
+            padding:0px 5px 0px 5px; float:left; border:1px solid #ccc; font-size:14px; color:#555;
+        }
+        .btn{ padding-top:20px;}
+        #sign{ display:block; width:100px; height:30px; overflow:hidden; color:#fff;
+            background-color:#940032; border-radius:5px; margin-left:90px; line-height:30px;
+            font-size:14px; font-family:"微软雅黑"; cursor:pointer;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        function main() {
+            $("#sign").click(function () {
+                var user=$("#userAccount").val();
+                var pwd_f = $("#password").val();
+                var _params = {
+                    "user": user,
+                    "password": pwd_f
+                };
+                $.post("api/login.php", _params, function (data,textStatus) {
+                    try{
+						if(data=="0"){
+							alert("用户名或密码不正确");
+						}else{
+							alert("欢迎:"+data+" 光顾!!");
+							window.location.href="index.html";
+						}
+                    }catch (e){
+                        alert("忘记密码了吗?");
+                    }
+                });
+            });
+        }
+        $(function(){
+			main();
+		})
+    </script>
+</head>
+<body>
+	<div id="top"></div>
+    <div>
+        <ul>
+            <li><span>账号：</span><input type="text" id="userAccount"/><span class="comment"></span></li>
+            <li><span>用户密码：</span><input type="password" id="password"/><span class="comment"></span></li>
+        </ul>
+    </div>
+    <div class="btn">
+        <span id="sign">登陆</span>
+    </div>
+</body>
+</html>

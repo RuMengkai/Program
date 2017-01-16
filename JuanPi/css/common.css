@@ -1,0 +1,17 @@
+/* CSS Document */
+body,html{height:100%}
+body{font-family:"微软雅黑";font-size:12px;margin:0;padding:0;border:none;}
+html,div,p,span,form,legend,fieldset,h1,h2,h3,h4,h5,h6,hr,ul,li,ol,dl,dd,dt,nr{margin:0;padding:0;border:none;}
+button,img,a,input,textarea,th,td,table,lable{margin:0;padding:0;}
+a{text-decoration:none;color:#000}
+ul,li,ol{list-style:none}
+img{border:none}
+body, button, input, select, textarea{font:12px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif,\5b8b\4f53}
+.clear{clear:both ;overflow: hidden;}
+.clear:after{content: "";display:block;visibility: hidden;height:0; clear: both; overflow: hidden;}
+.red{color: red;}
+.blue{color: blue;}
+.green{color: green;}
+.border-r{border: 1px solid #666; border-radius: 5px;}
+button:focus{outline: none;}
+input:focus{outline: none;}

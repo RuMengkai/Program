@@ -1,0 +1,310 @@
+body {
+  background-color: #f6f6f6;
+}
+#topbar {
+  width: 100%;
+  min-width: 1200px;
+  height: 30px;
+  background-color: #f6f6f6;
+}
+#topbar .top-con {
+  width: 1200px;
+  margin: 0 auto;
+}
+#topbar .right-show {
+  width: auto;
+  line-height: 29px;
+  float: right;
+  color: #333;
+}
+#topbar .right-show > div {
+  float: left;
+  margin-left: 15px;
+}
+#topbar .right-show a:hover {
+  text-decoration: underline;
+}
+#topbar .right-show .login-show a {
+  margin-left: 13px;
+}
+#topbar .right-show .login-show a:nth-child(2) {
+  color: #ff464e;
+}
+#topbar .right-show .bag-show {
+  padding: 0 20px 0 10px;
+  margin-left: 5px;
+  position: relative;
+}
+#topbar .right-show .bag-show:hover {
+  background-color: #fff;
+  box-shadow: 0 2px 3px #d9d9d9;
+}
+#topbar .right-show .bag-show > a {
+  margin-right: 10px;
+}
+#topbar .right-show .bag-show > a:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+#topbar .right-show .bag-show .icon-bag {
+  background: url(../images/icon-total.png);
+  background-position: 0 -156px;
+  width: 16px;
+  height: 18px;
+  float: left;
+  margin: 6px 10px 0 0px;
+}
+#topbar .right-show .bag-show .cartnum {
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+  font-size: 14px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 78px;
+  margin-top: 5px;
+  top: 0px;
+  background-color: #cccccc;
+  border-radius: 10px;
+  display: inline-block;
+}
+#topbar .right-show .bag-show .bag-tool {
+  display: none;
+  width: 158px;
+  box-shadow: 0 2px 3px #d9d9d9;
+  position: absolute;
+  z-index: 2;
+  top: 28px;
+  background: #fff;
+  left: -96px;
+  padding: 10px 20px 10px;
+  color: #999;
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+  line-height: 34px;
+  white-space: nowrap;
+}
+#topbar .right-show .bag-show .bag-tool span {
+  float: left;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background: url(../images/icon-total.png) no-repeat 0 0;
+  background-position: 0 -182px;
+}
+#topbar .right-show .bag-show .bag-tool p {
+  float: left;
+}
+#topbar .right-show .sx {
+  display: inline-block;
+  height: 18px;
+  color: #eae2ea;
+  margin-left: 14px;
+  overflow: hidden;
+}
+#topbar .right-show > .sx {
+  display: inline-block;
+  height: 18px;
+  color: #eae2ea;
+  margin-left: 14px;
+  overflow: hidden;
+  margin-left: 4px;
+  float: left;
+}
+#topbar .right-show .center {
+  position: relative;
+}
+#topbar .right-show .center div {
+  position: absolute;
+  background: #fff;
+  border-radius: 5px;
+  top: 24px;
+  left: -15px;
+  padding: 5px 10px;
+  width: 60px;
+  height: 50px;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 10;
+}
+#topbar .right-show .center div a {
+  display: block;
+}
+.header {
+  background-color: #fff;
+}
+.header .area {
+  width: 1200px;
+  height: 85px;
+  margin: 0 auto;
+  position: relative;
+}
+.header .area .logo {
+  background: url(../images/header-total.gif);
+  background-position: -78px -52px;
+  width: 210px;
+  height: 52px;
+  position: absolute;
+  top: 17px;
+}
+.header .area .protection {
+  position: absolute;
+  right: 290px;
+  background-position: 0 0;
+  height: 33px;
+  width: 465px;
+  top: 28px;
+  display: block;
+  background: url(../images/header-total.gif) no-repeat;
+}
+.header .area .protection a {
+  display: block;
+  float: left;
+  height: 35px;
+  width: 108px;
+  margin: 0 0px 0 34px;
+  color: #5e5e5e;
+}
+.header .area .search {
+  top: 25px;
+  right: 0;
+  width: 237px;
+  height: 35px;
+  position: absolute;
+}
+.header .area .search input[type="text"] {
+  width: 166px;
+  height: 35px;
+  margin: 0px 0 0 10px;
+  border: none;
+  background: #efefef;
+  padding: 0 10px;
+  float: left;
+}
+.header .area .search input[type="submit"] {
+  background: url(../images/header-total.gif) no-repeat;
+  background-position: right -65px;
+  border: 0 none;
+  cursor: pointer;
+  height: 35px;
+  width: 37px;
+  float: left;
+}
+.mainNav {
+  width: 100%;
+  height: 38px;
+  background: #fff;
+  border-bottom: 2px solid #ff464e;
+}
+.mainNav .nav {
+  margin: 0 auto;
+  width: 1200px;
+  height: 38px;
+  font-size: 14px;
+}
+.mainNav .nav ul {
+  float: left;
+}
+.mainNav .nav ul a {
+  padding: 10px 24px 0;
+}
+.mainNav .nav ul a:hover {
+  text-decoration: underline;
+}
+.mainNav .nav ul li:first-child {
+  background: #ff464e;
+  border-radius: 6px 6px 0 0;
+  text-align: center;
+  width: 210px;
+  height: 38px;
+}
+.mainNav .nav ul li:first-child a {
+  color: #fff;
+  line-height: 38px;
+  width: 162px;
+}
+.mainNav .nav ul li {
+  line-height: 40px;
+  float: left;
+  margin-left: 0px;
+}
+.mainNav .nav ul li:last-child {
+  position: relative;
+}
+.mainNav .nav ul li:last-child a span {
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  background: url(../images/phone-new.png);
+  width: 10px;
+  height: 16px;
+}
+.mainNav .nav ul li:last-child .phone-in {
+  display: none;
+  background: #fff;
+  padding: 5px 5px 0 5px ;
+  position: absolute;
+  top: 42px;
+  left: -43px;
+  height: 180px;
+}
+.mainNav .nav ul li:last-child .phone-in div {
+  background-image: url(../images/jp-app-90-new.png);
+  width: 148px;
+  height: 148px;
+  overflow: hidden;
+}
+.mainNav .nav ul li:last-child .phone-in p {
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+.mainNav .nav .state-show {
+  float: right;
+  line-height: 40px;
+  position: relative;
+}
+.mainNav .nav .state-show > span:first-child {
+  position: absolute;
+  left: -20px;
+  top: 13px;
+  background-image: url(../images/icon-total.png);
+  background-position: -84px -38px;
+  width: 16px;
+  height: 16px;
+}
+.mainNav .nav .state-show a {
+  color: #39c;
+}
+.mainNav .nav .state-show a:hover {
+  text-decoration: underline;
+}
+.mainNav .nav .state-show .normal-side-box {
+  display: none;
+  font-size: 12px;
+  line-height: 26px;
+  top: 39px;
+  right: 0;
+  width: 180px;
+  height: 140px;
+  color: #666;
+  border: solid #f00 1px;
+  position: absolute;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.mainNav .nav .state-show .normal-side-box p:first-child {
+  background: #fff;
+  padding: 12px 0;
+}
+.mainNav .nav .state-show .normal-side-box p a {
+  margin: 0 15px;
+}
+.mainNav .nav .state-show .normal-side-box p span {
+  color: #f00;
+  font-weight: bold;
+}
