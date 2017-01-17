@@ -1,0 +1,24 @@
+{
+	"1":{
+		"img_icon":"new",
+		"img_good":"../images/goods_1.jpg",
+		"baoyou":"[包邮]",
+		"desc":"多功能抱婴腰凳四季款",
+		"price":"99",
+		"sprice":"299",
+		"smalllogo":"tm",
+		"source":"天猫",
+		"go":"去天猫"
+	},
+	"2":{
+		"img_icon":"brand",
+		"img_good":"../images/goods_2.jpg",
+		"baoyou":"[包邮]",
+		"desc":"多功能抱婴腰凳四季款",
+		"price":"99",
+		"sprice":"299",
+		"smalllogo":"tb",
+		"source":"淘宝",
+		"go":"去淘宝"
+	}
+}
