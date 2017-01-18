@@ -751,6 +751,8 @@ body {
 }
 .goods-list li a > img {
   width: 280px;
+  height: 280px;
+  background: url(../images/blank.png) 0 0 no-repeat;
 }
 .goods-list li .good_bottom {
   height: 48px;

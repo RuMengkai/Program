@@ -38,10 +38,10 @@ $(function() {
 		$(this).children("div").children('.enter').css({"background":"#fff","color":"#ff464e"});
 	});
 	//goods list hover
-	$(".goods-list li").on("mouseover",function() {
+	$(".goods-list").on("mouseover","li",function() {
 		$(this).children(".good_bottom").children('a').css({"display":"block"});
 	});
-	$(".goods-list li").on("mouseout",function() {
+	$(".goods-list").on("mouseout","li",function() {
 		$(this).children(".good_bottom").children('a').css({"display":"none"});
 	});
 	//轮播图
@@ -143,51 +143,71 @@ $(function() {
 	 	$(".djs").html(clock());
 		_timer_djs=setTimeout(djs,1000);
 	}
-	djs();
-
-
-	$.ajax({
-		url: '../api/goodsList.json',
-		type: 'POST',
-		dataType: 'json',
-		data: null,
-	})
-	.done(function (data) {
-		goodsload(data);
-	})
-	.fail(function() {
-		console.log("error");
-	})
-
-	//请求回来的json数据处理
-	function goodsload(data) {
-		var str="";
-		for (var key in data) {
-			console.log(key);
-			console.log(data[key]["desc"]);
-		// 	str+="<li><a href="#"><div class="new"></div>
-		// 		<img src="../images/good1.jpg">
-		// 		<div class="like"><i></i></div>
-		// 	</a>
-		// 	<p>
-		// 		<span>[包邮]</span>
-		// 		<a href="#" target="_blank">多功能抱婴腰凳四季款</a>
-		// 		<span class="state">上新</span>
-		// 	</p>
-		// 	<div class="good_bottom">
-		// 		<div class="price">
-		// 			<em>￥</em>89
-		// 		</div>
-		// 		<span>
-		// 			<s><em>￥</em>200</s>
-		// 		</span>
-		// 		<a href="#">
-		// 			<em></em>
-		// 			<span>天猫</span>
-		// 		</a>
-		// 	</div>
-		// </li>"
+	djs();//倒计时
+	//加载goods list
+	var _s=0;
+	window.onscroll=function(){
+		var scrollh=$(document).scrollTop()//滚动条高度
+		var pmh=$(window).height();//页面（屏幕）高度
+		var conh=$(document).height();//浏览器内容高度
+		// console.log(scrollh+"|"+pmh+"|"+conh);
+		console.log(conh);
+		if(scrollh+pmh>=conh){
+			readGood(_s,_s+30);//读取图片
+			_s=_s+35;
 		}
-		//$(".goods-list").html(str);
+	}
+	//readGood(0,240);//加载goods
+	function readGood(_min,_max){
+		$.ajax({
+			url: '../api/goodsList.json',
+			type: 'POST',
+			dataType: 'json',
+			data: null,
+		})
+		.done(function (data) {
+			goodsload(data,_min,_max);
+		})
+		.fail(function() {
+			console.log("error");
+		})
+	}
+	//请求回来的json数据处理
+	function goodsload(data,_min,_max) {
+		var str="";
+		var _length=0;
+		for (var key in data) {
+			_length++;
+		}
+		// console.log(_min+"-"+(_max<_length?_max:_length));
+		for (var key=_min;key<_max && _min<_length;key++,_min++) {
+			str+='<li class='+key+'>';
+			str+='<a href="#"><div class="'+data[key]["img_icon"]+'"></div>';
+			str+='	<img src="'+data[key]["img_good"]+'">';
+			str+='	<div class="like"><i></i></div>';
+			str+='</a>';
+			str+='<p>';
+			str+='	<span>'+data[key]["baoyou"]+'</span>';
+			str+='	<a href="#" target="_blank">'+data[key]["desc"]+'</a>';
+			str+='	<span class="state">上新</span>';
+			str+='</p>';
+			str+='<div class="good_bottom">';
+			str+='	<div class="price">';
+			str+='		<em>￥</em>'+data[key]["price"]+'';
+			str+='	</div>';
+			str+='	<span>';
+			str+='		<s><em>￥</em>'+data[key]["sprice"]+'</s>';
+			str+='	</span>';
+			str+='	<div class="source">';
+			str+='		<em class="'+data[key]["smalllogo"]+'"></em>';
+			str+='		<span>'+data[key]["source"]+'</span>';
+			str+='	</div>';
+			str+='	<a href="#">';
+			str+=		data[key]["go"];
+			str+='	</a>';
+			str+='</div>';
+			str+='</li>';
+		}
+		$(".goods-list").append(str);
 	}
 });
