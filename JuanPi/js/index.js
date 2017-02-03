@@ -208,6 +208,7 @@ $(function() {
 			str+='</div>';
 			str+='</li>';
 		}
-		$(".goods-list").append(str);
+		//将请求回的信息添加到页面
+		//$(".goods-list").append(str);
 	}
 });
