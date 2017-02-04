@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>会员登录</title>
+	<meta charset="UTF-8">
+	<meta name="Author" content="rmk">
+	<link rel="icon" href="../images/icon.png" type="image/x-icon"/> 
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css" />
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header header-login">
+		<div class="area">
+			<div class="logo">
+				<div class="fl">
+					<a href="index.html" title="卷皮首页" class="juan-logo fl"></a>
+					<span class="juan-txt fl"></span>
+				</div>
+			</div>
+			<div class="protection">
+				<a href="#" class="update" title="每天10点开抢" rel="nofollow"></a>
+				<a href="#" class="lowest" title="职业买手砍价" rel="nofollow"></a>
+				<a href="#" class="check1" title="商品验货质检" rel="nofollow"></a>
+			</div>
+		</div>
+	</div><!-- 头部结束 -->
+	<!-- main区域 -->
+	<div class="main">
+		<div class="login-content">
+			<div class="title">
+				<span class="hd">老用户登录</span>
+				<span class="tips">尊敬的卷皮用户，欢迎您回来！</span>
+				<p class="other">还没账号？<a href="register.html" rel="nofollow">立即去注册</a></p>
+			</div>
+			<div class="login-center">
+				<div class="content-landing">
+					<form action="/login/checkLogin" method="post" onsubmit="return false;" id="login">
+						<ul class="login_list">
+							<li class="error_box">
+								<label class="normal"></label>
+								<div class="box_border">
+									<div class="user_img"></div>
+									<input type="text" class="normal-input" id="account" placeholder="手机号/邮箱/昵称" name="account" autocomplete="off" value="">
+									<div class="dele_info_img"></div>
+								</div>
+								<div class="error-box" id="account_warn">
+									<p class="msg_error">账号不能为空</p>
+								</div>
+							</li>
+							<li class="clear">
+								<label class="normal"></label>
+								<div class="box_border">
+									<div class="code_img"></div>
+									<input type="password" class="normal-input" placeholder="密码" name="password" autocomplete="off" id="inter_code">
+									<div class="dele_info_img"></div>
+								</div>
+								<div class="error-box" id="password_warn">
+									<p class="msg_error">密码不能为空</p>
+								</div>
+							</li>
+							<li class="chex-d">
+								<label class="normal"></label>
+								<div class="chex">
+									<span><label><input type="checkbox" class="ck" name="auto" checked="checked">两周内免登录</label></span>
+									<a class="forget " href="#">忘记密码？</a>
+								</div>
+							</li>
+
+							<li>
+								<label class="normal"></label>
+								<div class="btn">
+									<input type="button" id="sign" class="sub smt-o" value="登录" autocomplete="off">
+									<span id="loading"></span> 
+								</div>
+							</li>
+							<li class="third-login">
+								<label class="normal"></label>
+								<div class="union-login">
+									<p class="union-title"><span>合作网站账号登录</span></p>
+									<div class="third-box">
+										<a class="qq" href="https://user.juanpi.com/login/connect/type/qq"></a>
+										<a href="https://user.juanpi.com/login/connect/type/weixin" class="weixin"></a>
+										<a class="sina" href="https://user.juanpi.com/login/connect/type/sina"></a>
+										<a href="https://user.juanpi.com/login/connect/type/taobao" class="taobao"></a>
+									</div>
+								</div>
+								<a href="#" class="quick fl"><em class="icons icons-phone-other fl"></em>
+									<span class="fl">手机快捷登录&gt;&gt;</span>
+								</a>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div class="login-l-img">
+					<img src="../images/login-bj-ad.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div><!-- main区域结束 -->
+	<!-- 底部 -->
+	<p class="foot-tips">
+		武汉奇米网络科技有限公司 鄂ICP备10209250号 | ICP许可证号：鄂B1-20150109 | 食品流通许可证 SP4201991510041888   Copyright © 2010 - 2017 JuanPi.com All Rights Reserved
+	</p>
+</body>
+</html>

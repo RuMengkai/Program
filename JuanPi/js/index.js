@@ -1,17 +1,33 @@
 $(function() {
-	//show 
-	$(".bag-show").on("mouseover",function() {
-		$(".bag-tool").css("display","block");
+	//请求toolbar
+	$.ajax({
+		url: '../tpl/toolbar.html',
+		type: 'POST',
+		dataType: 'text',
+		data: null,
+	})
+	.done(function (data) {
+		$("#toolbar").html(data);
+		getJs();
+	})
+	.fail(function() {
+		console.log("toolbar error");
 	});
-	$(".bag-show").on("mouseout",function() {
-		$(".bag-tool").css("display","none");
+	//请求footer
+	$.ajax({
+		url: '../tpl/footer.html',
+		type: 'POST',
+		dataType: 'text',
+		data: null,
+	})
+	.done(function (data) {
+		$(".foot").html(data);
+		getJs();
+	})
+	.fail(function() {
+		console.log("toolbar error");
 	});
-	$(".center").on("mouseover",function() {
-		$(this).children("div").css("display","block")
-	});
-	$(".center").on("mouseout",function() {
-		$(".center div").css("display","none");
-	});
+	
 	//手机二维码show
 	$(".navigation li:last-child").on("mouseover",function() {
 		$(".phone-in").css("display","block");
@@ -26,6 +42,8 @@ $(function() {
 	$(".state-show").on("mouseout",function() {
 		$(".normal-side-box").css("display","none");
 	});
+	
+	
 	//初始化banner左边的menu
 	for (var i = 1; i < 15; i++) {
 		$(".top-menu dd:nth-child("+(i+1)+") i").css("background-position-x", -24*i);
@@ -122,9 +140,9 @@ $(function() {
 		eventHandle($("#btn span").eq(++i)[0]);
 	});
 	//倒计时
-	function clock(){
+	function clock(time){
 		var _nowDate=new Date();
-		var _stopDate=new Date(2017,2,31);
+		var _stopDate=new Date(time);
 		var _date=new Date(_stopDate.getTime()-_nowDate.getTime());
 		var _day=_date.getDate();
 		var _hours=_date.getHours()-8;
@@ -138,26 +156,47 @@ $(function() {
 		return _code;
 	}
 	var _timer_djs=0;
-	function djs(){
-		clearTimeout(_timer_djs);
-	 	$(".djs").html(clock());
-		_timer_djs=setTimeout(djs,1000);
+	function djs(time){
+		(function start() {
+			clearTimeout(_timer_djs);
+			$(".djs").html(clock(time));
+			_timer_djs=setTimeout(start,1000);
+		})();
 	}
-	djs();//倒计时
+	$.ajax({
+		url: '../api/data.json',
+		type: 'POST',
+		dataType: 'json',
+		data: null,
+	})
+	.done(function (data) {
+		djs(data[0]["time"]);//倒计时
+	})
+	.fail(function() {
+		console.log("error");
+	})
 	//加载goods list
-	var _s=0;
+	var _s=10;
 	window.onscroll=function(){
 		var scrollh=$(document).scrollTop()//滚动条高度
 		var pmh=$(window).height();//页面（屏幕）高度
 		var conh=$(document).height();//浏览器内容高度
 		// console.log(scrollh+"|"+pmh+"|"+conh);
-		console.log(conh);
-		if(scrollh+pmh>=conh){
+		// console.log(conh);
+		//显示fixed-top
+		if(scrollh>=pmh){
+			$(".fixed-top").css("display","block");
+			$(".returntop").css("display","block");
+		}else{
+			$(".fixed-top").css("display","none");
+			$(".returntop").css("display","none");
+		}
+		if(scrollh+pmh+360>=conh){
 			readGood(_s,_s+30);//读取图片
 			_s=_s+35;
 		}
 	}
-	//readGood(0,240);//加载goods
+	readGood(0,10);//加载goods
 	function readGood(_min,_max){
 		$.ajax({
 			url: '../api/goodsList.json',
@@ -211,4 +250,57 @@ $(function() {
 		//将请求回的信息添加到页面
 		//$(".goods-list").append(str);
 	}
+	//侧栏fixed-right效果
+	$(".fixed-right ul li").on("mouseenter",function name() {
+		$(this).children(".tab-tips").css({"display":"block"});
+		$(this).children(".tab-tips").animate({right:36}, 300);
+	})
+	$(".fixed-right ul li").on("mouseleave",function name() {
+		$(this).children(".tab-tips").css({"right":"98px","display":"none"});
+	})
+	//returntop
+	$("#returntop").click(function() {
+		$("html,body").animate({scrollTop:$("#toolbar").offset().top+"px"},700);
+	});
+	//侧栏info close
+	$(".close").click(function() {
+		$("#side-login").css("display","none");
+	});
+	//打开购物车
+	var gwc_flg=0;
+	$(".gwd").click(function() {
+		if (gwc_flg==0) {
+			$(".shopping-cart").animate({"right": "36px"},200);
+			gwc_flg=1;
+			return false;
+		} else {
+			$(".shopping-cart").animate({"right": "-230px"},200);
+			gwc_flg=0;
+		}
+	});
+	$("body").click(function() {
+		if (gwc_flg==1) {
+			$(".shopping-cart").animate({"right": "-230px"},200);
+			gwc_flg=0;
+		} 
+	});
+	//close购物车
+	$(".cart_close").click(function() {
+		$(".shopping-cart").animate({"right": "-230px"},200);
+		gwc_flg=0;
+	});
 });
+function getJs() {
+	$.ajax({
+		url: '../js/compart.js',
+		type: 'POST',
+		dataType: 'script',
+		data: null,
+	})
+	.done(function (data) {
+		data;
+	})
+	.fail(function() {
+		console.log("js error");
+	})
+}

@@ -1,0 +1,248 @@
+body {
+  background-color: #f6f6f6;
+  color: #666;
+}
+.header-login {
+  background: #fff;
+  border-bottom: 4px solid #ff464e;
+}
+.header-login .area {
+  height: 76px;
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+}
+.header-login .area .logo {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 210px;
+  height: 56px;
+  display: block;
+  background: url(../images/header-total.gif) no-repeat;
+  background-position: -78px -217px;
+}
+.header-login .area .logo .juan-logo {
+  height: 0;
+  overflow: hidden;
+  padding-top: 46px;
+  width: 88px;
+  display: block;
+}
+.header-login .area .protection {
+  top: 24px;
+  position: absolute;
+  background: url(../images/header-total.gif) no-repeat;
+  background-position: 0 0;
+  height: 33px;
+  width: 465px;
+  right: 10px;
+}
+.header-login .area .protection a {
+  display: block;
+  float: left;
+  height: 16px;
+  width: 98px;
+  margin: 0 0px 0 34px;
+}
+.icons {
+  background: url(../images/icons-total.gif) no-repeat;
+  display: block;
+}
+.icons-phone-other {
+  width: 12px;
+  height: 22px;
+  background-position: right -249px;
+  margin: 0 5px 0 0;
+  float: left;
+}
+.main {
+  width: 980px;
+  margin: 0px auto;
+  margin-top: 20px;
+}
+.main .login-content {
+  width: 978px;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid #e2e2e2;
+  padding-bottom: 50px;
+}
+.main .login-content .title {
+  width: 878px;
+  padding: 20px 50px;
+  border-bottom: #e2e2e2 solid 1px;
+  overflow: hidden;
+}
+.main .login-content .title span.hd {
+  color: #ff464e;
+  font-size: 16px;
+  font-family: "微软雅黑", "宋体";
+  margin-right: 10px;
+  background: url(../images/hd-bg.gif) no-repeat center right;
+  padding-right: 20px;
+  float: left;
+}
+.main .login-content .title span.tips {
+  color: #666;
+  float: left;
+  margin-top: 3px;
+}
+.main .login-content .title .other {
+  float: right;
+  font-size: 14px;
+  color: #999;
+}
+.main .login-content .title .other a {
+  color: #0289cd;
+}
+.main .login-content .login-center {
+  padding: 30px 80px 0 80px;
+  width: 818px;
+  height: auto;
+  overflow: hidden;
+}
+.main .login-content .login-center .content-landing {
+  width: 450px;
+  float: left;
+  display: inline;
+}
+.main .login-content .login-center .content-landing form {
+  display: block;
+}
+.main .login-content .login-center .content-landing form ul {
+  width: 290px;
+  padding: 0 80px;
+}
+.main .login-content .login-center .content-landing form ul li {
+  padding-bottom: 25px;
+  overflow: visible;
+  height: auto;
+  position: relative;
+  height: 45px;
+  _height: 45px;
+  clear: both;
+}
+.main .login-content .login-center .content-landing form ul li .box_border {
+  border: 1px solid #c6c6c6;
+  width: 270px;
+  float: left;
+  background: #000000 url() 0 0 no-repeat;
+}
+.main .login-content .login-center .content-landing form ul li .box_border .user_img {
+  background: url(../images/name2.jpg) no-repeat #f1f1f1;
+  width: 39px;
+  height: 38px;
+  float: left;
+  display: block;
+}
+.main .login-content .login-center .content-landing form ul li .box_border .code_img {
+  background: url(../images/code2.jpg) no-repeat #f1f1f1;
+  width: 39px;
+  height: 38px;
+  float: left;
+  display: block;
+}
+.main .login-content .login-center .content-landing form ul li .normal-input {
+  border: 0;
+  width: 226px;
+  padding: 12px 0 12px 5px;
+  height: 14px;
+  line-height: 14px;
+  float: left;
+}
+.main .login-content .login-center .content-landing form ul li #account_warn {
+  display: none;
+}
+.main .login-content .login-center .content-landing form ul li #password_warn {
+  display: none;
+}
+.main .login-content .login-center .content-landing form ul li .msg_error {
+  width: 330px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  top: 42px;
+  left: 10px;
+  color: #ff464e;
+  display: block;
+}
+.main .login-content .login-center .content-landing form ul li .btn .sub {
+  background: url(../images/new-login.gif) no-repeat;
+  width: 260px;
+  background-position: 0 0;
+  color: #fff;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 2px;
+  border: none;
+}
+.main .login-content .login-center .content-landing form ul li .btn .sub:hover {
+  background-position-y: -45px;
+}
+.main .login-content .login-center .content-landing form ul .chex-d {
+  padding-bottom: 8px;
+  height: 20px;
+}
+.main .login-content .login-center .content-landing form ul .chex-d .chex {
+  width: 280px;
+  float: left;
+}
+.main .login-content .login-center .content-landing form ul .chex-d .chex .forget {
+  float: right;
+  color: #999;
+}
+.main .login-content .login-center .content-landing form ul .chex-d .chex .ck {
+  vertical-align: -2px;
+  margin-right: 5px;
+}
+.main .login-content .login-center .content-landing form ul .third-login .union-login {
+  float: left;
+  width: 142px;
+}
+.main .login-content .login-center .content-landing form ul .third-login .third-box a {
+  background: url(../images/new-login.gif) no-repeat;
+  float: left;
+  width: 22px;
+  height: 7px;
+  margin-right: 7px;
+  display: block;
+  margin-top: 15px;
+}
+.main .login-content .login-center .content-landing form ul .third-login .third-box .qq {
+  background-position: right -166px;
+}
+.main .login-content .login-center .content-landing form ul .third-login .third-box .weixin {
+  background-position: -236px -194px;
+}
+.main .login-content .login-center .content-landing form ul .third-login .third-box .sina {
+  background-position: -27px -169px;
+}
+.main .login-content .login-center .content-landing form ul .third-login .third-box .taobao {
+  background-position: -27px -140px;
+}
+.main .login-content .login-center .content-landing form ul .third-login a {
+  padding-top: 15px;
+  font-size: 14px;
+  display: block;
+  color: #666;
+  float: right;
+  margin-right: 20px;
+}
+.main .login-content .login-center .content-landing form ul .third-login a:hover {
+  text-decoration: underline;
+}
+.main .login-content .login-center .login-l-img {
+  overflow: hidden;
+  width: 358px;
+  text-align: right;
+  float: right;
+  display: inline;
+}
+.foot-tips {
+  text-align: center;
+  margin: 40px auto 40px;
+  width: 900px;
+}

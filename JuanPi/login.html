@@ -38,16 +38,16 @@
                 };
                 $.post("api/login.php", _params, function (data,textStatus) {
                     try{
-						if(data=="0"){
-							alert("用户名或密码不正确");
-						}else{
-							alert("欢迎:"+data+" 光顾!!");
-							window.location.href="index.html";
-						}
-                    }catch (e){
-                        alert("忘记密码了吗?");
-                    }
-                });
+                      if(data=="0"){
+                         alert("用户名或密码不正确");
+                     }else{
+                         alert("欢迎:"+data+" 光顾!!");
+                         window.location.href="index.html";
+                     }
+                 }catch (e){
+                    alert("忘记密码了吗?");
+                }
+            });
             });
         }
         $(function(){

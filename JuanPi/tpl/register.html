@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>免费注册</title>
+	<meta charset="UTF-8">
+	<meta name="Author" content="rmk">
+	<link rel="icon" href="../images/icon.png" type="image/x-icon"/> 
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/register.css" />
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/register.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header header-login">
+		<div class="area">
+			<div class="logo">
+				<div class="fl">
+					<a href="index.html" title="卷皮首页" class="juan-logo fl"></a>
+					<span class="juan-txt fl"></span>
+				</div>
+			</div>
+			<div class="protection">
+				<a href="#" class="update" title="每天10点开抢" rel="nofollow"></a>
+				<a href="#" class="lowest" title="职业买手砍价" rel="nofollow"></a>
+				<a href="#" class="check1" title="商品验货质检" rel="nofollow"></a>
+			</div>
+		</div>
+	</div><!-- 头部结束 -->
+	<!-- main区域 -->
+	<div class="main">
+		<div class="login-content">
+			<div class="title">
+				<span class="hd">新用户注册</span>
+				<span class="tips">注册卷皮网，赢积分换好礼！</span>
+				<p class="other">已有账号，<a href="login.html" rel="nofollow">立即登录</a></p>
+			</div>
+			<div class="login-center">
+				<div class="content-landing">
+					<form action="/login/checkLogin" method="post" onsubmit="return false;" id="login">
+						<ul>
+							<li class="error_box">
+								<label class="normal">手机号码：</label>
+								<input type="text" class="normal-input" id="mobile" name="email" autocomplete="off" tabindex="1">
+								<div class="error-box " id="email_warn" warn="请输入11位手机号">
+									<strong class="error "></strong>
+									<p class="msg_error">请输入手机号码</p>
+								</div>
+								<span class="otherregister">或 <a href="https://user.juanpi.com/register/email">邮箱注册</a></span>
+							</li>
+							<li class="set-password error_box">
+								<label class="normal">创建密码：</label>
+								<input type="password" class="normal-input" id="password" name="password" autocomplete="off" tabindex="2">
+								<div class="error-box" id="password_warn" warn="6-16个数字、字母或符号，字母区分大小写"><strong class="error "></strong>
+								<p class="msg_error">请输入密码</p></div>
+							</li>
+							<li class="error_box">
+								<label class="normal">确认密码：</label>
+								<input type="password" class="normal-input" id="confirm_password" name="confirm_password" autocomplete="off" tabindex="3">
+								<div class="error-box" id="confirm_password_warn" warn="请再次输入密码"><strong class="error "></strong><p class="msg_error">请输入确认密码 </p></div>
+							</li>
+							<li id="verify_display" style="display: none;">
+								<label class="normal">验证码：</label>
+								<input class="normal-input code-input" type="text" placeholder="验证码" name="code" autocomplete="off" tabindex="4">
+								<div class="verification-code">
+									<input class="phone-verify" type="button" style="display:none;" value="获取短信验证码"></div>
+									<div class="error-box" id="code_warn" warn="请输入短信验证码"></div>
+								</li>
+								<li>
+									<label class="normal"></label>
+									<div class="btn">
+										<input type="hidden" value="9fb86db6ec2ea0fe0fa3fa7416534045" name="mtoken" id="mtoken">
+										<input type="hidden" name="opt" id="opt" value="">
+										<input type="hidden" value="2" id="isMobile" name="isMobile">
+										<input type="submit" class="sub smt-o" id="sub" value="立即注册" autocomplete="off">
+										<span id="loading"></span> </div>
+									</li>
+									<li class="chex-d">
+										<label class="normal" style="width:16px"></label>
+										<div class="chex" style="width:378px">
+											<span>
+												<label>
+													<input type="checkbox" class="ck" name="protocol" checked="checked">
+													我已阅读并接受
+													<a href="http://www.juanpi.com/about/liences" target="_blank">《卷皮用户协议》</a>
+												</label>
+											</span>
+										</div>
+									</li>
+								</ul>
+							</form>
+						</div>
+						<div class="login-l-img">
+							<img src="../images/login-bj-ad01.png" alt="">
+							<div class="line"></div>
+							<li class="third-login">
+								<label class="normal"></label>
+								<div class="union-login">
+									<p class="union-title"><span>无需注册，快捷登录</span></p>
+									<div class="third-box">
+										<a class="qq" href="https://user.juanpi.com/login/connect/type/qq"></a>
+										<a href="https://user.juanpi.com/login/connect/type/weixin" class="weixin"></a>
+										<a class="sina" href="https://user.juanpi.com/login/connect/type/sina"></a>
+										<a href="https://user.juanpi.com/login/connect/type/taobao" class="taobao"></a>
+									</div>
+								</div>
+							</li>
+						</div>
+					</div>
+				</div>
+			</div><!-- main区域结束 -->
+			<!-- 底部 -->
+			<p class="foot-tips">
+				武汉奇米网络科技有限公司 鄂ICP备10209250号 | ICP许可证号：鄂B1-20150109 | 食品流通许可证 SP4201991510041888   Copyright © 2010 - 2017 JuanPi.com All Rights Reserved
+			</p>
+		</body>
+		</html>
