@@ -15,9 +15,9 @@
 			}
 			$conn->close();
 		}
-		if(!isset($_SESSION["info_user"])||$info_data==0){
+		if(!isset($_SESSION["info_user"])||$info_data===0){
 			echo $info_data;
-			$_SESSION["info_user"]="";//清空session
+			session_unset("info_user");//清空session
 		}else{
 			echo $_SESSION["info_user"];
 		}

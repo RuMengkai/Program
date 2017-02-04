@@ -1,4 +1,5 @@
 $(function() {
+
 	//请求公共资源
 	getCompart();
 	//初始化banner左边的menu
@@ -267,7 +268,6 @@ function getCompart() {
 	})
 	.done(function (data) {
 		$("#toolbar").html(data);
-		getJs();
 	})
 	.fail(function() {
 		console.log("toolbar error");

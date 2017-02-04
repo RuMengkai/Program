@@ -24,8 +24,90 @@
 			a {
 				margin-left: 13px
 			}
-			a:nth-child(2) {
-				color: #ff464e
+			.nologin{
+				display: none;
+				a:nth-child(2) {
+					color: #ff464e
+				}
+			}
+			.login{
+				position: relative;
+				display: none;
+				.menu{
+					display: inline;
+					width: 100px;
+					a{
+						.cur{
+							display: inline-block;
+							float: left;
+							background: url(../images/cur.gif) no-repeat;
+							width: 10px;
+							height: 5px;
+							transition: all .4s;
+							-webkit-transition: all .4s;
+							-o-transition: all .4s;
+							-moz-transition: all .4s;
+							margin-left: 2px;
+							margin-top: 11px;
+							line-height: normal;
+							cursor: pointer;
+						}
+						.user{
+							color: #ff464e;
+							font-weight: bold;
+							display: inline;
+							float: left;
+							max-width: 64px;
+							_width: 64px;
+							overflow: hidden;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+						}
+						img{
+							margin-right: 5px;
+							float: left;
+							display: inline;
+							width: 18px;
+							height: 18px;
+							vertical-align: middle;
+							margin-top: 5px;
+						}
+						
+					}
+					&:hover{
+						.cur{
+							transform:rotate(180deg); 
+						}
+					}
+				}
+				.login-box{
+					position: absolute;
+					top: 24px;
+					left: 0;
+					background: #fff;
+					border: #f7dce0 solid 1px;
+					width: 98px;
+					border-radius: 5px;
+					display: none;
+					z-index: 13;
+					ul{
+						li{
+							&:hover{
+								background: #f7dce0 ;
+							}
+							a{
+								display: block;
+								margin-left: 0;
+								color: #ff464e;
+								width: 78px;
+								height: 26px;
+								cursor: pointer;
+								text-decoration:none;
+								padding-left:20px;
+							}
+						}
+					}
+				}
 			}
 		}
 		.bag-show {

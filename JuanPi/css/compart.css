@@ -24,8 +24,81 @@
 #toolbar .right-show .login-show a {
   margin-left: 13px;
 }
-#toolbar .right-show .login-show a:nth-child(2) {
+#toolbar .right-show .login-show .nologin {
+  display: none;
+}
+#toolbar .right-show .login-show .nologin a:nth-child(2) {
   color: #ff464e;
+}
+#toolbar .right-show .login-show .login {
+  position: relative;
+  display: none;
+}
+#toolbar .right-show .login-show .login .menu {
+  display: inline;
+  width: 100px;
+}
+#toolbar .right-show .login-show .login .menu a .cur {
+  display: inline-block;
+  float: left;
+  background: url(../images/cur.gif) no-repeat;
+  width: 10px;
+  height: 5px;
+  transition: all .4s;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  margin-left: 2px;
+  margin-top: 11px;
+  line-height: normal;
+  cursor: pointer;
+}
+#toolbar .right-show .login-show .login .menu a .user {
+  color: #ff464e;
+  font-weight: bold;
+  display: inline;
+  float: left;
+  max-width: 64px;
+  _width: 64px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#toolbar .right-show .login-show .login .menu a img {
+  margin-right: 5px;
+  float: left;
+  display: inline;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-top: 5px;
+}
+#toolbar .right-show .login-show .login .menu:hover .cur {
+  transform: rotate(180deg);
+}
+#toolbar .right-show .login-show .login .login-box {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  background: #fff;
+  border: #f7dce0 solid 1px;
+  width: 98px;
+  border-radius: 5px;
+  display: none;
+  z-index: 13;
+}
+#toolbar .right-show .login-show .login .login-box ul li:hover {
+  background: #f7dce0 ;
+}
+#toolbar .right-show .login-show .login .login-box ul li a {
+  display: block;
+  margin-left: 0;
+  color: #ff464e;
+  width: 78px;
+  height: 26px;
+  cursor: pointer;
+  text-decoration: none;
+  padding-left: 20px;
 }
 #toolbar .right-show .bag-show {
   padding: 0 20px 0 10px;

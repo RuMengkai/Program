@@ -1,6 +1,7 @@
 <?php
 header("Content-type:text/html;charset=utf-8");
 function doPost(){
+    session_start();
     $success=0;
     $conn=new mysqli("localhost","root","","usercenter");
     mysqli_query($conn,"set character set 'utf8'");//读库
