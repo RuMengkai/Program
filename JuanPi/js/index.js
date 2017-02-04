@@ -26,44 +26,9 @@ $(function() {
 	djsClock();
 	//加载goods list
 	getGoodList();
-	//侧栏fixed-right效果
-	$(".fixed-right ul li").on("mouseenter",function name() {
-		$(this).children(".tab-tips").css({"display":"block"});
-		$(this).children(".tab-tips").animate({right:36}, 300);
-	})
-	$(".fixed-right ul li").on("mouseleave",function name() {
-		$(this).children(".tab-tips").css({"right":"98px","display":"none"});
-	})
-	//returntop
-	$("#returntop").click(function() {
-		$("html,body").animate({scrollTop:$("#toolbar").offset().top+"px"},700);
-	});
-	//侧栏info close
-	$(".close").click(function() {
-		$("#side-login").css("display","none");
-	});
-	//打开购物车
-	var gwc_flg=0;
-	$(".gwd").click(function() {
-		if (gwc_flg==0) {
-			$(".shopping-cart").animate({"right": "36px"},200);
-			gwc_flg=1;
-			return false;
-		} else {
-			$(".shopping-cart").animate({"right": "-230px"},200);
-			gwc_flg=0;
-		}
-	});
-	$("body").click(function() {
-		if (gwc_flg==1) {
-			$(".shopping-cart").animate({"right": "-230px"},200);
-			gwc_flg=0;
-		} 
-	});
-	//close购物车
-	$(".cart_close").click(function() {
-		$(".shopping-cart").animate({"right": "-230px"},200);
-		gwc_flg=0;
+	//跳转详情页
+	$(".goods-list").on("click","li",function () {
+		window.open("../tpl/details.html?n="+$(this).attr("class"));
 	});
 });
 
@@ -228,7 +193,7 @@ function getGoodList() {
 		// console.log(_min+"-"+(_max<_length?_max:_length));
 		for (var key=_min;key<_max && _min<_length;key++,_min++) {
 			str+='<li class='+key+'>';
-			str+='<a href="#"><div class="'+data[key]["img_icon"]+'"></div>';
+			str+='<a href="../tpl/details.html?n='+key+'" target="_blank"><div class="'+data[key]["img_icon"]+'"></div>';
 			str+='	<img src="'+data[key]["img_good"]+'">';
 			str+='	<div class="like"><i></i></div>';
 			str+='</a>';
@@ -295,10 +260,23 @@ function getCompart() {
 	.done(function (data) {
 		$(".mainNav").html(data);
 		$(".fi").addClass("first");
-		getJs();
 	})
 	.fail(function() {
 		console.log("mainNav error");
+	});
+	//请求右边侧栏
+	$.ajax({
+		url: '../tpl/rightfixed.html',
+		type: 'POST',
+		dataType: 'text',
+		data: null,
+	})
+	.done(function (data) {
+		$("body").append(data);
+		getJs();//获取js
+	})
+	.fail(function() {
+		console.log("rightfixed error");
 	});
 	//请求footer
 	$.ajax({
@@ -309,7 +287,6 @@ function getCompart() {
 	})
 	.done(function (data) {
 		$(".foot").html(data);
-
 	})
 	.fail(function() {
 		console.log("toolbar error");

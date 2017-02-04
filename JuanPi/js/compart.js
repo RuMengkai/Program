@@ -64,3 +64,42 @@ $(".state-show").on("mouseover",function() {
 $(".state-show").on("mouseout",function() {
 	$(".normal-side-box").css("display","none");
 });
+//侧栏fixed-right效果
+$(".fixed-right ul li").on("mouseenter",function name() {
+	$(this).children(".tab-tips").css({"display":"block"});
+	$(this).children(".tab-tips").animate({right:36}, 300);
+})
+$(".fixed-right ul li").on("mouseleave",function name() {
+	$(this).children(".tab-tips").css({"right":"98px","display":"none"});
+})
+//returntop
+$("#returntop").click(function() {
+	$("html,body").animate({scrollTop:$("#toolbar").offset().top+"px"},700);
+});
+//侧栏info close
+$(".close").click(function() {
+	$("#side-login").css("display","none");
+});
+//打开购物车
+var gwc_flg=0;
+$(".gwd").click(function() {
+	if (gwc_flg==0) {
+		$(".shopping-cart").animate({"right": "36px"},200);
+		gwc_flg=1;
+		return false;
+	} else {
+		$(".shopping-cart").animate({"right": "-230px"},200);
+		gwc_flg=0;
+	}
+});
+$("body").click(function() {
+	if (gwc_flg==1) {
+		$(".shopping-cart").animate({"right": "-230px"},200);
+		gwc_flg=0;
+	} 
+});
+//close购物车
+$(".cart_close").click(function() {
+	$(".shopping-cart").animate({"right": "-230px"},200);
+	gwc_flg=0;
+});

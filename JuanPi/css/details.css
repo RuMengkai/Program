@@ -1,0 +1,90 @@
+body {
+  background: #f6f6f6;
+  color: #666;
+  padding-right: 30px;
+}
+.fl {
+  float: left;
+  display: inline;
+}
+.main {
+  width: 1200px;
+  margin: 0px auto;
+  position: relative;
+  margin-top: 20px;
+}
+.main .place-show {
+  margin: 0 0 20px 20px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+.main .place-show .place-explain {
+  padding: 0;
+  float: left;
+  display: inline;
+}
+.main .place-show .place-explain a {
+  margin: 0 5px;
+  color: #5e5e5e;
+}
+.main .place-show .place-explain a:hover {
+  text-decoration: underline;
+}
+.main .place-show .djs {
+  width: 204px;
+  position: absolute;
+  top: 0;
+  width: 180px;
+  text-align: right;
+  color: #999;
+}
+.main .place-show .djs span {
+  color: #666;
+}
+.main .goods_show {
+  background-color: #fff;
+  width: 1120px;
+  padding: 40px;
+}
+.main .goods_show .deal-pic {
+  float: left;
+  display: inline;
+  width: 400px;
+}
+.main .goods_show .deal-pic .pic {
+  display: table-cell;
+  height: 400px;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 400px;
+  text-align: center;
+}
+.main .goods_show .deal-pic .pic img {
+  width: 400px;
+  height: 400px;
+}
+.main .goods_show .deal-pic ul {
+  margin-top: 15px;
+  margin: 10px auto 0;
+  display: block;
+  width: 260px;
+}
+.main .goods_show .deal-pic ul li {
+  border: 1px solid #f3f3f3;
+  float: left;
+  height: 58px;
+  margin-right: 5px;
+  width: 58px;
+}
+.main .goods_show .deal-pic ul li a {
+  display: table-cell;
+  height: 58px;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 58px;
+}
+.main .goods_show .deal-pic ul li a img {
+  width: 58px;
+  height: 58px;
+}
