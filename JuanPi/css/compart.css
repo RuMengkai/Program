@@ -129,6 +129,187 @@
 #toolbar .right-show .center div a {
   display: block;
 }
+.header {
+  background-color: #fff;
+  min-width: 1200px;
+}
+.header .area {
+  width: 1200px;
+  height: 85px;
+  margin: 0 auto;
+  position: relative;
+}
+.header .area .logo {
+  background: url(../images/header-total.gif);
+  background-position: -78px -52px;
+  width: 210px;
+  height: 52px;
+  position: absolute;
+  top: 17px;
+}
+.header .area .protection {
+  position: absolute;
+  right: 290px;
+  background-position: 0 0;
+  height: 33px;
+  width: 465px;
+  top: 28px;
+  display: block;
+  background: url(../images/header-total.gif) no-repeat;
+}
+.header .area .protection a {
+  display: block;
+  float: left;
+  height: 35px;
+  width: 108px;
+  margin: 0 0px 0 34px;
+  color: #5e5e5e;
+}
+.header .area .search {
+  top: 25px;
+  right: 0;
+  width: 237px;
+  height: 35px;
+  position: absolute;
+}
+.header .area .search input[type="text"] {
+  width: 166px;
+  height: 35px;
+  margin: 0px 0 0 10px;
+  border: none;
+  background: #efefef;
+  padding: 0px 10px;
+  line-height: 35px;
+  float: left;
+}
+.header .area .search input[type="submit"] {
+  background: url(../images/header-total.gif) no-repeat;
+  background-position: right -65px;
+  border: 0 none;
+  cursor: pointer;
+  height: 35px;
+  width: 37px;
+  float: left;
+}
+.mainNav {
+  width: 100%;
+  min-width: 1200px;
+  height: 38px;
+  background: #fff;
+  border-bottom: 2px solid #ff464e;
+}
+.mainNav .nav {
+  margin: 0 auto;
+  width: 1200px;
+  height: 38px;
+  font-size: 14px;
+}
+.mainNav .nav ul {
+  float: left;
+}
+.mainNav .nav ul a {
+  padding: 10px 24px 0;
+}
+.mainNav .nav ul a:hover {
+  text-decoration: underline;
+}
+.mainNav .nav ul .first {
+  background: #ff464e;
+  border-radius: 6px 6px 0 0;
+  text-align: center;
+  width: 210px;
+  height: 38px;
+}
+.mainNav .nav ul .first a {
+  color: #fff;
+  line-height: 38px;
+  width: 162px;
+}
+.mainNav .nav ul li {
+  line-height: 40px;
+  float: left;
+  margin-left: 0px;
+}
+.mainNav .nav ul .phone-last {
+  position: relative;
+}
+.mainNav .nav ul .phone-last a span {
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  background: url(../images/phone-new.png);
+  width: 10px;
+  height: 16px;
+}
+.mainNav .nav ul .phone-last .phone-in {
+  display: none;
+  background: #fff;
+  padding: 5px 5px 0 5px;
+  top: 42px;
+  left: -43px;
+  height: 180px;
+  position: absolute;
+  z-index: 10;
+}
+.mainNav .nav ul .phone-last .phone-in div {
+  width: 148px;
+  height: 148px;
+  overflow: hidden;
+}
+.mainNav .nav ul .phone-last .phone-in p {
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #999;
+}
+.mainNav .nav .state-show {
+  float: right;
+  line-height: 40px;
+  position: relative;
+}
+.mainNav .nav .state-show > span:first-child {
+  position: absolute;
+  left: -20px;
+  top: 13px;
+  background-image: url(../images/icon-total.png);
+  background-position: -84px -38px;
+  width: 16px;
+  height: 16px;
+}
+.mainNav .nav .state-show a {
+  color: #39c;
+}
+.mainNav .nav .state-show a:hover {
+  text-decoration: underline;
+}
+.mainNav .nav .state-show .normal-side-box {
+  display: none;
+  font-size: 12px;
+  line-height: 26px;
+  top: 39px;
+  right: 0;
+  width: 180px;
+  height: 140px;
+  color: #666;
+  border: solid #f00 1px;
+  position: absolute;
+  background-color: #f9f9f9;
+  text-align: center;
+  z-index: 10;
+}
+.mainNav .nav .state-show .normal-side-box p:first-child {
+  background: #fff;
+  padding: 12px 0;
+}
+.mainNav .nav .state-show .normal-side-box p a {
+  margin: 0 15px;
+}
+.mainNav .nav .state-show .normal-side-box p span {
+  color: #f00;
+  font-weight: bold;
+}
 .foot {
   height: 200px;
   width: 100%;

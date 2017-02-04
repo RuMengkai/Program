@@ -1,9 +1,9 @@
+//顶部
 #toolbar {
 	width: 100%;
 	min-width: 1200px;
 	height: 30px;
 	background-color: #f6f6f6;
-
 	.top-con {
 		width: 1200px;
 		margin: 0 auto;
@@ -128,6 +128,209 @@
 
 				a {
 					display: block;
+				}
+			}
+		}
+	}
+}
+//头部
+.header {
+	background-color: #fff;
+	min-width: 1200px;
+
+	.area {
+		width: 1200px;
+		position: relative;
+		height: 85px;
+		margin: 0 auto;
+		position: relative;
+
+		.logo {
+			background: url(../images/header-total.gif);
+			background-position: -78px -52px;
+			width: 210px;
+			height: 52px;
+			position: absolute;
+			top: 17px;
+		}
+		.protection {
+			position: absolute;
+			right: 290px;
+			background-position: 0 0;
+			height: 33px;
+			width: 465px;
+			top: 28px;
+			display: block;
+			background: url(../images/header-total.gif) no-repeat;
+
+			a {
+				display: block;
+				float: left;
+				height: 35px;
+				width: 108px;
+				margin: 0 0px 0 34px;
+				color: #5e5e5e;
+			}
+		}
+		.search {
+			top: 25px;
+			right: 0;
+			width: 237px;
+			height: 35px;
+			position: absolute;
+
+			input[type="text"] {
+				width: 166px;
+				height: 35px;
+				margin: 0px 0 0 10px;
+				border: none;
+				background: #efefef;
+				padding: 0px 10px;
+				line-height: 35px;
+				float: left;
+			}
+			input[type="submit"] {
+				background: url(../images/header-total.gif) no-repeat;
+				background-position: right -65px;
+				border: 0 none;
+				cursor: pointer;
+				height: 35px;
+				width: 37px;
+				float: left;
+			}
+		}
+	}
+}
+//mainNav导航
+.mainNav {
+	width: 100%;
+	min-width: 1200px;
+	height: 38px;
+	background: #fff;
+	border-bottom: 2px solid #ff464e;
+
+	.nav {
+		margin: 0 auto;
+		width: 1200px;
+		height: 38px;
+		font-size: 14px;
+
+		ul {
+			float: left;
+
+			a {
+				padding: 10px 24px 0;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.first{
+				background: #ff464e;
+				border-radius: 6px 6px 0 0;
+				text-align: center;
+				width: 210px;
+				height: 38px;
+
+				a {
+					color: #fff;
+					line-height: 38px;
+					width: 162px;
+				}
+			}
+			li {
+				line-height: 40px;
+				float: left;
+				margin-left: 0px;
+
+				a {
+				}
+			}
+			.phone-last {
+				position: relative;
+
+				a span {
+					position: absolute;
+					top: 11px;
+					left: 10px;
+					background: url(../images/phone-new.png);
+					width: 10px;
+					height: 16px;
+				}
+				.phone-in {
+					display: none;
+					background: #fff;
+					padding: 5px 5px 0 5px;
+					top: 42px;
+					left: -43px;
+					height: 180px;
+					position: absolute;
+					z-index: 10;
+
+					div {
+						width: 148px;
+						height: 148px;
+						overflow: hidden;
+					}
+					p {
+						line-height: 20px;
+						text-align: center;
+						font-size: 14px;
+						margin: 0;
+						padding: 0;
+						color: #999;
+					}
+				}
+			}
+		}
+		.state-show {
+			float: right;
+			line-height: 40px;
+			position: relative;
+
+			>span:first-child {
+				position: absolute;
+				left: -20px;
+				top: 13px;
+				background-image: url(../images/icon-total.png);
+				background-position: -84px -38px;
+				width: 16px;
+				height: 16px;
+			}
+			a {
+				color: #39c;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.normal-side-box {
+				display: none;
+				font-size: 12px;
+				line-height: 26px;
+				top: 39px;
+				right: 0;
+				width: 180px;
+				height: 140px;
+				color: #666;
+				border: solid #f00 1px;
+				position: absolute;
+				background-color: #f9f9f9;
+				text-align: center;
+				z-index: 10;
+
+				p:first-child {
+					background: #fff;
+					padding: 12px 0;
+				}
+				p {
+					a {
+						margin: 0 15px;
+					}
+					span {
+						color: #f00;
+						font-weight: bold;
+					}
 				}
 			}
 		}

@@ -1,49 +1,6 @@
 $(function() {
-	//请求toolbar
-	$.ajax({
-		url: '../tpl/toolbar.html',
-		type: 'POST',
-		dataType: 'text',
-		data: null,
-	})
-	.done(function (data) {
-		$("#toolbar").html(data);
-		getJs();
-	})
-	.fail(function() {
-		console.log("toolbar error");
-	});
-	//请求footer
-	$.ajax({
-		url: '../tpl/footer.html',
-		type: 'POST',
-		dataType: 'text',
-		data: null,
-	})
-	.done(function (data) {
-		$(".foot").html(data);
-		getJs();
-	})
-	.fail(function() {
-		console.log("toolbar error");
-	});
-	
-	//手机二维码show
-	$(".navigation li:last-child").on("mouseover",function() {
-		$(".phone-in").css("display","block");
-	});
-	$(".navigation li:last-child").on("mouseout",function() {
-		$(".phone-in").css("display","none");
-	});
-	//每日签到show
-	$(".state-show").on("mouseover",function() {
-		$(".normal-side-box").css("display","block");
-	});
-	$(".state-show").on("mouseout",function() {
-		$(".normal-side-box").css("display","none");
-	});
-	
-	
+	//请求公共资源
+	getCompart();
 	//初始化banner左边的menu
 	for (var i = 1; i < 15; i++) {
 		$(".top-menu dd:nth-child("+(i+1)+") i").css("background-position-x", -24*i);
@@ -63,7 +20,54 @@ $(function() {
 		$(this).children(".good_bottom").children('a').css({"display":"none"});
 	});
 	//轮播图
-	var i=0;
+	turnPic();
+	//倒计时
+	djsClock();
+	//加载goods list
+	getGoodList();
+	//侧栏fixed-right效果
+	$(".fixed-right ul li").on("mouseenter",function name() {
+		$(this).children(".tab-tips").css({"display":"block"});
+		$(this).children(".tab-tips").animate({right:36}, 300);
+	})
+	$(".fixed-right ul li").on("mouseleave",function name() {
+		$(this).children(".tab-tips").css({"right":"98px","display":"none"});
+	})
+	//returntop
+	$("#returntop").click(function() {
+		$("html,body").animate({scrollTop:$("#toolbar").offset().top+"px"},700);
+	});
+	//侧栏info close
+	$(".close").click(function() {
+		$("#side-login").css("display","none");
+	});
+	//打开购物车
+	var gwc_flg=0;
+	$(".gwd").click(function() {
+		if (gwc_flg==0) {
+			$(".shopping-cart").animate({"right": "36px"},200);
+			gwc_flg=1;
+			return false;
+		} else {
+			$(".shopping-cart").animate({"right": "-230px"},200);
+			gwc_flg=0;
+		}
+	});
+	$("body").click(function() {
+		if (gwc_flg==1) {
+			$(".shopping-cart").animate({"right": "-230px"},200);
+			gwc_flg=0;
+		} 
+	});
+	//close购物车
+	$(".cart_close").click(function() {
+		$(".shopping-cart").animate({"right": "-230px"},200);
+		gwc_flg=0;
+	});
+});
+
+function turnPic() {
+		var i=0;
 	var _timer=0;
 	function delay(){
 		$("#btn span").eq(i).css("border-color","transparent");
@@ -139,7 +143,8 @@ $(function() {
 	$("#arrow span.right").click(function(){
 		eventHandle($("#btn span").eq(++i)[0]);
 	});
-	//倒计时
+}
+function djsClock() {
 	function clock(time){
 		var _nowDate=new Date();
 		var _stopDate=new Date(time);
@@ -175,7 +180,8 @@ $(function() {
 	.fail(function() {
 		console.log("error");
 	})
-	//加载goods list
+}
+function getGoodList() {
 	var _s=10;
 	window.onscroll=function(){
 		var scrollh=$(document).scrollTop()//滚动条高度
@@ -248,48 +254,67 @@ $(function() {
 			str+='</li>';
 		}
 		//将请求回的信息添加到页面
-		//$(".goods-list").append(str);
+		$(".goods-list").append(str);
 	}
-	//侧栏fixed-right效果
-	$(".fixed-right ul li").on("mouseenter",function name() {
-		$(this).children(".tab-tips").css({"display":"block"});
-		$(this).children(".tab-tips").animate({right:36}, 300);
+}
+function getCompart() {
+	//请求toolbar
+	$.ajax({
+		url: '../tpl/toolbar.html',
+		type: 'POST',
+		dataType: 'text',
+		data: null,
 	})
-	$(".fixed-right ul li").on("mouseleave",function name() {
-		$(this).children(".tab-tips").css({"right":"98px","display":"none"});
+	.done(function (data) {
+		$("#toolbar").html(data);
+		getJs();
 	})
-	//returntop
-	$("#returntop").click(function() {
-		$("html,body").animate({scrollTop:$("#toolbar").offset().top+"px"},700);
+	.fail(function() {
+		console.log("toolbar error");
 	});
-	//侧栏info close
-	$(".close").click(function() {
-		$("#side-login").css("display","none");
+	//请求heard
+	$.ajax({
+		url: '../tpl/heard.html',
+		type: 'POST',
+		dataType: 'text',
+		data: null,
+	})
+	.done(function (data) {
+		$(".header").html(data);
+	})
+	.fail(function() {
+		console.log("header error");
 	});
-	//打开购物车
-	var gwc_flg=0;
-	$(".gwd").click(function() {
-		if (gwc_flg==0) {
-			$(".shopping-cart").animate({"right": "36px"},200);
-			gwc_flg=1;
-			return false;
-		} else {
-			$(".shopping-cart").animate({"right": "-230px"},200);
-			gwc_flg=0;
-		}
+	//请求mainNav
+	$.ajax({
+		url: '../tpl/nav.html',
+		type: 'POST',
+		dataType: 'text',
+		data: null,
+	})
+	.done(function (data) {
+		$(".mainNav").html(data);
+		$(".fi").addClass("first");
+		getJs();
+	})
+	.fail(function() {
+		console.log("mainNav error");
 	});
-	$("body").click(function() {
-		if (gwc_flg==1) {
-			$(".shopping-cart").animate({"right": "-230px"},200);
-			gwc_flg=0;
-		} 
+	//请求footer
+	$.ajax({
+		url: '../tpl/footer.html',
+		type: 'POST',
+		dataType: 'text',
+		data: null,
+	})
+	.done(function (data) {
+		$(".foot").html(data);
+
+	})
+	.fail(function() {
+		console.log("toolbar error");
 	});
-	//close购物车
-	$(".cart_close").click(function() {
-		$(".shopping-cart").animate({"right": "-230px"},200);
-		gwc_flg=0;
-	});
-});
+}
 function getJs() {
 	$.ajax({
 		url: '../js/compart.js',
