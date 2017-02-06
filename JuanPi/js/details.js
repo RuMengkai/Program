@@ -18,6 +18,8 @@ urlGet:function()
  }
 })
 })(jQuery);
+
+
 $(function() {
 	var GET = $.urlGet();
 	//商品编号
@@ -32,14 +34,29 @@ $(function() {
 		data: null,
 	})
 	.done(function(data) {
-		console.log(data[n]);
+		n=Number(n);
 		$(".bady-xx-seo").html(data[n]["desc"]);
 		$(".pic img").attr("src",data[n]["img_good"]);
 		$(".pic1 img").attr("src",data[n]["img_good"]);
+		$(".pic1").css("border","1px #666 solid");
+		$(".pic2 img").attr("src",data[n+1]["img_good"]);
+		$(".pic3 img").attr("src",data[n+2]["img_good"]);
+		$(".pic4 img").attr("src",data[n+3]["img_good"]);
+		$(".deal-wrap h1").html(data[n]["desc"]);
+		$(".js-cprice").html(data[n]["price"]);
+		$(".js-oprice").html(data[n]["sprice"]);
+		$(".js-discount").html(((data[n]["price"]*10)/(data[n]["sprice"])).toFixed(1));
 	})
 	.fail(function() {
 		console.log("error");
 	})
+	//图片切换效果
+	$(".picn li").on("mouseenter",function () {
+		$(this).parents().children("li").css("border","1px solid #f3f3f3");
+		$(this).css("border","1px #666 solid")
+		var img=$(this).children('a').children("img").attr("src");
+		$(".pic").children("img").attr("src",img);
+	});
 });
 //倒计时
 function djsClock(n) {

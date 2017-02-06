@@ -7,6 +7,10 @@ body{
 	float: left;
 	display: inline;
 }
+.fr {
+	float: right;
+	display: inline;
+}
 .main{
 	width: 1200px;
 	margin: 0px auto;
@@ -83,6 +87,85 @@ body{
 							height: 58px;
 						}
 					}
+				}
+			}
+		}
+		.deal-wrap {
+			width: 660px;
+			.fr;
+			position: relative;
+			h1 {
+				color: #333;
+				font-size: 16px;
+				height: 24px;
+				overflow: hidden;
+				width: auto;
+			}
+			.sector-info {
+				float: left;
+				display: inline;
+				line-height: 32px;
+				width: 560px;
+				.J-basic {
+					padding: 15px 0 8px 0;
+					border-bottom: 1px dotted #e2e2e2;
+					.tm-price {
+						line-height: 26px;
+						margin-top: 5px;
+						.price {
+							line-height: 32px;
+							i {
+								font-style: normal;
+								font-size: 20px;
+								width: 10px;
+								font-family: "微软雅黑","verdana";
+							}
+							.current {
+								font-size: 40px;
+								color: #ff464e;
+								.fl;
+								
+								span{
+									margin-left: -15px;
+								}
+							}
+							.discount {
+								text-indent: 15px;
+								color: #fff;
+								background: url(../images/discount-icon.gif) no-repeat;
+								height: 20px;
+								width: 51px;
+								line-height: 20px;
+								margin: 7px 3px 0;
+							}
+							.old {
+								color: #999;
+								text-decoration: line-through;
+							}
+						}
+					}
+				}
+				.J-other {
+					padding-top: 10px;
+					margin-top: 5px;
+					width: 500px;
+				}
+				.number {
+					margin-top: 10px;
+				}
+				.submit-go {
+					margin: 20px 0 0 45px;
+					float: left;
+					width: auto;
+					display: inline;
+					position: relative;
+				}
+				.sector-other {
+					width: 338px;
+					clear: both;
+					float: left;
+					margin: 20px 0 0 40px;
+					line-height: 20px;
 				}
 			}
 		}
