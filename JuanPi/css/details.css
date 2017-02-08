@@ -150,13 +150,214 @@ body {
   color: #999;
   text-decoration: line-through;
 }
+.main .goods_show .deal-wrap .sector-info .J-basic dt {
+  color: #999;
+  width: 50px;
+  float: left;
+  display: inline;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic dd {
+  float: left;
+  display: inline;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic dd .activity-c {
+  width: 450px;
+  float: left;
+  display: inline;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic dd .activity-c .activity-item {
+  color: #ff464e;
+  cursor: pointer;
+  padding-top: 10px;
+  position: relative;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic dd .activity-c .brand-tag-red {
+  font-family: '宋体';
+  color: #fff;
+  margin-right: 10px;
+  background: #ff464e;
+  padding: 0px 4px;
+  line-height: 16px;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic dd .activity-c .activity-item.manjian .info {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 16px;
+  width: 360px;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic dd .activity-c .activity-item.manjian .info .detail {
+  color: #666666;
+  margin-left: 5px;
+  display: inline-block;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic .freight .address {
+  display: inline;
+  cursor: pointer;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic .freight .address:hover .city {
+  display: block;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic .freight .by {
+  position: relative;
+  display: none;
+  font-size: 12px;
+  background-color: #ff464e;
+  padding: 2px 3px;
+  color: #fff;
+  vertical-align: middle;
+  -moz-box-orient: vertical;
+  line-height: 12px;
+  display: inline-block;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic .freight .city {
+  display: none;
+  position: absolute;
+  top: 138px;
+  left: 0;
+  width: 360px;
+  padding: 10px 0;
+  z-index: 11;
+  border: #e2e2e2 solid 1px;
+  background: #fff;
+  text-indent: 15px;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic .freight .city ul li {
+  width: 100px;
+  float: left;
+  width: 120px;
+  height: 24px;
+  line-height: 24px;
+}
+.main .goods_show .deal-wrap .sector-info .J-basic .freight .city ul li a:hover {
+  color: #00f;
+}
 .main .goods_show .deal-wrap .sector-info .J-other {
   padding-top: 10px;
   margin-top: 5px;
   width: 500px;
 }
+.main .goods_show .deal-wrap .sector-info .J-other dt {
+  float: left;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.color {
+  margin-top: 10px;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.color dd {
+  float: left;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.color dd ul li {
+  border-color: #ff464e;
+  border-width: 2px;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #ccc;
+  float: left;
+  display: inline;
+  margin: 0 5px 10px;
+  position: relative;
+  min-width: 34px;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.color dd ul li a {
+  position: relative;
+  background: #fff;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+  white-space: nowrap;
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.color dd ul li a img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  float: left;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.size {
+  margin-top: 10px;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.size dd {
+  float: left;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.size dd ul > li {
+  float: left;
+  margin-left: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  display: inline;
+  height: 34px;
+  line-height: 34px;
+  margin: 0 5px 10px;
+  position: relative;
+  min-width: 34px;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.size dd ul > li a {
+  position: relative;
+  background: #fff;
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+  white-space: nowrap;
+  color: #666;
+  cursor: pointer;
+  padding: 0 25px;
+}
+.main .goods_show .deal-wrap .sector-info .J-other dl.size dd ul > li:hover {
+  border: 1px solid #f00;
+}
+.main .goods_show .deal-wrap .sector-info .J-other .number {
+  margin-top: 10px;
+}
 .main .goods_show .deal-wrap .sector-info .number {
   margin-top: 10px;
+}
+.main .goods_show .deal-wrap .sector-info .number dd p {
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #e2e2e2;
+  float: left;
+  line-height: 26px;
+  margin-right: 10px;
+  height: 28px;
+  width: 104px;
+}
+.main .goods_show .deal-wrap .sector-info .number dd p i.no {
+  color: #e2e2e2;
+  cursor: default;
+}
+.main .goods_show .deal-wrap .sector-info .number dd p input {
+  background: #f6f6f6;
+  font-size: 14px;
+  border-color: #e2e2e2;
+  border-style: solid;
+  border-width: 0 1px;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  padding: 5px;
+  text-align: center;
+  width: 40px;
+  color: #8a8a8a;
+  font-family: "Arial";
+  display: inline;
+}
+.main .goods_show .deal-wrap .sector-info .number dd p i {
+  cursor: pointer;
+  display: block;
+  float: left;
+  font: bold 18px/26px "微软雅黑";
+  height: 28px;
+  text-align: center;
+  width: 26px;
 }
 .main .goods_show .deal-wrap .sector-info .submit-go {
   margin: 20px 0 0 45px;
@@ -165,10 +366,54 @@ body {
   display: inline;
   position: relative;
 }
+.main .goods_show .deal-wrap .sector-info .submit-go .btn {
+  text-align: center;
+  line-height: 50px;
+  background: #ff464e;
+  width: 180px;
+  height: 50px;
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  font-family: "微软雅黑", "宋体";
+  float: left;
+  border-radius: 2px;
+}
+.main .goods_show .deal-wrap .sector-info .submit-go .btn:hover {
+  background: #f00;
+}
 .main .goods_show .deal-wrap .sector-info .sector-other {
   width: 338px;
   clear: both;
   float: left;
   margin: 20px 0 0 40px;
   line-height: 20px;
+}
+.main .goods_show .deal-wrap .sector-info .sector-other div {
+  float: left;
+  margin-right: 30px;
+}
+.main .goods_show .deal-wrap .sector-info .sector-other div a {
+  color: #666;
+}
+.main .goods_show .deal-wrap .sector-info .sector-other div a:hover {
+  color: #f00;
+}
+.main .goods_show .deal-wrap .sector-info .sector-other div i {
+  width: 21px;
+  height: 17px;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: -4px;
+  margin-right: 5px;
+  background: url(../images/mall-total.gif) no-repeat;
+}
+.main .goods_show .deal-wrap .sector-info .sector-other .share-box i {
+  background-position: right -21px;
+  width: 20px;
+  height: 20px;
+  vertical-align: -5px;
+}
+.main .goods_show .deal-wrap .sector-info .sector-other .collect i {
+  background-position: -103px 2px;
 }

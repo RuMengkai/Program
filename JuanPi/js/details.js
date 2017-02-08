@@ -57,6 +57,18 @@ $(function() {
 		var img=$(this).children('a').children("img").attr("src");
 		$(".pic").children("img").attr("src",img);
 	});
+	//number
+	$(".increase").click(function() {
+		$(".decrease").removeClass("no");
+		$("#amount").val(Number($("#amount").val())+1);
+	});
+	$(".decrease").click(function() {
+		if ($("#amount").val()>0) {
+			$("#amount").val(Number($("#amount").val())-1);
+		}else{
+			$(this).addClass("no");
+		}
+	});
 });
 //倒计时
 function djsClock(n) {

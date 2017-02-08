@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/common.css"rel="stylesheet"/>
+    <link href="css/register.css"rel="stylesheet"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/register.js"></script>
+</head>
+<body>
+    <div id="box">
+        <div id="container">
+            <!--头部-->
+            <div class="header">
+                <img src="registerImages/tlogo.png"/>
+                <h2>欢迎加入沱沱工社</h2>
+            </div>
+            <!--中间内容部分-->
+            <div class="main_box">
+                <div class="main">
+                    <div class="title">
+                        <span class="personal_user">个人用户</span>
+                        <span class="company_user">企业用户</span>
+                        <span>已有账户？<i class="red">直接登录</i></span>
+                        <div class="move">
+                            <div class="trigger"></div>
+                        </div>
+                    </div>
+                    <!--注册信息-->
+                    <!--个人用户-->
+                    <!--input标签固定一行别用p-->
+                    <div class="section">
+                        <div class="left">
+                            <form>
+                                <div class="input">
+                                    <input type="text"placeholder="请输入手机号" class="phone_num"/>
+                                    <img src="registerImages/tc_no.png" class="fail flag phone_fail"/>
+                                    <img src="registerImages/tc_yes.png" alt="" class="success flag phone_success">
+                                    <span class="phone_void"><img src="registerImages/tc_tip.png"/>手机号不能为空</span>
+                                    <span class="phone_format"><img src="registerImages/tc_tip.png"/>手机号格式不正确，请重新输入</span>
+                                </div>
+                                <div class="input">
+                                    <input type="password"placeholder="请输入密码" class="password_num"/>
+                                    <img src="registerImages/tc_no.png" class="fail flag password_fail"/>
+                                    <img src="registerImages/tc_yes.png" alt="" class="success flag password_success">
+                                    <span class="password_void"><img src="registerImages/tc_tip.png"/>请输入密码</span>
+                                    <span class="password_format"><img src="registerImages/tc_tip.png"/>6-20个字符内，使用字母、数字或符号，区分大小写</span>
+                                </div>
+                                <div class="input">
+                                    <input type="password"placeholder="请再次输入密码" class="repeat_password"/>
+                                    <img src="registerImages/tc_no.png" class="fail flag repeat_fail"/>
+                                    <img src="registerImages/tc_yes.png" alt="" class="success flag repeat_success">
+                                    <span class="confirm"><img src="registerImages/tc_tip.png"/>请输入确认密码</span>
+                                    <span class="judge"><img src="registerImages/tc_tip.png"/>两次输入的密码不一致！</span>
+                                </div>
+                                <div class="input phone_big">
+                                    <div class="phone_box">
+                                        <div class="yan_box_left" >
+                                            <input type="text" placeholder="请输入图形验证码" class="img_ma" maxlength="4"/>
+                                            <img src="registerImages/tc_no.png" class="fail flag yan_fail"/>
+                                            <img src="registerImages/tc_yes.png" alt="" class="success flag yan_success">
+                                            <img src="registerImages/yanzhneg_03.png" class="yan_img"/>
+                                            <span class="yan yan_font_fail"><img src="registerImages/tc_tip.png"/>请输入4位的数字或字母</span>
+                                            <span class="fail yan_font_void"><img src="registerImages/tc_tip.png"/>验证码不能为空</span>
+                                            <span class="fail yan_font_reg"><img src="registerImages/tc_tip.png"/>校验图片验证码失败！</span>
+                                        </div>
+                                        <div class="yan_box_right">
+                                            <input type="text" placeholder="请输入手机验证码" class="phone_ma" maxlength="6"/>
+                                            <span class="second time_yan">
+                                                <i class="time_font"style="font-style: normal;">60秒重新发送</i>
+                                            </span>
+                                            <img src="registerImages/tc_no.png" class="fail flag phone_ma_fail"/>
+                                            <img src="registerImages/tc_yes.png" alt="" class="success flag phone_ma_success">
+                                            <span style="color:#37bd83;" class="yan_send">验证码发送成功</span>
+                                            <span class="phone_ma_void"><img src="registerImages/tc_tip.png"/>请填写短信验证码</span>
+                                            <span class="phone_ma_false"><img src="registerImages/tc_tip.png"/>您输入的验证码错误，请确认后重新填写！</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="song">
+                                    <span>未收到短信?</span>
+                                    <span class="green"><img src="images/switch_ico.png"/><span class="hover">切换语音验证码</span></span>
+                                </div>
+
+                            </form>
+                            <p class="item"><input type="checkbox" checked/>我已阅读并同意<span>《沱沱工社用户协议》</span></p>
+                            <span class="regular"><img src="registerImages/tc_tip.png"/>您必须同意沱沱工社用户协议才能注册</span>
+                            <div class="button">注册</div>
+                        </div>
+                        <div class="right">
+                            <img src="registerImages/5a3.jpg"/>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--企业用户-->
+                    <div class="company">
+                        <div class="top">
+                            <img src="registerImages/company_top.jpg"/>
+                        </div>
+                        <div class="center">
+                            <img src="registerImages/company_left.jpg"/>
+                            <img src="registerImages/company_right.jpg"/>
+                        </div>
+                        <div class="bottom">
+                            <img src="registerImages/company_bottom.jpg"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--底部-->
+            <div class="footer_box">
+                <div class="footer">
+                    <div class="top"></div>
+                    <p>
+                        <a href="#">关于我们</a>
+                        <span>|</span>
+                        <a href="#">联系我们</a>
+                        <span>|</span>
+                        <a href="#">服务条款</a>
+                        <span>|</span>
+                        <a href="#">友情链接</a>
+                        <span>|</span>
+                        <a href="#">网站地图</a>
+                        <span>|</span>
+                        <a href="#">帮助中心</a>
+                        <span>|</span>
+                        <a href="#">九城集团</a>
+                        <span>|</span>
+                        <a href="#">沱沱网</a>
+                        <span>|</span>
+                        <a href="#">企业员工内购</a>
+                    </p>
+                    <span class="font">Copyright © 2009-2015 沱沱工社 版权所有 京ICP证100205号 京ICP备09043401号 京公网安备110105019943</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

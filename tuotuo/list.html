@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/list.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/function.js" ></script>
+		<script type="text/javascript" src="js/list.js" ></script>
+	</head>
+	<body>
+		<div id="container">
+			<!--顶部登录注册固定定位部分-->
+	        <div id="login">
+	            <span>欢迎光临沱沱工社！|</span>
+	            <a class="login">登录</a>
+	            <span>|</span>
+	            <a href="register.html"target="_blank">注册</a>
+	            <span>|</span>
+	            <span class="song">送货至：</span>
+	            <div class="destination">
+	                <span>北京 东城区</span>
+	                <img src="images/city_choose.png"/>
+	            </div>
+	            <!--注意每个a标签增加左右内边距-->
+	            <ul>
+	                <li><a href="#">English</a><span>|</span></li>
+	                <li class="nav_two">
+	                    <a href="#" class="phone_tuo"><img src="images/icon_new1.png"/>手机沱沱</a><span>|</span>
+	                    <div class="phone_apple">
+	                        <img src="images/iPhone_icon_new.png"/>
+	                        <img src="images/Android_icon_new.png"/>
+	                        <img src="images/down_m_new.png"/>
+	                    </div>
+	                </li>
+	                <li class="nav_three">
+	                    <a href="#">我的沱沱</a><span>|</span>
+	                    <div class="my_tuotuo">
+	                        <a href="#">我的订单</a>
+	                        <a href="#">我的收藏</a>
+	                        <a href="#">积分兑换</a>
+	                        <a href="#">优惠券</a>
+	                        <a href="#">我的地址库</a>
+	                        <a href="#">邀请好友</a>
+	                    </div>
+	                </li>
+	                <li><a href="#">充值</a><span>|</span></li>
+	                <li><a href="#">提货</a></li>
+	            </ul>
+	        </div>
+	        <!--搜索-->
+	        <div id="search">
+	            <a href="#" class="logo"><img src="images/tlogo_01.png"/></a>
+	            <a href="#" class="yun"><img src="images/yun.jpg" /></a>
+	            <div class="search">
+	                <form action="#"class="form">
+	                    <input type="text" value="原浆橄榄油"class="search_input"/>
+	                    <input type="submit" value="搜索"/>
+	                </form>
+	                <p><span>热门搜索：</span>
+	                    <a href="#">农场蔬菜</a>
+	                    <a href="#">鸡蛋</a>
+	                    <a href="#">奇异果</a>
+	                    <a href="#">燕窝</a>
+	                    <a href="#">虾</a>
+	                    <a href="#">油</a>
+	                </p>
+	            </div>
+	            <div class="youji"></div>
+	            <div class="zhigong"></div>
+	            <div class="lenglian"></div>
+	        </div>
+	        <!--导航-->
+	        <div id="nav">
+            <a href="#">全部商品分类</a>
+            <a href="#">首页</a>
+            <a href="#">沱沱团</a>
+            <a href="#">沱沱礼品</a>
+            <a href="#">宅配卡</a>
+            <a href="#">沱沱农场</a>
+            <a href="#">入住沱沱</a>
+            <img src="images/baoyou.png"class="baoyou"/>
+            <img src="images/hot.gif" class="hot"/>
+        </div>
+		</div>
+		<!--标题-->
+		<div id="list_title">
+			全部分类  > 有机食品
+		</div>
+		<!--内容部分-->
+		<div id="main_box">
+			<!--左侧部分-->
+			<div id="left">
+				<div class="goods">
+					<div class="a">有机食品</div>
+					<div class="b ff">
+						<span>有机蔬菜水果</span>
+						<img src="images/list/i_arrow_dl.png" />
+					</div>
+					<div class="b_list">
+						<p>有机蔬菜</p>
+						<p>有机水果</p>
+					</div>
+					
+					<div class="c b ff">
+						<span>有机肉禽蛋奶</span>
+						<img src="images/list/i_arrow_dl.png" />
+					</div>
+					<div class="b_list c_list">
+						<p>有机奶</p>
+						<p>有机蛋类</p>
+						<p>有机猪肉</p>
+						<p>有机牛羊肉</p>
+						<p>有机禽类</p>
+					</div>
+					
+					<div class="d b ff">
+						<span>有机粮油副食</span>
+						<img src="images/list/i_arrow_dl.png" />
+					</div>
+					<div class="b_list d_list">
+						<p>有机米/面/杂粮</p>
+						<p>有机食用油/干货/调味品</p>
+					</div>
+					
+					<div class="e b gg">
+						<span>有机休食冲饮</span>
+						<img src="images/list/i_arrow_dl.png" />
+					</div>
+					<div class="b_list e_list">
+						<p>有机休食冲饮</p>
+					</div>
+				</div>
+				<!--热销排行-->
+				<div class="hot_title">
+					热销排行
+				</div>
+				<div class="hot_goods">
+					<div class="hot1">
+						<img src="images/list/hot1.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+					
+					<div class="hot1">
+						<img src="images/list/hot2.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+					
+					<div class="hot1">
+						<img src="images/list/hot3.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+					
+					<div class="hot1">
+						<img src="images/list/hot4.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+					
+					<div class="hot1">
+						<img src="images/list/hot1.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+					
+					<div class="hot1">
+						<img src="images/list/hot2.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+					
+					<div class="hot1">
+						<img src="images/list/hot3.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+					
+					<div class="hot1">
+						<img src="images/list/hot4.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+					
+					<div class="hot1">
+						<img src="images/list/hot2.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+					
+					<div class="hot1">
+						<img src="images/list/hot3.jpg" />
+						<div class="a_nowrap">
+							<a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a>
+						</div>
+						<span class="price"><span class="small">￥</span>19.90</span>
+						<div class="add_car">
+							<span class="font">加入购物车</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--右侧部分-->
+			<div id="right">
+				<div class="texing">
+					<span class="a">特性：</span>
+					<span class="b">国产</span>
+					<span class="c b">有机</span>
+					<span class="d b">沱沱自营</span>
+				</div>
+				<div class="pinpai texing">
+					<span class="a">品牌：</span>
+					<span class="b">沱沱工社</span>
+					<span class="p_e b">孟宗笋业</span>
+					<span class="p_e b">顺意生</span>
+					<span class="p_e b">哈东金</span>
+					<span class="b p_e">其他</span>
+				</div>
+				<!--排序-->
+				<div class="order">
+					<div class="paixu">
+						<span class="aa">排序：</span>
+						<span class="border">销量</span>
+						<span class="border">促销</span>
+						<span class="border">价格</span>
+						<span class="border border_">新上架</span>
+						<span class="border border_">人气度</span>
+					</div>
+					<div class="shaixuan">
+						<span class="aa">筛选：</span>
+						<input type="checkbox" class="check"/>
+						<span class="font">会员折扣</span>
+						<input type="checkbox" class="check"/>
+						<span class="font">仅显示可送达</span>
+					</div>
+				</div>
+				<!--商品-->
+				<div class="hot_goods">
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods1.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods2.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods3.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1">
+						<img src="images/list/goods4.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods5.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods6.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods7.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1">
+						<img src="images/list/goods8.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods9.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods10.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods11.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					<div class="hot1_1">
+						<img src="images/list/goods12.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods13.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods14.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods15.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1">
+						<img src="images/list/goods16.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods17.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods18.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1 m_right">
+						<img src="images/list/goods19.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="hot1_1">
+						<img src="images/list/goods20.jpg" class="hot_img"/>
+						<a href="#"><span class="red">【沱沱工社】</span>有机油菜 约400g/份</a>
+						<span class="red">农场有机种植油菜</span>
+						<p class="price"><span>￥19.80</span></p>
+						<span class="bj">北京有货</span>
+						<a href="#" class="pl">已有2375条评论</a>
+						<div class="add_car">
+							<span class="num">1</span>
+							<div class="cal">
+								<span class="add">+</span>
+								<span class="jian">-</span>
+							</div>
+							<div class="add_car_">
+								<span class="car_font">加入购物车</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--底部上-->
+	    <div id="footer1">
+	        <ul>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	        </ul>
+	    </div>
+	
+	    <!--底部中-->
+	    <div id="footer2">
+	        <div class="left">
+	            <ul>
+	                <li>食品安全</li>
+	                <li><a href="#">自营沱沱有机农场</a></li>
+	                <li><a href="#">沱沱工社采购标准</a></li>
+	                <li><a href="#">透明社区经营理念</a></li>
+	                <li><a href="#">我们的资质</a></li>
+	            </ul>
+	
+	            <ul>
+	                <li>新手教程</li>
+	                <li><a href="#">购物流程</a></li>
+	                <li><a href="#">注册登录</a></li>
+	                <li><a href="#">账户充值</a></li>
+	                <li><a href="#">如何提货</a></li>
+	                <li><a href="#">会员政策</a></li>
+	            </ul>
+	
+	            <ul>
+	                <li>配送方式</li>
+	                <li><a href="#">配送范围</a></li>
+	                <li><a href="#">运费标准</a></li>
+	            </ul>
+	
+	            <ul>
+	                <li>支付方式</li>
+	                <li><a href="#">在线支付</a></li>
+	                <li><a href="#">账户余额支付</a></li>
+	                <li><a href="#">多种福利卡</a></li>
+	            </ul>
+	
+	            <ul>
+	                <li>售后服务</li>
+	                <li><a href="#">退换货政策</a></li>
+	                <li><a href="#">退换货流程</a></li>
+	                <li><a href="#">退款</a></li>
+	                <li><a href="#">投诉建议</a></li>
+	            </ul>
+	
+	            <ul>
+	                <li>帮助信息</li>
+	                <li><a href="#">安全食品采购指南</a></li>
+	                <li><a href="#">常见问题</a></li>
+	                <li><a href="#">电子优惠券的使用</a></li>
+	                <li><a href="#">礼品卡</a></li>
+	            </ul>
+	        </div>
+	        <div class="right">
+	            <div class="a">
+	                <h2>客户端下载</h2>
+	                <img src="images/down_m_new.png" class="ma"/>
+	                <img src="images/down.png"/>
+	            </div>
+	            <div class="b">
+	                <h2>关注沱沱微信</h2>
+	                <img src="images/weixian_er.png"class="ma"/>
+	                <img src="images/weix_span.png"/>
+	            </div>
+	        </div>
+	    </div>
+	
+	    <!--底部下-->
+	    <div id="footer3">
+        <p class="top">
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">联系我们</a><span>|</span>
+            <a href="#">服务条款</a><span>|</span>
+            <a href="#">友情链接</a><span>|</span>
+            <a href="#">网站地图</a><span>|</span>
+            <a href="#">帮助中心</a><span>|</span>
+            <a href="#">沱沱网</a><span>|</span>
+            <a href="#">企业员工内购</a>
+        </p>
+        <p class="bottom">
+            Copyright © 2009-2015 北京沱沱工社生态农业股份有限公司
+            版权所有 京ICP证100205号 京ICP备09043401号 京公网安备110105019943 食品流通许可证编号SP1101091310024845
+        </p>
+    </div>
+	</body>
+</html>

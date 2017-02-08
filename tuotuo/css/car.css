@@ -1,0 +1,179 @@
+#car{
+	width: 380px;
+	height: 500px;
+	background: url(../images/shoppcart4.jpg);
+	margin: 20px auto;
+	border-radius: 8px;
+	position: relative;
+	padding-top: 1px;
+}
+#car span.close_car{
+	display: inline-block;
+	width: 42px;
+	height: 16px;
+	background:url(../images/shoppcart3.jpg);
+	position: absolute;
+	right: 15px;
+	cursor: pointer;
+}
+#car .to_buy{
+	height: 55px;
+	width: 380px;
+	margin-top: 16px;
+	text-align: center;
+}
+#car .to_buy .many_go{
+	display: inline-block;
+	width: 249px;
+	height: 40px;
+	background: url(../images/shoppcart5.jpg);
+	margin-top: 5px;
+	cursor: pointer;
+}
+#car .goods{
+	width: 365px;
+	height: 417px;
+	border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    background: #fff;
+    margin-left: 8px;
+}
+#car .goods .box{
+	height: 382px;
+	overflow: auto;
+}
+#car .goods .box .top_num{
+	height: 30px;
+	background: #f0f0f0;
+	font-size: 12px;
+	line-height: 30px;
+	
+}
+#car .goods .box .top_num h3{
+	font-size: 12px;
+	float: left;
+	margin-right: 11px;
+	margin-left: 11px;
+}
+#car .goods .box .top_num .num{
+	color: #FF3300;
+	font-weight: bold;
+}
+#car .goods .box .top_num .how_many{
+	margin-left: 85px;
+}
+#car .goods .box .top_num .how_many .many_m{
+	color: #FF3300;
+	font-weight: bold;
+}
+#car .goods .box .top_num .how_many .many{
+	color: #FF3300;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+#car .goods .box .goods_detail{
+	padding-left: 10px;
+}
+#car .goods .box .goods_detail li{
+	height: 61px;
+	width: 335px;
+	border-bottom: 1px dashed #D1D1D1;
+	padding-top: 12px;
+	position: relative;
+}
+#car .goods .box .goods_detail li .a_num{
+	float: left;
+	width: 32px;
+	height: 42px;
+	background: url(../images/car/shoppcart11.jpg);
+	text-align: center;
+	line-height: 42px;
+}
+#car .goods .box .goods_detail li .b_add{
+	float: left;
+	width: 33px;
+	height: 42px;
+}
+#car .goods .box .goods_detail li .b_add .add{
+	display: inline-block;
+	width: 33px;
+	height: 21px;
+	float: left;
+	background: url(../images/car/shoppcart12.jpg);
+	cursor: pointer;
+}
+#car .goods .box .goods_detail li .b_add .jian{
+	display: inline-block;
+	width: 33px;
+	height: 21px;
+	float: left;
+	background: url(../images/car/shoppcart13.jpg);
+	cursor: pointer;
+}
+#car .goods .box .goods_detail li .c_img{
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin: 0 10px 0 6px;
+}
+#car .goods .box .goods_detail li .d_font{
+	float: left;
+	width: 158px;
+	height: 55px;
+	font-size: 12px;
+}
+#car .goods .box .goods_detail li .d_font a{
+	color: #000;
+}
+#car .goods .box .goods_detail li .d_font a:hover{
+	color: #FF0000;
+	text-decoration: underline;
+}
+#car .goods .box .goods_detail li .d_font p{
+	margin-top: 15px;
+}
+#car .goods .box .goods_detail li .delete{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../images/car/newshopp_img16.jpg);
+	position: absolute;
+	top: 10px;
+	right: 0;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

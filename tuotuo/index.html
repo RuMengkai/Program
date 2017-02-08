@@ -1,0 +1,2879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/common.css"rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/function.js" type="text/javascript"></script>
+    <script src="js/demo.js" type="text/javascript"></script>
+</head>
+<body>
+    <!--登录遮罩层-->
+    <div id="zhegai"></div>
+    <div id="container">
+        <!--顶部登录注册固定定位部分-->
+        <div id="login">
+            <span>欢迎光临沱沱工社！|</span>
+            <a class="login">登录</a>
+            <span>|</span>
+            <a href="register.html"target="_blank">注册</a>
+            <span>|</span>
+            <span class="song">送货至：</span>
+            <div class="destination">
+                <span>北京 东城区</span>
+                <img src="images/city_choose.png"/>
+            </div>
+            <ul>
+                <li><a href="#">English</a><span>|</span></li>
+                <li class="nav_two">
+                    <a href="#" class="phone_tuo"><img src="images/icon_new1.png"/>手机沱沱</a><span>|</span>
+                    <div class="phone_apple">
+                        <img src="images/iPhone_icon_new.png"/>
+                        <img src="images/Android_icon_new.png"/>
+                        <img src="images/down_m_new.png"/>
+                    </div>
+                </li>
+                <li class="nav_three">
+                    <a href="#">我的沱沱</a><span>|</span>
+                    <div class="my_tuotuo">
+                        <a href="#">我的订单</a>
+                        <a href="#">我的收藏</a>
+                        <a href="#">积分兑换</a>
+                        <a href="#">优惠券</a>
+                        <a href="#">我的地址库</a>
+                        <a href="#">邀请好友</a>
+                    </div>
+                </li>
+                <li><a href="#">充值</a><span>|</span></li>
+                <li><a href="#">提货</a></li>
+            </ul>
+        </div>
+
+        <!--登录页面-->
+        <div id="loginPage">
+            <div class="drag">
+                <span>登录沱沱账号</span>
+                <img src="images/close1.png" class="close"/>
+            </div>
+            <div class="container">
+                <div class="title">
+                    <h2>用户登录</h2>
+                    <span class="register">没有沱沱账号？<a class="red" href="#">立即注册></a></span>
+                </div>
+                <div class="move_box">
+                    <div class="move_left">
+                        <div class="message">
+                            <span class="message_login1">
+                                <span class="bg"></span>
+                                <span class="quick">短信快捷登录</span>
+                            </span>
+                        </div>
+
+                        <form>
+                            <div class="username">
+                                <input type="text"placeholder="请输入邮箱地址/卡号/手机号！" class="user_text"/>
+                                <span class="user_void"><img src="registerImages/tc_tip.png"/>用户名不能为空，请输入用户名</span>
+                                <span class="user_no_exist"><img src="registerImages/tc_tip.png"/>很抱歉，您输入的用户名不存在</span>
+                                <img src="registerImages/tc_no.png" class="fail flag user_fail"/>
+                                <img src="registerImages/tc_yes.png" alt="" class="success flag user_success">
+                            </div>
+
+                            <div class="password">
+                                <input type="password"placeholder="请输入密码" class="password_text"/>
+                                <span class="password_void"><img src="registerImages/tc_tip.png"/>请输入密码</span>
+                                <span class="password_no_exist"><img src="registerImages/tc_tip.png"/>您输入的密码错误</span>
+                                <span class="password_format"><img src="registerImages/tc_tip.png"/>请输入6-20位的数字或字母</span>
+                                <img src="registerImages/tc_no.png" class="fail flag password_fail"/>
+                                <img src="registerImages/tc_yes.png" alt="" class="success flag password_success">
+                            </div>
+
+                        </form>
+                        <div class="auto">
+                            <input type="checkbox" class="check"/>
+                            <span class="auto_login">30天内自动登录</span>
+                            <span class="pass">忘记密码？</span>
+                        </div>
+                        <div class="button">登录</div>
+                        <div class="hezuo">
+                            <span class="left line"></span>
+                            <span class="font">使用合作网站方式登录沱沱工社</span>
+                            <span class="right line"></span>
+                        </div>
+                        <div class="kehu">
+                            <span class="left image"></span>
+                            <span class="center image"></span>
+                            <span class="right image"></span>
+                        </div>
+                    </div>
+                    <div class="move_right">
+                        <div class="message">
+                            <span class="message_login2">
+                                <span class="bg"></span>
+                                <span class="quick">返回普通登录</span>
+                            </span>
+                        </div>
+
+                        <form>
+                            <div class="phone_num">
+                                <input type="text"placeholder="请输入手机号" class="phone_text"/>
+                                <span class="phone_void"><img src="registerImages/tc_tip.png"/>手机号不能为空</span>
+                                <span class="phone_format"><img src="registerImages/tc_tip.png"/>手机号格式不正确，请重新输入</span>
+                                <img src="registerImages/tc_no.png" class="fail flag phone_num_wrong"/>
+                                <img src="registerImages/tc_yes.png" alt="" class="success flag phone_num_right">
+                            </div>
+                            <div class="phone_yan">
+                                <input type="text"placeholder="请输入手机验证码" class="ma_text"maxlength="6"/>
+                                <span class="sendMa">发送验证码</span>
+                                <span class="phone_ma"><img src="registerImages/tc_tip.png"/>请填写短信验证码</span>
+                                <span class="phone_fail"><img src="registerImages/tc_tip.png"/>验证码错误，请重新输入!</span>
+                                <img src="registerImages/tc_no.png" class="fail flag phone_yan_wrong"/>
+                                <img src="registerImages/tc_yes.png" alt="" class="success flag phone_yan_right">
+                            </div>
+                        </form>
+                        <div class="song">
+                            <span>未收到短信?</span>
+                            <span class="green"><img src="images/switch_ico.png"/><span class="hover">切换语音验证码</span></span>
+                        </div>
+                        <div class="tip">
+                            温馨提示：未注册沱沱的手机号，登录时将自动注册沱沱账号，并代表您已同意
+                            <span>《沱沱工社用户协议》</span>
+                        </div>
+                        <div class="button">登录</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--广告-->
+        <div id="gg">
+            <img src="images/guanggao.jpg" class="gg"/>
+            <img src="images/search_918_tit20.jpg" class="close"/>
+        </div>
+        <!--搜索-->
+        <div id="search">
+            <a href="#" class="logo"><img src="images/tlogo_01.png"/></a>
+            <a href="#" class="yun"><img src="images/yun.jpg" /></a>
+            <div class="search">
+                <form action="#"class="form">
+                    <input type="text" value="原浆橄榄油"class="search_input"/>
+                    <input type="submit" value="搜索"/>
+                </form>
+                <p><span>热门搜索：</span>
+                    <a href="#">农场蔬菜</a>
+                    <a href="#">鸡蛋</a>
+                    <a href="#">奇异果</a>
+                    <a href="#">燕窝</a>
+                    <a href="#">虾</a>
+                    <a href="#">油</a>
+                </p>
+            </div>
+            <div class="youji"></div>
+            <div class="zhigong"></div>
+            <div class="lenglian"></div>
+        </div>
+        <!--导航-->
+        <div id="nav">
+            <a href="#">全部商品分类</a>
+            <a href="#">首页</a>
+            <a href="#">沱沱团</a>
+            <a href="#">沱沱礼品</a>
+            <a href="#">宅配卡</a>
+            <a href="#">沱沱农场</a>
+            <a href="#">入住沱沱</a>
+            <img src="images/baoyou.png"class="baoyou"/>
+            <img src="images/hot.gif" class="hot"/>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div id="player">
+        <div class="player">
+            <div class="slide1 slide"></div>
+            <div class="slide2 slide"></div>
+            <div class="slide3 slide"></div>
+            <div class="slide4 slide"></div>
+            <div class="slide5 slide"></div>
+            <div class="slide6 slide"></div>
+            <div class="slide7 slide"></div>
+            <div class="slide8 slide"></div>
+            <div class="slide9 slide"></div>
+            <div class="slide10 slide"></div>
+        </div>
+        <div class="player_box">
+            <!--左侧导航-->
+            <div class="player_left">
+                <ul>
+                    <li class="li1">
+                        <div class="li">
+                            <span class="bg_img"></span>
+                            <a href="#">有机食品</a>
+                            <span class="small_jiao"><strong> > </strong></span>
+                        </div>
+
+                    </li>
+                    <li class="li2">
+                        <div class="li">
+                            <span class="bg_img"></span>
+                            <a href="#">蔬菜水果</a>
+                            <span class="small_jiao"><strong> > </strong></span>
+                        </div>
+
+                    </li>
+                    <li class="li3">
+                        <div class="li">
+                            <span class="bg_img"></span>
+                            <a href="#">肉类禽蛋</a>
+                            <span class="small_jiao"><strong> > </strong></span>
+                        </div>
+
+                    </li>
+                    <li class="li4">
+                        <div class="li">
+                            <span class="bg_img"></span>
+                            <a href="#">海鲜水产</a>
+                            <span class="small_jiao"><strong> > </strong></span>
+                        </div>
+
+                    </li>
+                    <li class="li5">
+                        <div class="li">
+                            <span class="bg_img"></span>
+                            <a href="#">奶类/烘焙</a>
+                            <span class="small_jiao"><strong> > </strong></span>
+                        </div>
+
+                    </li>
+                    <li class="li6">
+                        <div class="li">
+                            <span class="bg_img"></span>
+                            <a href="#">粮油副食</a>
+                            <span class="small_jiao"><strong> > </strong></span>
+                        </div>
+
+                    </li>
+                    <li class="li7">
+                        <div class="li">
+                            <span class="bg_img"></span>
+                            <a href="#">休食冲饮</a>
+                            <span class="small_jiao"><strong> > </strong></span>
+                        </div>
+
+                    </li>
+                    <li class="li8">
+                        <div class="li">
+                            <span class="bg_img"></span>
+                            <a href="#">生态日用</a>
+                            <span class="small_jiao"><strong> > </strong></span>
+                        </div>
+
+                    </li>
+
+                </ul>
+                <div class="left_detail">
+                    <div class="show_list" >
+                        <div class="one">
+                            <h2><a href="#">有机蔬菜水果</a></h2>
+                            <a href="#" class="one_a">有机蔬菜</a>
+                            <a href="#" class="one_a">有机水果</a>
+                        </div>
+                        <div class="two">
+                            <h2><a href="#">有机肉禽蛋奶</a></h2>
+                            <a href="#" class="one_a">有机奶</a>
+                            <a href="#" class="one_a">有机蛋类</a>
+                            <a href="#" class="one_a">有机猪肉</a>
+                            <a href="#" class="one_a">有机牛羊肉</a>
+                            <a href="#" class="one_a">有机禽类</a>
+                        </div>
+                        <div class="three">
+                            <h2><a href="#">有机粮油副食</a></h2>
+                            <a href="#" class="one_a">有机米/面/杂粮</a>
+                            <a href="#" class="one_a">有机食用油/干货/调味品</a>
+                        </div>
+                        <div class="four">
+                            <h2><a href="#">有机休食冲饮</a></h2>
+                            <a href="#" class="one_a">有机休食冲饮</a>
+                        </div>
+                    </div>
+
+                    <div class="show_list">
+                        <div class="one">
+                            <h2><a href="#">蔬菜类</a></h2>
+                            <a href="#" class="one_a">有机蔬菜</a>
+                            <a href="#" class="one_a">地方特产蔬菜/菌类</a>
+                            <a href="#" class="one_a">沱沱农场自产蔬菜</a>
+                        </div>
+                        <div class="one">
+                            <h2><a href="#">水果类</a></h2>
+                            <a href="#" class="one_a">有机水果</a>
+                            <a href="#" class="one_a">国产水果</a>
+                            <a href="#" class="one_a">进口水果</a>
+                        </div>
+                    </div>
+
+                    <div class="show_list li3_div">
+                            <div class="one ">
+                                <h2><a href="#">牛羊肉</a></h2>
+                                <a href="#" class="one_a" style="color: #e84f6e;">有机牛羊肉</a>
+                                <a href="#" class="one_a">进口牛羊肉</a>
+                                <a href="#" class="one_a" style="color: #e84f6e;">精品牛羊肉</a>
+                            </div>
+                            <div class="one">
+                                <h2><a href="#">猪肉</a></h2>
+                                <a href="#" class="one_a">有机猪肉</a>
+                                <a href="#" class="one_a" style="color: #e84f6e;">进口猪肉</a>
+                                <a href="#" class="one_a" style="color: #e84f6e;">国产猪肉</a>
+                                <a href="#" class="one_a" style="color: #e84f6e;">农场自养猪肉</a>
+                            </div>
+                            <div class="one">
+                                <h2><a href="#">禽类</a></h2>
+                                <a href="#" class="one_a">有机禽类</a>
+                                <a href="#" class="one_a">散养禽类</a>
+                            </div>
+                            <div class="one">
+                                <h2><a href="#">蛋类</a></h2>
+                                <a href="#" class="one_a" style="color: #e84f6e;">有机蛋类</a>
+                                <a href="#" class="one_a">散养蛋类</a>
+                            </div>
+                            <div class="one">
+                                <h2><a href="#">牛排/半成品</a></h2>
+                                <a href="#" class="one_a">牛排/半成品</a>
+                            </div>
+                            <div class="one">
+                                <h2><a href="#">中西式熟食</a></h2>
+                                <a href="#" class="one_a">中西式熟食</a>
+                            </div>
+                        </div>
+
+                    <div class="show_list li3_div">
+                            <div class="one ">
+                                <h2><a href="#">鱼/虾</a></h2>
+                                <a href="#" class="one_a" >虾</a>
+                                <a href="#" class="one_a"style="color: #1594e3;">鱼</a>
+                            </div>
+                            <div class="one">
+                                <h2 style="width: 115px;"><a href="#">参/贝/蟹/鲍/海菜</a></h2>
+                                <a href="#" class="one_a" style="margin-left: 6px;">参/贝/蟹/鲍/海菜</a>
+                            </div>
+                        </div>
+
+                    <div class="show_list li3_div">
+                            <div class="one ">
+                                <h2><a href="#">奶制品</a></h2>
+                                <a href="#" class="one_a" >有机奶</a>
+                                <a href="#" class="one_a">牛奶/酸奶</a>
+                                <a href="#" class="one_a">奶酪/黄油</a>
+                            </div>
+                            <div class="one">
+                                <h2 ><a href="#">烘焙/面点</a></h2>
+                                <a href="#" class="one_a">烘焙/面点</a>
+                            </div>
+                        </div>
+
+                    <div class="show_list li3_div">
+                            <div class="one ">
+                                <h2><a href="#">米/面/杂粮</a></h2>
+                                <a href="#" class="one_a" >有机米/面/杂粮</a>
+                                <a href="#" class="one_a">米</a>
+                                <a href="#" class="one_a">面粉/面条</a>
+                                <a href="#" class="one_a">杂粮</a>
+                                <a href="#" class="one_a" style="color: #ea6c06;">沱沱自有</a>
+                            </div>
+                            <div class="two">
+                                <h2>
+                                    <a href="#" style="line-height: 20px;">食用油/干货/调味品</a>
+                                </h2>
+                                <a href="#" class="one_a">有机食用油/干货/调味品</a>
+                                <a href="#" class="one_a">干货</a>
+                                <a href="#" class="one_a">食用油</a>
+                                <a href="#" class="one_a">调味品</a>
+                                <a href="#" class="one_a" style="color: #ea6c06;">沱沱自有</a>
+                            </div>
+                        </div>
+
+                    <div class="show_list li3_div">
+                            <div class="two ">
+                                <h2><a href="#">冲调品/休食类</a></h2>
+                                <a href="#" class="one_a" style="color: #995629;">有机休食冲饮</a>
+                                <a href="#" class="one_a">蜂蜜/麦片</a>
+                                <a href="#" class="one_a">果汁/茶</a>
+                                <a href="#" class="one_a">坚果干果</a>
+                                <a href="#" class="one_a">特色食品</a>
+                            </div>
+                        </div>
+
+                    <div class="show_list li3_div">
+                            <div class="one ">
+                                <h2><a href="#">环保纸</a></h2>
+                                <a href="#" class="one_a" >环保纸</a>
+                            </div>
+                            <div class="two">
+                                <h2 ><a href="#">健康家纺</a></h2>
+                                <a href="#" class="one_a">毛巾/浴巾</a>
+                                <a href="#" class="one_a">寝室用品</a>
+                                <a href="#" class="one_a">成人内衣服饰</a>
+                                <a href="#" class="one_a">婴幼童服饰</a>
+                                <a href="#" class="one_a">成人/幼童袜</a>
+                            </div>
+                            <div class="one ">
+                                <h2><a href="#">清洁用品</a></h2>
+                                <a href="#" class="one_a"style="color:#97c008;" >衣物清洁</a>
+                                <a href="#" class="one_a" >厨房清洁</a>
+                                <a href="#" class="one_a" >卫浴清洁</a>
+                            </div>
+                            <div class="two">
+                                <h2 ><a href="#">个人护理</a></h2>
+                                <a href="#" class="one_a">口腔护理</a>
+                                <a href="#" class="one_a">面部/身体护理</a>
+                                <a href="#" class="one_a">女性护理</a>
+                                <a href="#" class="one_a">母婴洗浴</a>
+                                <a href="#" class="one_a">美发洗护</a>
+                                <a href="#" class="one_a">口罩</a>
+                            </div>
+                            <div class="one ">
+                                <h2><a href="#">健康家电</a></h2>
+                                <a href="#" class="one_a" >食品理料机</a>
+                                <a href="#" class="one_a" style="color:#97c008;">净化器</a>
+                                <a href="#" class="one_a" >电饭锅/杯/壶</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <!--右侧广告-->
+            <div class="player_right">
+                <img src="images/left_checken.jpg"/>
+            </div>
+            <!--中间部分-->
+            <div class="player_center">
+                <!--分页器-->
+                <div class="tab_page">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <!--左右按钮-->
+                <div class="tab_left"></div>
+                <div class="tab_right"></div>
+            </div>
+        </div>
+    </div>
+    <!--无缝滚动-->
+    <div id="roll">
+        <!--左按钮-->
+        <div class="left_button button"></div>
+        <!--中间滚动内容-->
+        <div class="roll_center">
+            <div class="content">
+                <div class="img1 img_roll">
+                    <img src="images/gun1.jpg"/>
+                    <span>广告</span>
+                </div>
+                <div class="img2 img_roll">
+                    <img src="images/gun2.jpg"/>
+                    <span>广告</span>
+                </div>
+                <div class="img3 img_roll">
+                    <img src="images/gun3.jpg"/>
+                    <span>广告</span>
+                </div>
+                <div class="img4 img_roll">
+                    <img src="images/gun4.jpg"/>
+                    <span>广告</span>
+                </div>
+                <div class="img5 img_roll">
+                    <img src="images/gun5.jpg"/>
+                    <span>广告</span>
+                </div>
+                <div class="img6 img_roll">
+                    <img src="images/gun6.jpg"/>
+                    <span>广告</span>
+                </div>
+                <div class="img7 img_roll">
+                    <img src="images/gun7.jpg"/>
+                    <span>广告</span>
+                </div>
+                <div class="img8 img_roll">
+                    <img src="images/gun8.jpg"/>
+                    <span>广告</span>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!--右按钮-->
+        <div class="right_button button"></div>
+    </div>
+
+    <!--悬浮切换部分-->
+    <div id="change">
+        <!--标题按钮部分-->
+        <div class="title">
+            <span class="font initial" index="0">沱沱力荐</span>
+            <span class="font" index="1">超值热卖</span>
+            <span class="font" index="2">包邮直达</span>
+            <img src="images/new.png"/>
+        </div>
+        <!--切换的内容部分-->
+
+        <div class="main_content">
+            <!--沱沱力荐-->
+            <div class="content recommend show">
+                <div class="content_img">
+                    <img src="images/change/recommend1.jpg"class="c_img"/>
+                    <p><a href="#">智利进口大樱桃（JJ车厘子）约500g/盒</a></p>
+                    <span class="name">饱满多汁 鲜甜可口</span><br/>
+                    <span class="price">￥46.80</span>
+                    <span class="gg">广告</span>
+                    <span class="hot"><img src="images/change/hot.png"/></span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/recommend2.jpg"class="c_img"/>
+                    <p><a href="#">砂糖桔   约1kg/份</a></p>
+                    <span class="name">精心挑选 品质上乘</span><br/>
+                    <span class="price">￥15.60</span>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/recommend3.jpg"class="c_img"/>
+                    <p><a href="#">阿根廷牛腱子 1kg/袋</a></p>
+                    <span class="name">补货囤货！肉中骄子</span><br/>
+                    <span class="price">￥59.00</span>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/recommend4.jpg"class="c_img"/>
+                    <p><a href="#">易盛玖灰芦花▪鸡小胸1000g/袋</a></p>
+                    <span class="name">高蛋白、低脂肪</span><br/>
+                    <span class="price">￥19.90</span>
+                    <span class="gg">广告</span>
+                    <span class="hot"><img src="images/change/hot.png"/></span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/recommend5.jpg"class="c_img"/>
+                    <p><a href="#"> Vanoni‘s厄瓜多尔白虾60-70头 约2kg/盒（原装进口）</a></p>
+                    <span class="name">壳薄、体肥、肉质鲜美</span><br/>
+                    <span class="price">￥128.00</span>
+                    <span class="gg">广告</span>
+                    <span class="hot"><img src="images/change/hot.png"/></span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/recommend6.jpg"class="c_img"/>
+                    <p><a href="#">三都港 日式蒲烧鳗鱼120g</a></p>
+                    <span class="name">和风料理 香甜烤鳗鱼</span><br/>
+                    <span class="price">￥43.90</span>
+                    <span class="gg">广告</span>
+                </div>
+            </div>
+            <!--超值热卖-->
+            <div class="content hot_sell">
+                <div class="content_img">
+                    <img src="images/change/hot1.jpg"class="c_img"/>
+                    <p><a href="#">进口韩国丰水梨礼盒装  约5.5kg/箱</a></p>
+                    <span class="name">个大、果肉细甜而脆</span><br/>
+                    <span class="price">￥58.00</span>
+                    <span class="gg">广告</span>
+                    <span class="hot"><img src="images/change/hot.png"/></span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/hot2.jpg"class="c_img"/>
+                    <p><a href="#">温县铁棍山药3斤装（垆土礼盒）</a></p>
+                    <span class="name">甘香软糯 营养丰富</span><br/>
+                    <span class="price">￥58.00</span>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/hot3.jpg"class="c_img"/>
+                    <p><a href="#">彼特博乳酸梅花肉  400g/袋</a></p>
+                    <span class="name">肉中骄子</span><br/>
+                    <span class="price">￥59.00</span>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/hot4.jpg"class="c_img"/>
+                    <p><a href="#">百年栗园北京油鸡母鸡 750g/袋</a></p>
+                    <span class="name">林地散养、原粮喂养、地道北京油鸡</span><br/>
+                    <span class="price">￥69.80</span>
+                    <span class="gg">广告</span>
+                    <span class="hot"><img src="images/change/song.png"/></span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/hot5.jpg"class="c_img"/>
+                    <p><a href="#"> 琨山水产 密云水库鱼—野生白鲢 3.5斤-4.5斤（净膛）</a></p>
+                    <span class="name">饮用水源地生长，水库珍品</span><br/>
+                    <span class="price">￥136.00</span>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/hot6.jpg"class="c_img"/>
+                    <p><a href="#">生态小镇 有机亚麻籽油 1L/瓶 物理冷榨</a></p>
+                    <span class="name">和风料理</span><br/>
+                    <span class="price">￥178.00</span>
+                    <span class="gg">广告</span>
+                </div>
+            </div>
+            <!--包邮直达-->
+            <div class="content bao_sell">
+                <div class="content_img">
+                    <img src="images/change/bao1.jpg"class="c_img"/>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/bao2.jpg"class="c_img"/>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/bao3.jpg"class="c_img"/>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/bao4.jpg"class="c_img"/>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/bao5.jpg"class="c_img"/>
+                    <span class="gg">广告</span>
+                </div>
+                <div class="content_img">
+                    <img src="images/change/bao6.jpg"class="c_img"/>
+                    <span class="gg">广告</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--图片广告-->
+    <div id="gg_img">
+        <img src="images/gg1.jpg"/>
+        <img src="images/gg2.jpg"/>
+        <img src="images/gg3.jpg"/>
+    </div>
+
+    <!--楼层1 蔬菜水果-->
+    <div class="floor1_fruit">
+
+        <div class="tab">
+            <h2 class="h2_initial">蔬菜水果</h2>
+            <span class="initial" index="0">特惠专区</span>
+            <span index="1">有机蔬菜</span>
+            <span index="2">国产水果</span>
+            <span index="3">进口水果</span>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <img src="images/floor1/left.jpg"/>
+            </div>
+            <div class="right">
+                <!--特惠专区-->
+                <div class="tab_change tab_change1 tehui">
+                    <div class="a">
+                        <div class="small">
+                            <img src="images/floor1/te1.jpg" class="img"/>
+                            <p class="name"><a href="#">怀柔鲜板栗 约3斤/箱</a></p>
+                            <p class="price"><strong>￥58.00</strong><span>/份</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="big">
+                            <img src="images/floor1/te2.jpg" class="img"/>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor1/te3.jpg" class="img"/>
+                            <p class="name"><a href="#">【联合农场】有机红薯 3斤/箱</a></p>
+                            <p class="price"><strong>￥23.00</strong><span>/箱</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor1/te4.jpg" class="img"/>
+                            <p class="name"><a href="#">【联合农场】有机红薯 3斤/箱</a></p>
+                            <p class="price"><strong>￥23.00</strong><span>/箱</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor1/te5.jpg" class="img"/>
+                            <p class="name"><a href="#">智利进口大樱桃（JJ车厘子）约500g/盒</a></p>
+                            <p class="price"><strong>￥46.80</strong><span>/份</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor1/te6.jpg" class="img"/>
+                            <p class="name"><a href="#">泰国山竹 约500g/份</a></p>
+                            <p class="price"><strong>￥29.00</strong><span>/份</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor1/te7.jpg" class="img"/>
+                            <p class="name"><a href="#">【赞橙】【沱沱工社】有机赣南脐橙 约10斤/箱</a></p>
+                            <p class="price"><strong>￥99.00</strong><span>/箱</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                    <div class="b">
+                        <div class="top">
+                            <div class="top1">
+                                <div class="font font_1">
+                                    <span class="num">1</span>
+                                    <span class="num_right">云南甜角 约300g/盒</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img1">
+                                    <img src="images/floor1/top1.jpg"/>
+                                    <span class="top_bg span1"></span>
+                                    <p class="name"><a href="#">云南甜角 约300g/盒</a></p>
+                                    <p class="price"><strong>￥12.80</strong><span>/盒</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_2">
+                                    <span class="num">2</span>
+                                    <span class="num_right">山东富士苹果 5kg/箱  </span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img2">
+                                    <img src="images/floor1/top2.jpg"/>
+                                    <span class="top_bg span2"></span>
+                                    <p class="name"><a href="#">山东富士苹果 5kg/箱  </a></p>
+                                    <p class="price"><strong>￥66.00</strong><span>/箱</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_3">
+                                    <span class="num">3</span>
+                                    <span class="num_right">泰国椰青</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img3">
+                                    <img src="images/floor1/top3.jpg"/>
+                                    <span class="top_bg span3"></span>
+                                    <p class="name"><a href="#">泰国椰青</a></p>
+                                    <p class="price"><strong>￥18.80</strong><span>/个</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_4">
+                                    <span class="num">4</span>
+                                    <span class="num_right">【沱沱联合农场】莲藕350g/份</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img4">
+                                    <img src="images/floor1/top4.jpg"/>
+                                    <span class="top_bg span4"></span>
+                                    <p class="name"><a href="#">【沱沱联合农场】莲藕350g/份</a></p>
+                                    <p class="price"><strong>￥11.80</strong><span>/份</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1 top_bottom">
+                                <div class="font font_5">
+                                    <span class="num">5</span>
+                                    <span class="num_right">天津沙窝萝卜  约9斤/箱</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img5">
+                                    <img src="images/floor1/top5.jpg"/>
+                                    <span class="top_bg span5"></span>
+                                    <p class="name"><a href="#">天津沙窝萝卜  约9斤/箱</a></p>
+                                    <p class="price"><strong>￥45.00</strong><span>/箱</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <img src="images/floor1/bottom.jpg"/>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                </div>
+                <!--有机蔬菜-->
+                <div class="tab_change tab_change2 box qindan">
+                    <div class="small">
+                        <img src="images/floor1/you1.jpg" class="img"/>
+                        <p class="name"><a href="#">孟宗有机压榨笋片 235g/袋</a></p>
+                        <p class="price"><strong>￥16.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/you2.jpg" class="img"/>
+                        <p class="name"><a href="#">哈东金 有机速冻粘玉米（黄色） 2个/袋 400g 糯玉米</a></p>
+                        <p class="price"><strong>￥9.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/you3.jpg" class="img"/>
+                        <p class="name"><a href="#">孟宗有机压榨笋条 235g/袋</a></p>
+                        <p class="price"><strong>￥18.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/you4.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】 有机圆茄子 茄子 约400-500g/份</a></p>
+                        <p class="price"><strong>￥24.80</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/you5.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】有机胡萝卜  约500g/份</a></p>
+                        <p class="price"><strong>￥15.80</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/you6.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】有机圆白菜 约500-700g/份</a></p>
+                        <p class="price"><strong>￥21.80</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/you7.jpg" class="img"/>
+                        <p class="name"><a href="#">顺意生有机菠菜 约200g/份</a></p>
+                        <p class="price"><strong>￥8.90</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/you8.jpg" class="img"/>
+                        <p class="name"><a href="#">顺意生有机千禧 约350g/份</a></p>
+                        <p class="price"><strong>￥13.90</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/you9.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】有机尖椒 辣椒 约500g/份 </a></p>
+                        <p class="price"><strong>￥23.80</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/you10.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱联合农场】生态花菇200g/盒</a></p>
+                        <p class="price"><strong>￥11.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--国产水果-->
+                <div class="tab_change tab_change3 box roulei">
+                    <div class="small">
+                        <img src="images/floor1/guo1.jpg" class="img"/>
+                        <p class="name"><a href="#">海南西番茄 约450g/盒</a></p>
+                        <p class="price"><strong>￥16.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/guo2.jpg" class="img"/>
+                        <p class="name"><a href="#">福建有机白肉蜜柚 约1.2-1.5kg/个</a></p>
+                        <p class="price"><strong>￥16.80</strong><span>/个</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/guo3.jpg" class="img"/>
+                        <p class="name"><a href="#">甘肃花牛苹果礼盒  12枚/盒 </a></p>
+                        <p class="price"><strong>￥46.80</strong><span>/箱</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/guo4.jpg" class="img"/>
+                        <p class="name"><a href="#">福建白肉蜜柚 约1-1.2kg/个</a></p>
+                        <p class="price"><strong>￥9.90</strong><span>/个</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/guo5.jpg" class="img"/>
+                        <p class="name"><a href="#">【赞橙】【沱沱工社】有机赣南脐橙 6枚/盒  约1.2kg/盒</a></p>
+                        <p class="price"><strong>￥29.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/guo6.jpg" class="img"/>
+                        <p class="name"><a href="#">耙耙柑（春见-丑柑）4粒装约800g</a></p>
+                        <p class="price"><strong>￥19.80</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/guo7.jpg" class="img"/>
+                        <p class="name"><a href="#">麒麟西瓜  约2.5-3kg/个</a></p>
+                        <p class="price"><strong>￥53.80</strong><span>/个</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/guo8.jpg" class="img"/>
+                        <p class="name"><a href="#">四川丰水梨4粒装 约1kg/份</a></p>
+                        <p class="price"><strong>￥15.60</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/guo9.jpg" class="img"/>
+                        <p class="name"><a href="#">福建有机红肉蜜柚 约1kg/个</a></p>
+                        <p class="price"><strong>￥23.60</strong><span>/个</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <a href="detail.html?n=10"target="_blank"><img src="images/floor1/guo10.jpg" class="img"/></a>
+                        <p class="name"><a href="detail.html?n=10">新疆库尔勒香梨  约1kg/份（单果100g起）</a></p>
+                        <p class="price"><strong>￥13.80</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--进口水果-->
+                <div class="tab_change tab_change4 box roulei">
+                    <div class="small">
+                        <img src="images/floor1/jin1.jpg" class="img"/>
+                        <p class="name"><a href="#">越南进口红肉火龙果4个/份  约1.2kg/份</a></p>
+                        <p class="price"><strong>￥36.00</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/jin2.jpg" class="img"/>
+                        <p class="name"><a href="#">进口牛油果2粒装</a></p>
+                        <p class="price"><strong>￥14.00</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/jin3.jpg" class="img"/>
+                        <p class="name"><a href="#">泰国龙眼500g装</a></p>
+                        <p class="price"><strong>￥15.80</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/jin4.jpg" class="img"/>
+                        <p class="name"><a href="#">泰国急冻树熟榴莲肉 约450g/盒</a></p>
+                        <p class="price"><strong>￥56.00</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/jin5.jpg" class="img"/>
+                        <p class="name"><a href="#">鲜百香果 4个/盒 约260g 又称西番莲、情人果</a></p>
+                        <p class="price"><strong>￥13.60</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/jin6.jpg" class="img"/>
+                        <p class="name"><a href="#">进口西柚2粒盒装</a></p>
+                        <p class="price"><strong>￥19.90</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/jin7.jpg" class="img"/>
+                        <p class="name"><a href="#">进口香蕉  约1kg/份</a></p>
+                        <p class="price"><strong>￥19.90</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/jin8.jpg" class="img"/>
+                        <p class="name"><a href="#">进口菠萝  约1kg/个</a></p>
+                        <p class="price"><strong>￥29.90</strong><span>/个</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/jin9.jpg" class="img"/>
+                        <p class="name"><a href="#">进口无籽黑提 约500g/份</a></p>
+                        <p class="price"><strong>￥38.00</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor1/jin10.jpg" class="img"/>
+                        <p class="name"><a href="#">缘天然纯有机奶 250ml*12盒/箱 </a></p>
+                        <p class="price"><strong>￥68.00</strong><span>/箱</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--楼层2 肉类禽蛋-->
+    <div class="floor2_meat">
+
+        <div class="tab">
+            <h2>肉类禽蛋</h2>
+            <span class="initial" index="0">特惠专区</span>
+            <span index="1">禽蛋</span>
+            <span index="2">肉类</span>
+            <span index="3">冷冻冷藏</span>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <img src="images/floor2/leftc.jpg"/>
+            </div>
+            <div class="right">
+                <!--特惠专区-->
+                <div class="tab_change tab_change1 tehui">
+                    <div class="a">
+                        <div class="small">
+                            <img src="images/floor2/te1.jpg" class="img"/>
+                            <p class="name"><a href="#">【沱沱工社】农场自养猪肥膘(纯肥可炼油)    1000g/袋</a></p>
+                            <p class="price"><strong>￥12.80</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                            <img class="hot"src="images/change/hot.png"/>
+                        </div>
+                        <div class="big">
+                            <img src="images/floor2/te2.jpg" class="img"/>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor2/te3.jpg" class="img"/>
+                            <p class="name"><a href="#">百年栗园北京油鸡母鸡 750g/袋</a></p>
+                            <p class="price"><strong>￥69.80</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                            <img class="hot"src="images/change/song.png"/>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor2/te4.jpg" class="img"/>
+                            <p class="name"><a href="#">福成肥牛片（400G/袋）</a></p>
+                            <p class="price"><strong>￥39.80</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor2/te5.jpg" class="img"/>
+                            <p class="name"><a href="#">北旺2:8瘦肉馅（冻）400g/袋</a></p>
+                            <p class="price"><strong>￥12.80</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor2/te6.jpg" class="img"/>
+                            <p class="name"><a href="#">【沱沱工社】林下散养油鸡蛋15枚/盒</a></p>
+                            <p class="price"><strong>￥35.80</strong><span>/盒</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor2/te7.jpg" class="img"/>
+                            <p class="name"><a href="#">百年栗园油鸡公鸡+油鸡母鸡礼盒装1.75kg </a></p>
+                            <p class="price"><strong>￥128.00</strong><span>/份</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                    <div class="b">
+                        <div class="top">
+                            <div class="top1">
+                                <div class="font font_1">
+                                    <span class="num">1</span>
+                                    <span class="num_right">沱沱工社农场自养猪通脊</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img1">
+                                    <img src="images/floor2/top1.jpg"/>
+                                    <span class="top_bg span1"></span>
+                                    <p class="name"><a href="#">沱沱工社农场自养猪通脊  500g/份  </a></p>
+                                    <p class="price"><strong>￥78.00</strong><span>/份</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+
+                            </div>
+                            <div class="top1">
+                                <div class="font font_2">
+                                    <span class="num">2</span>
+                                    <span class="num_right">百年栗园北京油鸡童子鸡</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img2">
+                                    <img src="images/floor2/top2.jpg"/>
+                                    <span class="top_bg span2"></span>
+                                    <p class="name"><a href="#">百年栗园北京油鸡童子鸡 500g/袋</a></p>
+                                    <p class="price"><strong>￥33.00</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_3">
+                                    <span class="num">3</span>
+                                    <span class="num_right">百年栗园柴鸡蛋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img3">
+                                    <img src="images/floor2/top3.jpg"/>
+                                    <span class="top_bg span3"></span>
+                                    <p class="name"><a href="#">百年栗园柴鸡蛋12枚/盒 </a></p>
+                                    <p class="price"><strong>￥16.00</strong><span>/盒</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_4">
+                                    <span class="num">4</span>
+                                    <span class="num_right">百年栗园有机柴鸡蛋礼盒</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img4">
+                                    <img src="images/floor2/top4.jpg"/>
+                                    <span class="top_bg span4"></span>
+                                    <p class="name"><a href="#">百年栗园有机柴鸡蛋礼盒  40枚/箱</a></p>
+                                    <p class="price"><strong>￥96.00</strong><span>/箱</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1 top_bottom">
+                                <div class="font font_5">
+                                    <span class="num">5</span>
+                                    <span class="num_right">进口香蕉  约1kg/份</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img5">
+                                    <img src="images/floor2/top5.jpg"/>
+                                    <span class="top_bg span5"></span>
+                                    <p class="name"><a href="#">进口香蕉  约1kg/份</a></p>
+                                    <p class="price"><strong>￥12.60</strong><span>/份</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <img src="images/floor2/bottom.jpg"/>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                </div>
+                <!--禽蛋-->
+                <div class="tab_change tab_change2 box qindan">
+                    <div class="small">
+                        <img src="images/floor2/qin1.jpg" class="img"/>
+                        <p class="name"><a href="#">国丹8枚红心咸麻鸭蛋</a></p>
+                        <p class="price"><strong>￥32.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/qin2.jpg" class="img"/>
+                        <p class="name"><a href="#">百年栗园有机柴鸡蛋礼盒  60枚/箱</a></p>
+                        <p class="price"><strong>￥148.00</strong><span>/箱</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/qin3.jpg" class="img"/>
+                        <p class="name"><a href="#">国丹有机咸鸭蛋20枚装（红心麻鸭蛋）新老包装交替中</a></p>
+                        <p class="price"><strong>￥88.00</strong><span>/箱</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/qin4.jpg" class="img"/>
+                        <p class="name"><a href="#">国丹有机野鸭蛋20枚装</a></p>
+                        <p class="price"><strong>￥88.00</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/qin5.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】林下散养芦花鸡蛋 15枚/盒</a></p>
+                        <p class="price"><strong>￥33.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/qin6.jpg" class="img"/>
+                        <p class="name"><a href="#">甄选自然4枚鹅蛋</a></p>
+                        <p class="price"><strong>￥23.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/qin7.jpg" class="img"/>
+                        <p class="name"><a href="#">易盛玖灰芦花▪鸡翅中1000g/袋</a></p>
+                        <p class="price"><strong>￥49.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/qin8.jpg" class="img"/>
+                        <p class="name"><a href="#">易盛玖灰芦花▪鸡小胸1000g/袋</a></p>
+                        <p class="price"><strong>￥19.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/qin9.jpg" class="img"/>
+                        <p class="name"><a href="#">百年栗园 有机柴母鸡 1kg/袋 </a></p>
+                        <p class="price"><strong>￥88.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/qin10.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】蒙古有机母鸡  1.0kg/只</a></p>
+                        <p class="price"><strong>￥88.00</strong><span>/只</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--肉类-->
+                <div class="tab_change tab_change3 box roulei">
+                    <div class="small">
+                        <img src="images/floor2/rou1.jpg" class="img"/>
+                        <p class="name"><a href="#">知牧 锡林郭勒草原 有机羔羊龙骨（羊蝎子） 1kg/袋</a></p>
+                        <p class="price"><strong>￥99.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/rou2.jpg" class="img"/>
+                        <p class="name"><a href="#">福成无公害A腹肉条 1kg/袋</a></p>
+                        <p class="price"><strong>￥108.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/rou3.jpg" class="img"/>
+                        <p class="name"><a href="#">福成无公害牛肉块 1kg/袋</a></p>
+                        <p class="price"><strong>￥86.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/rou4.jpg" class="img"/>
+                        <p class="name"><a href="#">添康有机后尖500g/盒</a></p>
+                        <p class="price"><strong>￥36.00</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/rou5.jpg" class="img"/>
+                        <p class="name"><a href="#">阿根廷眼肉牛排4片 420g/袋</a></p>
+                        <p class="price"><strong>￥69.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/rou6.jpg" class="img"/>
+                        <p class="name"><a href="#">乌拉圭牛尾   约1kg/袋</a></p>
+                        <p class="price"><strong>￥79.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/rou7.jpg" class="img"/>
+                        <p class="name"><a href="#">苏尼特羔羊肉片 500g/盒</a></p>
+                        <p class="price"><strong>￥39.90</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/rou8.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】橡子黑猪 前腿肉 500g/袋</a></p>
+                        <p class="price"><strong>￥59.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/rou9.jpg" class="img"/>
+                        <p class="name"><a href="#">嘉何牧场 草原黑头羊 放牧羊后腿 1.7kg 袋装</a></p>
+                        <p class="price"><strong>￥158.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/rou10.jpg" class="img"/>
+                        <p class="name"><a href="#">海南带皮小黄牛肉 牛脊肉300g</a></p>
+                        <p class="price"><strong>￥88.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--冷冻冷藏-->
+                <div class="tab_change tab_change4 box roulei">
+                    <div class="small">
+                        <img src="images/floor2/leng1.jpg" class="img"/>
+                        <p class="name"><a href="#">荷美尔超值精选培根 1kg/袋</a></p>
+                        <p class="price"><strong>￥66.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/leng2.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】生猪肉泥肠 300g/袋</a></p>
+                        <p class="price"><strong>￥75.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/leng3.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】牛小奔儿童菲力牛排6片装100g*6</a></p>
+                        <p class="price"><strong>￥276.00</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/leng4.jpg" class="img"/>
+                        <p class="name"><a href="#">澳洲雪花牛小排 300g/袋</a></p>
+                        <p class="price"><strong>￥105.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/leng5.jpg" class="img"/>
+                        <p class="name"><a href="#">澳洲雪花牛仔骨 300g/袋</a></p>
+                        <p class="price"><strong>￥59.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/leng6.jpg" class="img"/>
+                        <p class="name"><a href="#">阿根廷牛前柳 500g/袋</a></p>
+                        <p class="price"><strong>￥39.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/leng7.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品澳洲雪花牛肉礼盒A</a></p>
+                        <p class="price"><strong>￥489.90</strong><span>/箱</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/leng8.jpg" class="img"/>
+                        <p class="name"><a href="#">澳洲牛肉 澳洲安格斯眼肉盖 200g/袋</a></p>
+                        <p class="price"><strong>￥49.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/leng9.jpg" class="img"/>
+                        <p class="name"><a href="#">澳洲带骨牛小排 390g/袋</a></p>
+                        <p class="price"><strong>￥68.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor2/leng10.jpg" class="img"/>
+                        <p class="name"><a href="#">【澳洲和牛西冷】M9+ 200g/袋</a></p>
+                        <p class="price"><strong>￥358.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--楼层3 海鲜水产-->
+    <div class="floor3_seafood">
+
+        <div class="tab">
+            <h2>海鲜水产</h2>
+            <span class="initial" index="0">特惠专区</span>
+            <span index="1">鱼类</span>
+            <span index="2">虾类</span>
+            <span index="3">蟹/贝</span>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <img src="images/floor3/left.jpg"/>
+            </div>
+            <div class="right">
+                <!--特惠专区-->
+                <div class="tab_change tab_change1 tehui">
+                    <div class="a">
+                        <div class="small">
+                            <img src="images/floor3/te1.jpg" class="img"/>
+                            <p class="name"><a href="#">悦海上品 双栖比目鱼 600g/袋(2条装)</a></p>
+                            <p class="price"><strong>￥68.00</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="big">
+                            <img src="images/floor3/te2.jpg" class="img"/>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor3/te3.jpg" class="img"/>
+                            <p class="name"><a href="#">三都港 日式蒲烧鳗鱼400g</a></p>
+                            <p class="price"><strong>￥138.00</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor3/te4.jpg" class="img"/>
+                            <p class="name"><a href="#">悦海上品缅甸黄鱼 约400g/袋</a></p>
+                            <p class="price"><strong>￥49.00</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor3/te5.jpg" class="img"/>
+                            <p class="name"><a href="#">三都港 香煎黄鱼鲞175g</a></p>
+                            <p class="price"><strong>￥19.90</strong><span>/份</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor3/te6.jpg" class="img"/>
+                            <p class="name"><a href="#">Homarus Americanus加拿大 熟冻整只龙虾400-450g/只 </a></p>
+                            <p class="price"><strong>￥78.00</strong><span>/只</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor3/te7.jpg" class="img"/>
+                            <p class="name"><a href="#">悦海上品 活冻6头鲍鱼 450g/袋</a></p>
+                            <p class="price"><strong>￥199.00</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                    <div class="b">
+                        <div class="top">
+                            <div class="top1">
+                                <div class="font font_1">
+                                    <span class="num">1</span>
+                                    <span class="num_right">Figo墨鱼丸 200g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img1">
+                                    <img src="images/floor3/top1.jpg"/>
+                                    <span class="top_bg span1"></span>
+                                    <p class="name"><a href="#">Figo墨鱼丸 200g/袋</a></p>
+                                    <p class="price"><strong>￥26.80</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+
+                            </div>
+                            <div class="top1">
+                                <div class="font font_2">
+                                    <span class="num">2</span>
+                                    <span class="num_right">Figo白鱼丸 200g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img2">
+                                    <img src="images/floor3/top2.jpg"/>
+                                    <span class="top_bg span2"></span>
+                                    <p class="name"><a href="#">Figo白鱼丸 200g/袋</a></p>
+                                    <p class="price"><strong>￥26.00</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_3">
+                                    <span class="num">3</span>
+                                    <span class="num_right">世界风情进口海鲜礼盒B</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img3">
+                                    <img src="images/floor3/top3.jpg"/>
+                                    <span class="top_bg span3"></span>
+                                    <p class="name"><a href="#">世界风情进口海鲜礼盒B </a></p>
+                                    <p class="price"><strong>￥668.00</strong><span>/盒</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_4">
+                                    <span class="num">4</span>
+                                    <span class="num_right">海买 特选北极虾 400g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img4">
+                                    <img src="images/floor3/top4.jpg"/>
+                                    <span class="top_bg span4"></span>
+                                    <p class="name"><a href="#">海买 特选北极虾 400g/袋</a></p>
+                                    <p class="price"><strong>￥36.90</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1 top_bottom">
+                                <div class="font font_5">
+                                    <span class="num">5</span>
+                                    <span class="num_right">Figo香芋鱼丸 200g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img5">
+                                    <img src="images/floor3/top5.jpg"/>
+                                    <span class="top_bg span5"></span>
+                                    <p class="name"><a href="#">Figo香芋鱼丸 200g/袋</a></p>
+                                    <p class="price"><strong>￥18.60</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <img src="images/floor3/bottom.jpg"/>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                </div>
+                <!--鱼类-->
+                <div class="tab_change tab_change2 box qindan">
+                    <div class="small">
+                        <img src="images/floor3/two1.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品 龙利鱼柳 约450g/袋   </a></p>
+                        <p class="price"><strong>￥35.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/two2.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品 三文鱼块 200g/袋</a></p>
+                        <p class="price"><strong>￥36.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/two3.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品 鲷鱼片 约450g/袋</a></p>
+                        <p class="price"><strong>￥32.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/two4.jpg" class="img"/>
+                        <p class="name"><a href="#">琨山水产密云水库鱼—野生胖头鱼（鳙鱼）4.5斤-5.5斤净膛</a></p>
+                        <p class="price"><strong>￥288.00</strong><span>/条</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/two5.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品法国银鳕鱼 约500g/袋</a></p>
+                        <p class="price"><strong>￥219.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/two6.jpg" class="img"/>
+                        <p class="name"><a href="#">三都港 清蒸小黄鱼（两条装）250g/袋</a></p>
+                        <p class="price"><strong>￥31.60</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/two7.jpg" class="img"/>
+                        <p class="name"><a href="#">三都港 东海带鱼段600g</a></p>
+                        <p class="price"><strong>￥72.00</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/two8.jpg" class="img"/>
+                        <p class="name"><a href="#">密云水库野生（满籽）池沼公鱼 500g/袋</a></p>
+                        <p class="price"><strong>￥45.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/two9.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品 舟山带鱼段750g/袋 </a></p>
+                        <p class="price"><strong>￥48.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/two10.jpg" class="img"/>
+                        <p class="name"><a href="#">三都港 日式蒲烧鳗鱼120g</a></p>
+                        <p class="price"><strong>￥39.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--虾类-->
+                <div class="tab_change tab_change3 box roulei">
+                    <div class="small">
+                        <img src="images/floor3/three1.jpg" class="img"/>
+                        <p class="name"><a href="#">知牧 锡林郭勒草原 有机羔羊龙骨（羊蝎子） 1kg/袋</a></p>
+                        <p class="price"><strong>￥99.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/three2.jpg" class="img"/>
+                        <p class="name"><a href="#">福成无公害A腹肉条 1kg/袋</a></p>
+                        <p class="price"><strong>￥108.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/three3.jpg" class="img"/>
+                        <p class="name"><a href="#">福成无公害牛肉块 1kg/袋</a></p>
+                        <p class="price"><strong>￥86.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/three4.jpg" class="img"/>
+                        <p class="name"><a href="#">添康有机后尖500g/盒</a></p>
+                        <p class="price"><strong>￥36.00</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/three5.jpg" class="img"/>
+                        <p class="name"><a href="#">阿根廷眼肉牛排4片 420g/袋</a></p>
+                        <p class="price"><strong>￥69.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/three6.jpg" class="img"/>
+                        <p class="name"><a href="#">乌拉圭牛尾   约1kg/袋</a></p>
+                        <p class="price"><strong>￥79.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/three7.jpg" class="img"/>
+                        <p class="name"><a href="#">苏尼特羔羊肉片 500g/盒</a></p>
+                        <p class="price"><strong>￥39.90</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/three8.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】橡子黑猪 前腿肉 500g/袋</a></p>
+                        <p class="price"><strong>￥59.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/three9.jpg" class="img"/>
+                        <p class="name"><a href="#">嘉何牧场 草原黑头羊 放牧羊后腿 1.7kg 袋装</a></p>
+                        <p class="price"><strong>￥158.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/three10.jpg" class="img"/>
+                        <p class="name"><a href="#">海南带皮小黄牛肉 牛脊肉300g</a></p>
+                        <p class="price"><strong>￥88.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--蟹/贝-->
+                <div class="tab_change tab_change4 box roulei">
+                    <div class="small">
+                        <img src="images/floor3/four1.jpg" class="img"/>
+                        <p class="name"><a href="#">帆立贝柱1kg/盒</a></p>
+                        <p class="price"><strong>￥238.00</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/four2.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品半壳夏夷贝(直径9cm-10cm)  400g/袋</a></p>
+                        <p class="price"><strong>￥48.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/four3.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品 即食野生海参一条装 60g-70g/袋</a></p>
+                        <p class="price"><strong>￥59.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/four4.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品纯正蟹腿肉  200g/袋</a></p>
+                        <p class="price"><strong>￥36.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/four5.jpg" class="img"/>
+                        <p class="name"><a href="#">OMEGA 新西兰 整只青口贝 1kg/袋</a></p>
+                        <p class="price"><strong>￥76.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/four6.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品急冻贝丁肉 350g/袋</a></p>
+                        <p class="price"><strong>￥42.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/four7.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品进口水产礼盒 </a></p>
+                        <p class="price"><strong>￥888.90</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/four8.jpg" class="img"/>
+                        <p class="name"><a href="#">英国黄金蟹 600g-800g/只</a></p>
+                        <p class="price"><strong>￥66.90</strong><span>/只</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/four9.jpg" class="img"/>
+                        <p class="name"><a href="#">悦海上品 生态墨鱼仔 400g/袋</a></p>
+                        <p class="price"><strong>￥33.60</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor3/four10.jpg" class="img"/>
+                        <p class="name"><a href="#">洋风蟹柳500g</a></p>
+                        <p class="price"><strong>￥58.00</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--楼层4 奶类烘焙-->
+    <div class="floor4_milk">
+
+        <div class="tab">
+            <h2>奶类烘焙</h2>
+            <span class="initial" index="0">特惠专区</span>
+            <span index="1">奶类烘焙</span>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <img src="images/floor4/left.jpg"/>
+            </div>
+            <div class="right">
+                <!--特惠专区-->
+                <div class="tab_change tab_change1 tehui">
+                    <div class="a">
+                        <div class="small">
+                            <img src="images/floor4/te1.jpg" class="img"/>
+                            <p class="name"><a href="#">法式布朗尼小蛋糕 25g*6/袋</a></p>
+                            <p class="price"><strong>￥42.90</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                            <img class="hot"src="images/change/hot.png"/>
+                        </div>
+                        <div class="big">
+                            <img src="images/floor4/te2.jpg" class="img"/>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor4/te3.jpg" class="img"/>
+                            <p class="name"><a href="#">缘天然纯有机奶 250ml*12盒/箱  </a></p>
+                            <p class="price"><strong>￥68.80</strong><span>/箱</span></p>
+                            <span class="gg">广告</span>
+                            <img class="hot"src="images/change/hot.png"/>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor4/te4.jpg" class="img"/>
+                            <p class="name"><a href="#">爱氏晨曦儿童奶酪条（香蕉味）108g</a></p>
+                            <p class="price"><strong>￥32.60</strong><span>/块</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor4/te5.jpg" class="img"/>
+                            <p class="name"><a href="#">乐芝牛凯瑞涂抹型奶油奶酪原味6份装108g</a></p>
+                            <p class="price"><strong>￥26.80</strong><span>/个</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor4/te6.jpg" class="img"/>
+                            <p class="name"><a href="#">第一家牌芝麻汤圆 200g/袋</a></p>
+                            <p class="price"><strong>￥10.80</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor4/te7.jpg" class="img"/>
+                            <p class="name"><a href="#">第一家牌印度煎饼（全麦）325g</a></p>
+                            <p class="price"><strong>￥10.90</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                    <div class="b">
+                        <div class="top">
+                            <div class="top1">
+                                <div class="font font_1">
+                                    <span class="num">1</span>
+                                    <span class="num_right">银宝咸黄油6x10g</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img1">
+                                    <img src="images/floor4/top1.jpg"/>
+                                    <span class="top_bg span1"></span>
+                                    <p class="name"><a href="#">银宝咸黄油6x10g</a></p>
+                                    <p class="price"><strong>￥10.80</strong><span>/份</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_2">
+                                    <span class="num">2</span>
+                                    <span class="num_right">第一家牌春卷皮 340g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img2">
+                                    <img src="images/floor4/top2.jpg"/>
+                                    <span class="top_bg span2"></span>
+                                    <p class="name"><a href="#">第一家牌春卷皮 340g/袋</a></p>
+                                    <p class="price"><strong>￥10.80</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_3">
+                                    <span class="num">3</span>
+                                    <span class="num_right">第一家牌花生汤圆 200g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img3">
+                                    <img src="images/floor4/top3.jpg"/>
+                                    <span class="top_bg span3"></span>
+                                    <p class="name"><a href="#">第一家牌花生汤圆 200g/袋</a></p>
+                                    <p class="price"><strong>￥10.80</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_4">
+                                    <span class="num">4</span>
+                                    <span class="num_right">乐芝牛奶酪原味5粒110g</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img4">
+                                    <img src="images/floor4/top4.jpg"/>
+                                    <span class="top_bg span4"></span>
+                                    <p class="name"><a href="#">乐芝牛奶酪原味5粒110g</a></p>
+                                    <p class="price"><strong>￥28.80</strong><span>/个</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1 top_bottom">
+                                <div class="font font_5">
+                                    <span class="num">5</span>
+                                    <span class="num_right">延世牧场牛奶1L/瓶</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img5">
+                                    <img src="images/floor4/top5.jpg"/>
+                                    <span class="top_bg span5"></span>
+                                    <p class="name"><a href="#">延世牧场牛奶1L/瓶</a></p>
+                                    <p class="price"><strong>￥33.80</strong><span>/瓶</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <img src="images/floor4/bottom.jpg"/>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                </div>
+                <!--奶类烘焙-->
+                <div class="tab_change tab_change2 box qindan">
+                    <div class="small">
+                        <img src="images/floor4/two1.jpg" class="img"/>
+                        <p class="name"><a href="#">归原有机全脂调味酸牛奶 500g/盒</a></p>
+                        <p class="price"><strong>￥21.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor4/two2.jpg" class="img"/>
+                        <p class="name"><a href="#">延世E高儿童牛奶 1L/瓶</a></p>
+                        <p class="price"><strong>￥33.80</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor4/two3.jpg" class="img"/>
+                        <p class="name"><a href="#">延世E高儿童牛奶 223ml/瓶</a></p>
+                        <p class="price"><strong>￥12.80</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor4/two4.jpg" class="img"/>
+                        <p class="name"><a href="#">总统牌淡味黄油棒 100g/块</a></p>
+                        <p class="price"><strong>￥17.80</strong><span>/块</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor4/two5.jpg" class="img"/>
+                        <p class="name"><a href="#">银宝淡黄油6x10g</a></p>
+                        <p class="price"><strong>￥10.00</strong><span>/个</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor4/two6.jpg" class="img"/>
+                        <p class="name"><a href="#">1768海苔花生馒头4个装320g/袋</a></p>
+                        <p class="price"><strong>￥12.60</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor4/two7.jpg" class="img"/>
+                        <p class="name"><a href="#">1768南瓜枸杞馒头 4个装320g/袋</a></p>
+                        <p class="price"><strong>￥14.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor4/two8.jpg" class="img"/>
+                        <p class="name"><a href="#">1768黑米枸杞发糕 2块装200g/袋</a></p>
+                        <p class="price"><strong>￥9.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor4/two9.jpg" class="img"/>
+                        <p class="name"><a href="#">1768黑糖坚果馒头 4个装320g/袋</a></p>
+                        <p class="price"><strong>￥14.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor4/two10.jpg" class="img"/>
+                        <p class="name"><a href="#">1768白玉蔓越莓发糕 2块装 200g/袋</a></p>
+                        <p class="price"><strong>￥9.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--楼层5 粮油副食-->
+    <div class="floor5_oil">
+
+        <div class="tab">
+            <h2>粮油副食</h2>
+            <span class="initial" index="0">特惠专区</span>
+            <span index="1">米面油</span>
+            <span index="2">杂粮</span>
+            <span index="3">干货调味</span>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <img src="images/floor5/left.jpg"/>
+            </div>
+            <div class="right">
+                <!--特惠专区-->
+                <div class="tab_change tab_change1 tehui">
+                    <div class="a">
+                        <div class="small">
+                            <img src="images/floor5/te1.jpg" class="img"/>
+                            <p class="name"><a href="#">五谷康有机石磨全麦面粉 2KG/袋</a></p>
+                            <p class="price"><strong>￥28.80</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="big">
+                            <img src="images/floor5/te2.jpg" class="img"/>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor5/te3.jpg" class="img"/>
+                            <p class="name"><a href="#">五谷康有机石磨黄金玉米粉1kg</a></p>
+                            <p class="price"><strong>￥18.80</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor5/te4.jpg" class="img"/>
+                            <p class="name"><a href="#">兴龙垦 有机压榨大豆油 5L/桶 低温冷榨</a></p>
+                            <p class="price"><strong>￥138.00</strong><span>/桶</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor5/te5.jpg" class="img"/>
+                            <p class="name"><a href="#">【沱沱工社】五常稻花香大米 5kg/袋</a></p>
+                            <p class="price"><strong>￥89.90</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor5/te6.jpg" class="img"/>
+                            <p class="name"><a href="#">【沱沱工社】有机黑芝麻（生） 300g/袋</a></p>
+                            <p class="price"><strong>￥19.90</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor5/te7.jpg" class="img"/>
+                            <p class="name"><a href="#">【沱沱工社】 原浆橄榄油250ml*2</a></p>
+                            <p class="price"><strong>￥168.00</strong><span>/盒</span></p>
+                            <span class="gg">广告</span>
+                            <img class="hot"src="images/change/hot.png"/>
+                        </div>
+                    </div>
+                    <div class="b">
+                        <div class="top">
+                            <div class="top1">
+                                <div class="font font_1">
+                                    <span class="num">1</span>
+                                    <span class="num_right">【沱沱工社】有机黑豆 400g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img1">
+                                    <img src="images/floor5/top1.jpg"/>
+                                    <span class="top_bg span1"></span>
+                                    <p class="name"><a href="#">【沱沱工社】有机黑豆 400g/袋</a></p>
+                                    <p class="price"><strong>￥26.80</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+
+                            </div>
+                            <div class="top1">
+                                <div class="font font_2">
+                                    <span class="num">2</span>
+                                    <span class="num_right">【沱沱工社】有机绿豆 400g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img2">
+                                    <img src="images/floor5/top2.jpg"/>
+                                    <span class="top_bg span2"></span>
+                                    <p class="name"><a href="#">【沱沱工社】有机绿豆 400g/袋</a></p>
+                                    <p class="price"><strong>￥16.00</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_3">
+                                    <span class="num">3</span>
+                                    <span class="num_right">庆元信洲 有机花冬菇 50g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img3">
+                                    <img src="images/floor5/top3.jpg"/>
+                                    <span class="top_bg span3"></span>
+                                    <p class="name"><a href="#">庆元信洲 有机花冬菇 50g/袋</a></p>
+                                    <p class="price"><strong>￥18.00</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_4">
+                                    <span class="num">4</span>
+                                    <span class="num_right">有机高粱米 400g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img4">
+                                    <img src="images/floor5/top4.jpg"/>
+                                    <span class="top_bg span4"></span>
+                                    <p class="name"><a href="#">有机高粱米 400g/袋</a></p>
+                                    <p class="price"><strong>￥12.90</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1 top_bottom">
+                                <div class="font font_5">
+                                    <span class="num">5</span>
+                                    <span class="num_right">李锦记辣椒油 115ml/瓶</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img5">
+                                    <img src="images/floor5/top5.jpg"/>
+                                    <span class="top_bg span5"></span>
+                                    <p class="name"><a href="#">李锦记辣椒油 115ml/瓶</a></p>
+                                    <p class="price"><strong>￥11.60</strong><span>/瓶</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <img src="images/floor5/bottom.jpg"/>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                </div>
+                <!--米面油-->
+                <div class="tab_change tab_change2 box qindan">
+                    <div class="small">
+                        <img src="images/floor5/two1.jpg" class="img"/>
+                        <p class="name"><a href="#">北大荒亲民有机山药挂面 278g/袋（新老包装更替）</a></p>
+                        <p class="price"><strong>￥10.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/two2.jpg" class="img"/>
+                        <p class="name"><a href="#">亲民有机胡萝卜粉挂面 350g/袋（新老包装更替）</a></p>
+                        <p class="price"><strong>￥7.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/two3.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】饺子粉 2kg/袋</a></p>
+                        <p class="price"><strong>￥22.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/two4.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】有机红小豆 400g/袋</a></p>
+                        <p class="price"><strong>￥28.00</strong><span>/条</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/two5.jpg" class="img"/>
+                        <p class="name"><a href="#">亲民有机挂面 400g/袋（新老包装更替）</a></p>
+                        <p class="price"><strong>￥9.00</strong><span>/把</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/two6.jpg" class="img"/>
+                        <p class="name"><a href="#">生态小镇 有机花生油 1L/瓶 低温物理压榨</a></p>
+                        <p class="price"><strong>￥68.60</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/two7.jpg" class="img"/>
+                        <p class="name"><a href="#">第一坊 冷榨花生油 3L/桶</a></p>
+                        <p class="price"><strong>￥118.00</strong><span>/桶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/two8.jpg" class="img"/>
+                        <p class="name"><a href="#">生态小镇 有机黑大豆油 1L/瓶 低温冷榨</a></p>
+                        <p class="price"><strong>￥78.80</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/two9.jpg" class="img"/>
+                        <p class="name"><a href="#">生态小镇 有机葵花籽油 1L/瓶 低温冷榨</a></p>
+                        <p class="price"><strong>￥69.90</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/two10.jpg" class="img"/>
+                        <p class="name"><a href="#">老知青 有机山茶籽油 2L/桶</a></p>
+                        <p class="price"><strong>￥159.80</strong><span>/桶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--杂粮-->
+                <div class="tab_change tab_change3 box roulei">
+                    <div class="small">
+                        <img src="images/floor5/three1.jpg" class="img"/>
+                        <p class="name"><a href="#">九州香小米(优质小米) 2.5kg/袋---新旧包装随机发货，请以实物为准</a></p>
+                        <p class="price"><strong>￥99.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/three2.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】有机芝麻 300g/袋—新旧包装更替中，收货请以实物为准</a></p>
+                        <p class="price"><strong>￥18.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/three3.jpg" class="img"/>
+                        <p class="name"><a href="#">阴山优麦 全胚芽燕麦香米400g/盒 加赠100g </a></p>
+                        <p class="price"><strong>￥16.00</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/three4.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】有机葵花籽仁 300g/袋</a></p>
+                        <p class="price"><strong>￥19.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/three5.jpg" class="img"/>
+                        <p class="name"><a href="#">五谷康有机全麦粉 1kg/袋</a></p>
+                        <p class="price"><strong>￥15.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/three6.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】有机南瓜籽仁 300g/袋</a></p>
+                        <p class="price"><strong>￥28.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/three7.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】有机亚麻籽 300g/袋</a></p>
+                        <p class="price"><strong>￥39.90</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/three8.jpg" class="img"/>
+                        <p class="name"><a href="#">和耕有机黑五类精力谷1540g/袋（220g/袋*7）</a></p>
+                        <p class="price"><strong>￥59.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/three9.jpg" class="img"/>
+                        <p class="name"><a href="#">和耕原生态绿小米家庭装500g/袋</a></p>
+                        <p class="price"><strong>￥158.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/three10.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】有机大豆（黄豆） 400g/袋</a></p>
+                        <p class="price"><strong>￥88.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--干货调味-->
+                <div class="tab_change tab_change4 box roulei">
+                    <div class="small">
+                        <img src="images/floor5/four1.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】淳食茶树菇 120g/袋</a></p>
+                        <p class="price"><strong>￥28.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/four2.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】淳食香菇片 100g/袋</a></p>
+                        <p class="price"><strong>￥28.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/four3.jpg" class="img"/>
+                        <p class="name"><a href="#">龙大 有机绿豆粉丝 100g/盒</a></p>
+                        <p class="price"><strong>￥19.90</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/four4.jpg" class="img"/>
+                        <p class="name"><a href="#">荣灿 龙口粉丝 400g/袋</a></p>
+                        <p class="price"><strong>￥116.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/four5.jpg" class="img"/>
+                        <p class="name"><a href="#">白燕窝燕盏 尔雅（马来西亚进口）30g/盒</a></p>
+                        <p class="price"><strong>￥858.00</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/four6.jpg" class="img"/>
+                        <p class="name"><a href="#">李锦记排骨酱 240g/瓶</a></p>
+                        <p class="price"><strong>￥21.80</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/four7.jpg" class="img"/>
+                        <p class="name"><a href="#">恒顺镇江香醋500ml/瓶 </a></p>
+                        <p class="price"><strong>￥8.90</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/four8.jpg" class="img"/>
+                        <p class="name"><a href="#">古币香油450ml/瓶</a></p>
+                        <p class="price"><strong>￥33.90</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/four9.jpg" class="img"/>
+                        <p class="name"><a href="#">亲民有机酸菜(家庭整棵装)  500g/袋</a></p>
+                        <p class="price"><strong>￥11.60</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor5/four10.jpg" class="img"/>
+                        <p class="name"><a href="#">亲民有机黄豆酱 300g/袋</a></p>
+                        <p class="price"><strong>￥8.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--楼层6 休食冲饮-->
+    <div class="floor6_drink">
+
+        <div class="tab">
+            <h2>休食冲饮</h2>
+            <span class="initial" index="0">特惠专区</span>
+            <span index="1">休闲食品</span>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <img src="images/floor5/left.jpg"/>
+            </div>
+            <div class="right">
+                <!--特惠专区-->
+                <div class="tab_change tab_change1 tehui">
+                    <div class="a">
+                        <div class="small">
+                            <img src="images/floor6/te1.jpg" class="img"/>
+                            <p class="name"><a href="#">波龙堡 2015年有机桃红葡萄酒 750ml/瓶</a></p>
+                            <p class="price"><strong>￥138.80</strong><span>/瓶</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="big">
+                            <img src="images/floor6/te2.jpg" class="img"/>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor6/te3.jpg" class="img"/>
+                            <p class="name"><a href="#">【沱沱工社】新疆灰枣500g/袋 基地直采</a></p>
+                            <p class="price"><strong>￥45.80</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor6/te4.jpg" class="img"/>
+                            <p class="name"><a href="#">景岳敏亦安 LP33复合乳酸菌固体饮料1.5g*30包（益生菌）</a></p>
+                            <p class="price"><strong>￥298.00</strong><span>/盒</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor6/te5.jpg" class="img"/>
+                            <p class="name"><a href="#">季季亲 有机甘栗仁 100g/袋</a></p>
+                            <p class="price"><strong>￥9.90</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor6/te6.jpg" class="img"/>
+                            <p class="name"><a href="#">真力有机黑茶 普洱茶(熟茶)紧压茶沱 150g/罐</a></p>
+                            <p class="price"><strong>￥599.90</strong><span>/罐</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor6/te7.jpg" class="img"/>
+                            <p class="name"><a href="#">叫莫日根的黑蜂野生巢蜜（椴树蜜） 200g2</a></p>
+                            <p class="price"><strong>￥198.00</strong><span>/盒</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                    <div class="b">
+                        <div class="top">
+                            <div class="top1">
+                                <div class="font font_1">
+                                    <span class="num">1</span>
+                                    <span class="num_right">季季亲有机烤花生180g（蒜香味） </span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img1">
+                                    <img src="images/floor6/top1.jpg"/>
+                                    <span class="top_bg span1"></span>
+                                    <p class="name"><a href="#">季季亲有机烤花生180g（蒜香味） </a></p>
+                                    <p class="price"><strong>￥16.80</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+
+                            </div>
+                            <div class="top1">
+                                <div class="font font_2">
+                                    <span class="num">2</span>
+                                    <span class="num_right">吾甜桂花红糖 200克/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img2">
+                                    <img src="images/floor6/top2.jpg"/>
+                                    <span class="top_bg span2"></span>
+                                    <p class="name"><a href="#">吾甜桂花红糖 200克/袋</a></p>
+                                    <p class="price"><strong>￥39.00</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_3">
+                                    <span class="num">3</span>
+                                    <span class="num_right">笨面包 农科面包(原味)92g</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img3">
+                                    <img src="images/floor6/top3.jpg"/>
+                                    <span class="top_bg span3"></span>
+                                    <p class="name"><a href="#">笨面包 农科面包(原味)92g---（植物自然发酵吃出面包的本来味道）</a></p>
+                                    <p class="price"><strong>￥12.80</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_4">
+                                    <span class="num">4</span>
+                                    <span class="num_right">森宝源有机松子 500g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img4">
+                                    <img src="images/floor6/top4.jpg"/>
+                                    <span class="top_bg span4"></span>
+                                    <p class="name"><a href="#">森宝源有机松子 500g/袋</a></p>
+                                    <p class="price"><strong>￥59.90</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1 top_bottom">
+                                <div class="font font_5">
+                                    <span class="num">5</span>
+                                    <span class="num_right">博扬山楂条350g/袋</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img5">
+                                    <img src="images/floor6/top5.jpg"/>
+                                    <span class="top_bg span5"></span>
+                                    <p class="name"><a href="#">博扬山楂条350g/袋-包装更新中，请以收到实物为准！</a></p>
+                                    <p class="price"><strong>￥13.60</strong><span>/袋</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <img src="images/floor6/bottom.jpg"/>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                </div>
+                <!--休闲食品-->
+                <div class="tab_change tab_change2 box qindan">
+                    <div class="small">
+                        <img src="images/floor6/two1.jpg" class="img"/>
+                        <p class="name"><a href="#">光照人韵香型有机铁观音YT-1380-A33包*7.5g</a></p>
+                        <p class="price"><strong>￥618.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor6/two2.jpg" class="img"/>
+                        <p class="name"><a href="#">波龙堡 2012年有机干红葡萄酒 750ml/瓶</a></p>
+                        <p class="price"><strong>￥298.80</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor6/two3.jpg" class="img"/>
+                        <p class="name"><a href="#">真力有机黑茶 普洱茶(熟茶)散茶 96g(24包)/盒</a></p>
+                        <p class="price"><strong>￥259.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor6/two4.jpg" class="img"/>
+                        <p class="name"><a href="#">绿纯洋槐蜜 465g/瓶</a></p>
+                        <p class="price"><strong>￥35.00</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor6/two5.jpg" class="img"/>
+                        <p class="name"><a href="#">吾甜姜母红糖 200克/袋</a></p>
+                        <p class="price"><strong>￥22.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor6/two6.jpg" class="img"/>
+                        <p class="name"><a href="#">塞宝有机燕麦片 1kg/桶</a></p>
+                        <p class="price"><strong>￥28.60</strong><span>/桶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor6/two7.jpg" class="img"/>
+                        <p class="name"><a href="#">海斯拉夫麦卢卡活性蜂蜜500g UMF 5+ </a></p>
+                        <p class="price"><strong>￥118.00</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor6/two8.jpg" class="img"/>
+                        <p class="name"><a href="#">【沱沱工社】新疆纸皮核桃500g 基地直采</a></p>
+                        <p class="price"><strong>￥58.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor6/two9.jpg" class="img"/>
+                        <p class="name"><a href="#">明皇菊 罐装 35克/罐</a></p>
+                        <p class="price"><strong>￥79.90</strong><span>/罐</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor6/two10.jpg" class="img"/>
+                        <p class="name"><a href="#">塞宝有机燕麦片 400g/袋</a></p>
+                        <p class="price"><strong>￥19.80</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--楼层7 生态日用-->
+    <div class="floor7_day">
+
+        <div class="tab">
+            <h2>生态日用</h2>
+            <span class="initial" index="0">特惠专区</span>
+            <span index="1">健康家纺</span>
+            <span index="2">清洁用品</span>
+            <span index="3">天然美护</span>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <img src="images/floor7/left.jpg"/>
+            </div>
+            <div class="right">
+                <!--特惠专区-->
+                <div class="tab_change tab_change1 tehui">
+                    <div class="a">
+                        <div class="small">
+                            <img src="images/floor7/te1.jpg" class="img"/>
+                            <p class="name"><a href="#">泉林本色套装组合（实芯卷纸1提+塑抽3提+手帕纸3条）</a></p>
+                            <p class="price"><strong>￥75.80</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="big">
+                            <img src="images/floor7/te2.jpg" class="img"/>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor7/te3.jpg" class="img"/>
+                            <p class="name"><a href="#">五惠人原汁机HU-910SL-M 深灰色</a></p>
+                            <p class="price"><strong>￥3980.80</strong><span>/台</span></p>
+                            <span class="gg">广告</span>
+                            <img class="hot"src="images/change/hot.png"/>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor7/te4.jpg" class="img"/>
+                            <p class="name"><a href="#">朗圣洁生物活性修复牙膏-再矿化60g</a></p>
+                            <p class="price"><strong>￥62.00</strong><span>/盒</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor7/te5.jpg" class="img"/>
+                            <p class="name"><a href="#">呼吸大师防护型折叠内置鼻梁颈带式口罩KN95（5个/袋）</a></p>
+                            <p class="price"><strong>￥29.90</strong><span>/袋</span></p>
+                            <span class="gg">广告</span>
+                            <img class="hot"src="images/change/hot.png"/>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor7/te6.jpg" class="img"/>
+                            <p class="name"><a href="#">绿之态康仔熊猫餐具套餐 </a></p>
+                            <p class="price"><strong>￥158.90</strong><span>/套</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                        <div class="small">
+                            <img src="images/floor7/te7.jpg" class="img"/>
+                            <p class="name"><a href="#">贝昂•艾尔盾JY500空气净化器 </a></p>
+                            <p class="price"><strong>￥7999.00</strong><span>/台</span></p>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                    <div class="b">
+                        <div class="top">
+                            <div class="top1">
+                                <div class="font font_1">
+                                    <span class="num">1</span>
+                                    <span class="num_right">STNTUS鲜途方形真空保鲜盒五件套</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img1">
+                                    <img src="images/floor7/top1.jpg"/>
+                                    <span class="top_bg span1"></span>
+                                    <p class="name"><a href="#">STNTUS鲜途方形真空保鲜盒五件套</a></p>
+                                    <p class="price"><strong>￥599.80</strong><span>/盒</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+
+                            </div>
+                            <div class="top1">
+                                <div class="font font_2">
+                                    <span class="num">2</span>
+                                    <span class="num_right">贝贝二合一洗发沐浴露200ml/瓶</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img2">
+                                    <img src="images/floor7/top2.jpg"/>
+                                    <span class="top_bg span2"></span>
+                                    <p class="name"><a href="#">贝贝二合一洗发沐浴露200ml/瓶</a></p>
+                                    <p class="price"><strong>￥105.00</strong><span>/瓶</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_3">
+                                    <span class="num">3</span>
+                                    <span class="num_right"> VIP高档生活用纸色餐巾纸</span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img3">
+                                    <img src="images/floor7/top3.jpg"/>
+                                    <span class="top_bg span3"></span>
+                                    <p class="name"><a href="#">VIP高档生活用纸色餐巾纸</a></p>
+                                    <p class="price"><strong>￥8.00</strong><span>/包</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1">
+                                <div class="font font_4">
+                                    <span class="num">4</span>
+                                    <span class="num_right">塑装VIP高档本色面巾纸 </span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img4">
+                                    <img src="images/floor7/top4.jpg"/>
+                                    <span class="top_bg span4"></span>
+                                    <p class="name"><a href="#">泉林本色 塑装VIP高档本色面巾纸</a></p>
+                                    <p class="price"><strong>￥12.90</strong><span>/提</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                            <div class="top1 top_bottom">
+                                <div class="font font_5">
+                                    <span class="num">5</span>
+                                    <span class="num_right">泉林本色 婴幼儿专用纸巾 </span>
+                                    <span class="gg">广告</span>
+                                </div>
+                                <div class="top_img top_img5">
+                                    <img src="images/floor7/top5.jpg"/>
+                                    <span class="top_bg span5"></span>
+                                    <p class="name"><a href="#">泉林本色 婴幼儿专用纸巾</a></p>
+                                    <p class="price"><strong>￥13.60</strong><span>/提</span></p>
+                                    <span class="gg">广告</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <img src="images/floor7/bottom.jpg"/>
+                            <span class="gg">广告</span>
+                        </div>
+                    </div>
+                </div>
+                <!--健康家纺-->
+                <div class="tab_change tab_change2 box qindan">
+                    <div class="small">
+                        <img src="images/floor7/two1.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺幼童罗领秋衣</a></p>
+                        <p class="price"><strong>￥78.80</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/two2.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺幼童罗领秋衣</a></p>
+                        <p class="price"><strong>￥78.00</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/two3.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺儿童罗领秋衣</a></p>
+                        <p class="price"><strong>￥79.00</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/two4.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺幼童护肚秋裤  </a></p>
+                        <p class="price"><strong>￥78.00</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/two5.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺儿童秋裤</a></p>
+                        <p class="price"><strong>￥59.00</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/two6.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺幼童护肚秋裤   </a></p>
+                        <p class="price"><strong>￥78.60</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/two7.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺幼童罗领秋衣-浅粉 90 </a></p>
+                        <p class="price"><strong>￥78.00</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/two8.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺男士秋裤   薄款</a></p>
+                        <p class="price"><strong>￥108.80</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/two9.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺女士秋裤  薄款</a></p>
+                        <p class="price"><strong>￥109.90</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/two10.jpg" class="img"/>
+                        <p class="name"><a href="#">淳纺男士V领秋衣秋裤套装 浅黄 XXL</a></p>
+                        <p class="price"><strong>￥159.80</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--清洁用品-->
+                <div class="tab_change tab_change3 box roulei">
+                    <div class="small">
+                        <img src="images/floor7/three1.jpg" class="img"/>
+                        <p class="name"><a href="#">妙思乐 贝贝洗发沐浴露500ml/瓶</a></p>
+                        <p class="price"><strong>￥169.00</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/three2.jpg" class="img"/>
+                        <p class="name"><a href="#">Frosch 芦荟润肤洗碗液（浓缩型）500ml/瓶</a></p>
+                        <p class="price"><strong>￥58.00</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/three3.jpg" class="img"/>
+                        <p class="name"><a href="#">Frosch维他命果蔬清洗剂（浓缩型）500ml/瓶</a></p>
+                        <p class="price"><strong>￥46.00</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/three4.jpg" class="img"/>
+                        <p class="name"><a href="#">柔舒然黄粘土纯净清洁皂（飘逸柔润洗发）85克</a></p>
+                        <p class="price"><strong>￥139.00</strong><span>/块</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/three5.jpg" class="img"/>
+                        <p class="name"><a href="#">柔舒然绿粘土纯净清洁皂（清爽控油洗发）85克</a></p>
+                        <p class="price"><strong>￥138.80</strong><span>/块</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/three6.jpg" class="img"/>
+                        <p class="name"><a href="#">柔舒然白粘土纯净清洁皂（去屑止痒洗发）85克</a></p>
+                        <p class="price"><strong>￥138.00</strong><span>/块</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/three7.jpg" class="img"/>
+                        <p class="name"><a href="#">优然无氨倍护持久性染发剂2N（亮丽棕黑）150ml/盒</a></p>
+                        <p class="price"><strong>￥159.90</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/three8.jpg" class="img"/>
+                        <p class="name"><a href="#">美生贝乐天然碗盘洗碗精500ml（青苹果/百里香）</a></p>
+                        <p class="price"><strong>￥79.90</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/three9.jpg" class="img"/>
+                        <p class="name"><a href="#">中盐果蔬洗涤盐 400g/袋</a></p>
+                        <p class="price"><strong>￥8.00</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/three10.jpg" class="img"/>
+                        <p class="name"><a href="#">食在良品天然稻谷壳砧板400*300*8 </a></p>
+                        <p class="price"><strong>￥238.00</strong><span>/件</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+                <!--天然美护-->
+                <div class="tab_change tab_change4 box roulei">
+                    <div class="small">
+                        <img src="images/floor7/four1.jpg" class="img"/>
+                        <p class="name"><a href="#">柔舒然红粘土纯净清洁皂（滋养修复洗发）85克</a></p>
+                        <p class="price"><strong>￥128.00</strong><span>/块</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/four2.jpg" class="img"/>
+                        <p class="name"><a href="#">柔舒然自然温和隐私护理液200ML</a></p>
+                        <p class="price"><strong>￥128.90</strong><span>/瓶</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/four3.jpg" class="img"/>
+                        <p class="name"><a href="#">柔舒然乳木果精油美肤皂100克</a></p>
+                        <p class="price"><strong>￥59.90</strong><span>/块</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/four4.jpg" class="img"/>
+                        <p class="name"><a href="#">爱•普罗雅丽 保湿沐浴皂250克</a></p>
+                        <p class="price"><strong>￥68.00</strong><span>/块</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/four5.jpg" class="img"/>
+                        <p class="name"><a href="#">ReFa for Body  （身体专用美容器)</a></p>
+                        <p class="price"><strong>￥1958.00</strong><span>/份</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/four6.jpg" class="img"/>
+                        <p class="name"><a href="#">柔舒然阿甘油系列礼盒（洗发乳+发膜+多用途马赛美肤皂）</a></p>
+                        <p class="price"><strong>￥351.80</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/four7.jpg" class="img"/>
+                        <p class="name"><a href="#">柔舒然阿甘油系列礼盒（沐浴乳+护肤霜+多用途马赛美肤皂） </a></p>
+                        <p class="price"><strong>￥32.90</strong><span>/块</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/four8.jpg" class="img"/>
+                        <p class="name"><a href="#">朗圣洁卡芭兔儿童无氟防蛀牙膏-草莓味40g</a></p>
+                        <p class="price"><strong>￥66.90</strong><span>/袋</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/four9.jpg" class="img"/>
+                        <p class="name"><a href="#">炫洁声波震动电动牙刷替换刷头</a></p>
+                        <p class="price"><strong>￥61.60</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                    <div class="small">
+                        <img src="images/floor7/four10.jpg" class="img"/>
+                        <p class="name"><a href="#">中盐漱口盐（清爽薄荷味） 3g*30包/盒</a></p>
+                        <p class="price"><strong>￥14.00</strong><span>/盒</span></p>
+                        <span class="gg">广告</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--底部上-->
+    <div id="footer1">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!--底部中-->
+    <div id="footer2">
+        <div class="left">
+            <ul>
+                <li>食品安全</li>
+                <li><a href="#">自营沱沱有机农场</a></li>
+                <li><a href="#">沱沱工社采购标准</a></li>
+                <li><a href="#">透明社区经营理念</a></li>
+                <li><a href="#">我们的资质</a></li>
+            </ul>
+
+            <ul>
+                <li>新手教程</li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">注册登录</a></li>
+                <li><a href="#">账户充值</a></li>
+                <li><a href="#">如何提货</a></li>
+                <li><a href="#">会员政策</a></li>
+            </ul>
+
+            <ul>
+                <li>配送方式</li>
+                <li><a href="#">配送范围</a></li>
+                <li><a href="#">运费标准</a></li>
+            </ul>
+
+            <ul>
+                <li>支付方式</li>
+                <li><a href="#">在线支付</a></li>
+                <li><a href="#">账户余额支付</a></li>
+                <li><a href="#">多种福利卡</a></li>
+            </ul>
+
+            <ul>
+                <li>售后服务</li>
+                <li><a href="#">退换货政策</a></li>
+                <li><a href="#">退换货流程</a></li>
+                <li><a href="#">退款</a></li>
+                <li><a href="#">投诉建议</a></li>
+            </ul>
+
+            <ul>
+                <li>帮助信息</li>
+                <li><a href="#">安全食品采购指南</a></li>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">电子优惠券的使用</a></li>
+                <li><a href="#">礼品卡</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="a">
+                <h2>客户端下载</h2>
+                <img src="images/down_m_new.png" class="ma"/>
+                <img src="images/down.png"/>
+            </div>
+            <div class="b">
+                <h2>关注沱沱微信</h2>
+                <img src="images/weixian_er.png"class="ma"/>
+                <img src="images/weix_span.png"/>
+            </div>
+        </div>
+    </div>
+
+    <!--底部下-->
+    <div id="footer3">
+        <p class="top">
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">联系我们</a><span>|</span>
+            <a href="#">服务条款</a><span>|</span>
+            <a href="#">友情链接</a><span>|</span>
+            <a href="#">网站地图</a><span>|</span>
+            <a href="#">帮助中心</a><span>|</span>
+            <a href="#">沱沱网</a><span>|</span>
+            <a href="#">企业员工内购</a>
+        </p>
+        <p class="bottom">
+            Copyright © 2009-2015 北京沱沱工社生态农业股份有限公司
+            版权所有 京ICP证100205号 京ICP备09043401号 京公网安备110105019943 食品流通许可证编号SP1101091310024845
+        </p>
+    </div>
+
+    <!--右下固定部分-->
+    <div id="fixed">
+        <a href="#">
+            <div class="box">
+                <img src="images/ico_05.png"/>
+                <div><span class="name">购物车</span></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="box">
+                <img src="images/ico_04.png"/>
+                <div><span class="name">提货</span></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="box">
+                <img src="images/ico_03.png"/>
+                <div><span class="name">礼品卡充值</span></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="box">
+                <img src="images/ico_02.png"/>
+                <div><span class="name">问题反馈</span></div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="box">
+                <img src="images/ico_01.png"/>
+                <div><span class="name">在线客服</span></div>
+            </div>
+        </a>
+
+        <div class="back">
+            <img src="images/top.png"/>
+        </div>
+    </div>
+	<!--显示购物车-->
+	<div class="show_car"></div>
+</body>
+</html>

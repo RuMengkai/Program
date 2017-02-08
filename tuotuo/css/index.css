@@ -1,0 +1,1242 @@
+
+
+/*轮播
+#player{
+    width:100%;min-width:1189px;
+    height:315px;
+    position: relative;}
+.swiper-container{
+    width:100%;
+    min-width:1189px;
+    height:315px;  }
+.swiper-container .swiper-wrapper .slide1{background: url("../images/1.jpg") no-repeat center 0px;}
+.swiper-container .swiper-wrapper .slide2{background: url("../images/2.jpg") no-repeat center 0px;}
+.swiper-container .swiper-wrapper .slide3{background: url("../images/3.jpg") no-repeat center 0px;}
+.swiper-container .swiper-wrapper .slide4{background: url("../images/4.jpg") no-repeat center 0px;}
+.swiper-container .swiper-wrapper .slide5{background: url("../images/5.jpg") no-repeat center 0px;}
+.swiper-container .swiper-wrapper .slide6{background: url("../images/6.jpg") no-repeat center 0px;}
+.swiper-container .swiper-wrapper .slide7{background: url("../images/7.jpg") no-repeat center 0px;}
+.swiper-container .swiper-wrapper .slide8{background: url("../images/8.jpg") no-repeat center 0px;}
+.swiper-container .swiper-wrapper .slide9{background: url("../images/9.jpg") no-repeat center 0px;}
+.swiper-container .swiper-wrapper .slide10{background: url("../images/10.jpg") no-repeat center 0px;}
+/*border-radius:100%;opacity:0.2;width:8px;height:8px;background:#000;这些是span的默认值*/
+/*.swiper-container .swiper-pagination span{width: 20px; /*border-radius:0; 取消圆角边框opacity: 1;*/
+   /* height:20px;background: #999;opacity: 1;
+    color: #fff;}/*更改span本身的样式要在这儿设置*/
+/*滑动到span这个标签的颜色*/
+/*.swiper-container .swiper-pagination span.swiper-pagination-bullet-active{background: #9f1431;}*/
+/*自定义分页器*/
+/*
+#player .tab_page{
+    position: absolute;
+    left:440px;
+    bottom:11px;z-index: 222222;}
+#player .tab_page span{
+    width:20px;
+    height:20px;
+    border-radius:100%;
+    display: inline-block;
+    left:100px;background: #999;
+    margin-right:8px;text-align: center;
+    color: #fff;}
+
+/*背景图片水平方向在div的中间*/
+/*#player .container_box{*/
+    /*width:1189px;*/
+    /*height:315px;*/
+    /*margin:0 auto;}*/
+
+/*轮播*/
+#player{
+    width:100%;
+    height:315px;
+    min-width:1189px;
+    position: relative;}
+#player .player .slide{
+    width:100%;height:315px;
+    position: absolute;}
+#player .slide1{background: url("../images/1.jpg") no-repeat center 0px;}
+#player .slide2{background: url("../images/2.jpg") no-repeat center 0px;}
+#player .slide3{background: url("../images/3.jpg") no-repeat center 0px;}
+#player .slide4{background: url("../images/4.jpg") no-repeat center 0px;}
+#player .slide5{background: url("../images/5.jpg") no-repeat center 0px;}
+#player .slide6{background: url("../images/6.jpg") no-repeat center 0px;}
+#player .slide7{background: url("../images/7.jpg") no-repeat center 0px;}
+#player .slide8{background: url("../images/8.jpg") no-repeat center 0px;}
+#player .slide9{background: url("../images/9.jpg") no-repeat center 0px;}
+#player .slide10{background: url("../images/10.jpg") no-repeat center 0px;}
+#player .player_box{
+    width:1189px;
+    height:315px;
+    /*当子元素绝对定位时，margin:0 auto;没有效果，可用left:50%;margin-left:-594px;达到margin: 0 auto;效果*/
+    left:50%;margin-left:-594px;
+    position: absolute;z-index: 4;}
+
+#player .player_box .player_left{
+    width:200px;
+    height:315px;
+    float: left;background: rgba(255,255,255,.9);}
+
+#player .player_box .player_left ul li{
+    width:200px;
+    height:38px;
+    }
+#player .player_box .player_left ul li div.li{
+    width:188px;margin:0 6px 0 6px;border-bottom:1px solid #f2f2f2;;height:37px;}
+#player .player_box .player_left ul li .bg_img{
+    display: inline-block;
+    width:30px;
+    float: left;
+    height:25px;background: url("../images/player_left.png");
+    margin-left:40px;
+    margin-top:6px;}
+#player .player_box .player_left ul li .li a{
+    float: left;
+    line-height:38px;
+    margin-left: 6px; font-size:14px;
+    color: #000;}
+#player .player_box .player_left ul li a:hover{
+    text-decoration: underline;
+    color: #9f1431;}
+#player .player_box .player_left ul li:nth-child(2) .bg_img{background-position: -30px 0;}
+#player .player_box .player_left ul li:nth-child(3) .bg_img{background-position: -60px 0;}
+#player .player_box .player_left ul li:nth-child(4) .bg_img{background-position: -90px 0;}
+#player .player_box .player_left ul li:nth-child(5) .bg_img{background-position: -120px 0;}
+#player .player_box .player_left ul li:nth-child(6) .bg_img{background-position: -150px 0;}
+#player .player_box .player_left ul li:nth-child(7) .bg_img{background-position: -180px 0;}
+#player .player_box .player_left ul li:nth-child(8) .bg_img{background-position: -210px 0;}
+
+#player .player_box .player_left ul li span.small_jiao{
+    float: right;
+    color: #f30a36;
+    line-height:38px;
+    margin-right:8px;
+    display: none;}
+/*列表详情*/
+#player .player_box .player_left{
+    }
+#player .player_box .player_left .left_detail{width:430px;
+    height:315px;position: absolute;
+    left:200px;z-index: 444;top:-38px;
+    display: none;}
+#player .player_box .player_left div.show_list{
+    width:430px;
+    height:315px;
+    display: none;
+    position: absolute;background: rgba(255,255,255,0.9);
+    z-index: 33333;
+    padding-left:15px;}
+#player .player_box .player_left div.show_list .one{
+    width:100%;height:40px;border-bottom:1px solid #f2f2f2;}
+
+#player .player_box .player_left div.show_list h2{
+    font-size:14px;
+    float: left;
+    width:106px; }
+#player .player_box .player_left div.show_list h2 a{color: #000;}
+#player .player_box .player_left div.show_list a.one_a{font-size: 13px;float: left;
+    margin-left:15px;
+    color: #999;}
+
+#player .player_box .player_left div.show_list .one h2{line-height:40px;}
+#player .player_box .player_left div.show_list .one a.one_a{line-height:40px;}
+#player .player_box .player_left div.show_list .two{
+    width:100%;
+    height:50px;border-bottom:1px solid #f2f2f2;
+    padding-top:14px;}
+#player .player_box .player_left div.show_list .two h2{
+    margin-bottom:20px;}
+#player .player_box .player_left div.show_list .two a.one_a{
+    margin-bottom:10px;}
+#player .player_box .player_left div.show_list .three{width:100%;height:40px;border-bottom:1px solid #f2f2f2;}
+#player .player_box .player_left div.show_list .three h2{line-height:40px;}
+#player .player_box .player_left div.show_list .three a.one_a{line-height:40px;}
+
+#player .player_box .player_left div.show_list .four{width:100%;height:40px;border-bottom:1px solid #f2f2f2;}
+#player .player_box .player_left div.show_list .four h2{line-height:40px;}
+#player .player_box .player_left div.show_list .four a.one_a{line-height:40px;}
+
+
+#player .player_box .player_center{
+    width:784px;
+    height:315px;
+    float: left;
+    position: relative;}
+#player .player_box .player_center div.tab_page{
+    position: absolute;
+    left:50%;
+    bottom:11px;
+    margin-left:-180px;}
+#player .player_box .player_center div.tab_page span{width:20px;
+    height:20px;
+    border-radius:100%;
+    display: inline-block;
+    left:100px;background: #999;
+    margin-right:8px;text-align: center;
+    color: #fff;
+    cursor: pointer;}
+
+#player .player_box .player_center .tab_left{
+    width:45px;
+    height:64px;background: url("../images/s_banner_icon.png") no-repeat 0 -35px;
+    position: absolute;
+    top:50%;
+    margin-top:-30px;
+    left:0px;
+    display: none;}
+#player .player_box .player_center .tab_right{width:45px;
+    height:64px;background: url("../images/s_banner_icon.png") no-repeat 4px -270px;
+    top:50%;
+    position: absolute;z-index: 22;margin-top:-30px;
+    right:0px;
+    display: none;}
+
+#player .player_box .player_right{
+    width:205px;
+    height:315px;
+    float: right;}
+#player .player_box .player_right img{
+    cursor: pointer;}
+
+
+/*无缝滚动区域*/
+#roll{
+    width:1189px;
+    height:190px;
+    margin:20px auto 0;
+    border-top:1px solid #e6e6e6;
+    border-bottom:1px solid #e6e6e6;}
+#roll .button{
+    height:190px;
+    width:29px;
+    }
+#roll .left_button{
+    float: left;cursor: pointer;
+    background: url("../images/s_pre.png") no-repeat center;
+    border-left:1px solid #e6e6e6;
+    border-right:1px solid #e6e6e6;
+}
+#roll .right_button{
+    float: left;cursor: pointer;
+    border-right:1px solid #e6e6e6;
+    background: url("../images/s_next.png") no-repeat center;
+}
+/*中间滚动内容*/
+#roll .roll_center{
+    width:1128px;
+    height:190px;
+    position: relative;
+    float: left;overflow: hidden;}
+#roll .roll_center .content{
+    width:2258px;
+    height:190px;
+    position: absolute;}
+#roll .roll_center .content .img_roll{
+    width:281px;
+    height:190px;
+    position: relative;
+    float: left;border-right:1px solid #e6e6e6;
+    cursor: pointer;overflow: hidden;}
+#roll .roll_center .content .img_roll span{
+    font-size:10px;
+    color: #ccc;
+    cursor: text;
+    position: absolute;
+    bottom:5px;
+    left:5px;}
+#roll .roll_center .content .img_roll img{
+    position: absolute;}
+/*悬浮切换部分*/
+/*标题按钮部分*/
+#change{
+    width:1189px;
+    height:350px;
+    margin:20px auto 0; }
+#change .title{
+    height:35px;
+    border-bottom:2px solid #d1a26c;
+    position: relative;}
+#change .title span.font{
+    display: inline-block;
+    width:120px;
+    height:30px;background: #f2f2f2;text-align: center;
+    line-height:30px;
+    font-size:12px;
+    margin-top:5px;
+}
+#change .title span.initial{height:35px;
+margin-top:0;
+background:#d1a26c;
+color:#fff;
+font-size:16px;
+line-height:35px;}
+#change .title img{
+    position: absolute;
+    left:350px;
+    top:-5px;}
+/*切换的内容部分*/
+#change .content{
+    height:280px;
+    width:1188px;
+    margin-top:25px;
+    border-top:1px solid #e6e6e6;
+    border-bottom:1px solid #e6e6e6;
+    border-right:1px solid #e6e6e6;
+    display: none;}
+#change .show{
+    display: block;}
+#change .content .content_img{
+    width:196px;
+    height:280px;
+    border-left:1px solid #e6e6e6;
+    float: left;
+    position: relative;
+    text-align: center;}
+#change .content .content_img img.c_img{
+    width:170px;
+    height:170px;
+    cursor: pointer;
+    margin-top:12px;}
+/*可以设置宽高，再设置行高，两行的行高等于高度*/
+#change .content .content_img p,#v_f .content .content_box .cai .content_img p{
+    font-size:12px;
+    width:170px;
+    height:40px;
+    line-height:20px;
+    /*text-align对行内块有效*/
+    display: inline-block;}
+#change .content .content_img p a,#v_f .content .content_box .cai .content_img p a{
+    color: #999;}
+#change .content .content_img p a:hover,#v_f .content .content_box .cai .content_img p a:hover{text-decoration: underline;
+    color: #9f1431;}
+#change .content .content_img span.name,#v_f .content .content_box .cai .content_img span.name{
+    font-size:12px;
+    top:227px;
+    line-height:25px;
+    margin-bottom:3px;
+    color: #d1a26c;display: inline-block;
+    }
+#change .content .content_img span.price,#v_f .content .content_box .cai .content_img span.price{
+    font-size:13px;
+    color: #939494;
+    font-weight: bold; }
+#change .content .content_img span.gg,#v_f .content .content_box .cai .content_img span.gg{
+    position: absolute;
+    left:2px;
+    bottom:2px;
+    font-size:9px;
+    /*color页可设置rgba*/
+    color: rgba(0, 0, 0, 0.4);}
+#change .content .content_img span.hot{
+    width:69px;
+    height:69px;
+    position: absolute;
+    top:5px;
+    right:13px;}
+/*包邮直达*/
+#change .bao_sell .content_img{width:197px;
+    height:282px;
+    border-left:1px solid #e6e6e6;
+    float: left;
+    position: relative;
+    text-align: center;}
+#change .bao_sell .content_img img.c_img{width:196px;
+    height:280px;
+    cursor: pointer;
+    margin-top:0px;}
+#change .bao_sell .content_img span.gg{
+    left:5px;
+    bottom:5px;}
+
+/*图片广告*/
+#gg_img{
+    width:1180px;
+    height:90px;
+    margin:23px auto 0;}
+#gg_img img{
+    float: left;
+    cursor: pointer;}
+
+
+
+
+
+/*楼层*/
+.floor7_day,
+.floor6_drink,
+.floor5_oil,
+.floor1_fruit,
+.floor2_meat,
+.floor3_seafood,
+.floor4_milk
+
+{   margin:40px auto 0;
+    width:1189px;
+    height:600px;
+}
+.floor1_fruit{
+    margin:20px auto 0;
+}
+.floor7_day .tab,
+.floor6_drink .tab,
+.floor5_oil .tab,
+.floor1_fruit .tab,
+.floor2_meat .tab,
+.floor3_seafood .tab,
+.floor4_milk .tab
+{
+    height:42px;
+    margin-bottom:10px;
+}
+.floor1_fruit .tab{
+    border-bottom:2px solid #1db66f;
+}
+.floor2_meat .tab{
+    border-bottom:2px solid #e74f6e;
+}
+.floor3_seafood .tab{
+    border-bottom:2px solid #4ccdde;
+}
+.floor4_milk .tab{
+    border-bottom:2px solid #dcbe95;
+}
+.floor5_oil .tab{
+    border-bottom:2px solid #feb033;
+}
+.floor6_drink .tab{
+    border-bottom:2px solid #ffd923;
+}
+.floor7_day .tab{
+    border-bottom:2px solid #977ec2;
+}
+.floor7_day .tab h2,
+.floor6_drink .tab h2,
+.floor5_oil .tab h2,
+.floor1_fruit .tab h2,
+.floor2_meat .tab h2,
+.floor3_seafood .tab h2,
+.floor4_milk .tab h2
+{
+    width:155px;
+    height:42px;
+    float: left;
+    padding-left:45px;
+    font-size:22px;
+    line-height:42px;;
+}
+.floor1_fruit .tab h2{
+    color: #1db66f;
+    background: url("../images/floor.png") no-repeat 0 -69px;
+}
+.floor2_meat .tab h2{
+    color: #e74f6e;
+    background: url("../images/floor.png") no-repeat 0 -125px;
+}
+.floor3_seafood .tab h2{
+    color: #4ccdde;
+    background: url("../images/floor.png") no-repeat 0 -236px;
+}
+.floor4_milk .tab h2{
+    color: #dcbe95;
+    background: url("../images/floor.png") no-repeat 0 -181px;
+}
+.floor5_oil .tab h2{
+    color: #feb033;
+    background: url("../images/floor.png") no-repeat 0 -292px;
+}
+.floor6_drink .tab h2{
+    color: #ffd923;
+    background: url("../images/floor.png") no-repeat 0 -347px;
+}
+.floor7_day .tab h2{
+    color: #977ec2;
+    background: url("../images/floor.png") no-repeat 0 -405px;
+}
+.floor7_day .tab span,
+.floor6_drink .tab span,
+.floor5_oil .tab span,
+.floor1_fruit .tab span,
+.floor2_meat .tab span,
+.floor3_seafood .tab span,
+.floor4_milk .tab span
+{
+    display: inline-block;
+    width:120px;
+    height:30px;background: #f2f2f2;text-align: center;
+    line-height:30px;
+    font-size:12px;
+    margin-top:12px;
+    cursor: pointer;
+}
+
+
+.floor7_day .content,
+.floor6_drink .content,
+.floor5_oil .content,
+.floor1_fruit .content,
+.floor2_meat .content,
+.floor3_seafood .content,
+.floor4_milk .content
+{
+    width:1189px;
+    height:538px;
+    border-top:1px solid #e6e6e6;}
+
+.floor7_day .content .left,
+.floor6_drink .content .left,
+.floor5_oil .content .left,
+.floor1_fruit .content .left,
+.floor2_meat .content .left,
+.floor3_seafood .content .left,
+.floor4_milk .content .left
+{
+    width:200px;
+    height:538px;
+    float: left;}
+.floor7_day .content .left img,
+.floor6_drink .content .left img,
+.floor5_oil .content .left img,
+.floor1_fruit .content .left img,
+.floor2_meat .content .left img,
+.floor3_seafood .content .left img,
+.floor4_milk .content .left img
+{
+    cursor: pointer;  }
+
+.floor7_day .content .right,
+.floor6_drink .content .right,
+.floor5_oil .content .right,
+.floor1_fruit .content .right,
+.floor2_meat .content .right,
+.floor3_seafood .content .right,
+.floor4_milk .content .right
+{
+    width:985px;
+    height:538px;
+    float: left;}
+.floor7_day .content .right .box,
+.floor6_drink .content .right .box,
+.floor5_oil .content .right .box,
+.floor1_fruit .content .right .box,
+.floor2_meat .content .right .box,
+.floor3_seafood .content .right .box,
+.floor4_milk .content .right .box
+{
+    width:989px;
+    height:538px;}
+.floor7_day .content .right .box .small,
+.floor6_drink .content .right .box .small,
+.floor5_oil .content .right .box .small,
+.floor1_fruit .content .right .box .small,
+.floor2_meat .content .right .box .small,
+.floor3_seafood .content .right .box .small,
+.floor4_milk .content .right .box .small
+{
+    width:166px;
+    height:258px;
+    border-right:1px solid #e6e6e6;
+    border-bottom:1px solid #e6e6e6;
+    padding: 10px 15px 0px 15px;
+    text-align: center;
+    float: left;
+    position: relative;}
+
+.floor7_day .content .right .box .small:nth-child(2),
+.floor6_drink .content .right .box .small:nth-child(2),
+.floor5_oil .content .right .box .small:nth-child(2),
+.floor1_fruit .content .right .box .small:nth-child(2),
+.floor2_meat .content .right .box .small:nth-child(2),
+.floor3_seafood .content .right .box .small:nth-child(2),
+.floor4_milk .content .right .box .small:nth-child(2),
+
+
+.floor7_day .content .right .box .small:nth-child(3),
+.floor6_drink .content .right .box .small:nth-child(3),
+.floor5_oil .content .right .box .small:nth-child(3),
+.floor1_fruit .content .right .box .small:nth-child(3),
+.floor2_meat .content .right .box .small:nth-child(3),
+.floor3_seafood .content .right .box .small:nth-child(3),
+.floor4_milk .content .right .box .small:nth-child(3),
+
+.floor7_day .content .right .box .small:nth-child(4),
+.floor6_drink .content .right .box .small:nth-child(4),
+.floor5_oil .content .right .box .small:nth-child(4),
+.floor1_fruit .content .right .box .small:nth-child(4),
+.floor2_meat .content .right .box .small:nth-child(4),
+.floor3_seafood .content .right .box .small:nth-child(4),
+.floor4_milk .content .right .box .small:nth-child(4),
+
+.floor7_day .content .right .box .small:nth-child(5),
+.floor6_drink .content .right .box .small:nth-child(5),
+.floor5_oil .content .right .box .small:nth-child(5),
+.floor1_fruit .content .right .box .small:nth-child(5),
+.floor2_meat .content .right .box .small:nth-child(5),
+.floor3_seafood .content .right .box .small:nth-child(5),
+.floor4_milk .content .right .box .small:nth-child(5),
+
+.floor7_day .content .right .box .small:nth-child(7),
+.floor6_drink .content .right .box .small:nth-child(7),
+.floor5_oil .content .right .box .small:nth-child(7),
+.floor1_fruit .content .right .box .small:nth-child(7),
+.floor2_meat .content .right .box .small:nth-child(7),
+.floor3_seafood .content .right .box .small:nth-child(7),
+.floor4_milk .content .right .box .small:nth-child(7),
+
+.floor7_day .content .right .box .small:nth-child(8),
+.floor6_drink .content .right .box .small:nth-child(8),
+.floor5_oil .content .right .box .small:nth-child(8),
+.floor1_fruit .content .right .box .small:nth-child(8),
+.floor2_meat .content .right .box .small:nth-child(8),
+.floor3_seafood .content .right .box .small:nth-child(8),
+.floor4_milk .content .right .box .small:nth-child(8),
+
+.floor7_day .content .right .box .small:nth-child(9),
+.floor6_drink .content .right .box .small:nth-child(9),
+.floor5_oil .content .right .box .small:nth-child(9),
+.floor1_fruit .content .right .box .small:nth-child(9),
+.floor2_meat .content .right .box .small:nth-child(9),
+.floor3_seafood .content .right .box .small:nth-child(9),
+.floor4_milk .content .right .box .small:nth-child(9),
+
+.floor7_day .content .right .box .small:nth-child(10),
+.floor6_drink .content .right .box .small:nth-child(10),
+.floor5_oil .content .right .box .small:nth-child(10),
+.floor1_fruit .content .right .box .small:nth-child(10),
+.floor2_meat .content .right .box .small:nth-child(10),
+.floor3_seafood .content .right .box .small:nth-child(10),
+.floor4_milk .content .right .box .small:nth-child(10)
+{
+    width:167px;
+}
+.floor7_day .content .right .box .small img.img,
+.floor6_drink .content .right .box .small img.img,
+.floor5_oil .content .right .box .small img.img,
+.floor1_fruit .content .right .box .small img.img,
+.floor2_meat .content .right .box .small img.img,
+.floor3_seafood .content .right .box .small img.img,
+.floor4_milk .content .right .box .small img.img
+{
+    width:165px;
+    height:165px;
+    cursor: pointer;}
+.floor7_day .content .right .box .small p.name,
+.floor6_drink .content .right .box .small p.name,
+.floor5_oil .content .right .box .small p.name,
+.floor1_fruit .content .right .box .small p.name,
+.floor2_meat .content .right .box .small p.name,
+.floor4_milk .content .right .box .small p.name,
+.floor3_seafood .content .right .box .small p.name
+{height: 40px;
+    overflow: hidden;
+    line-height: 20px;
+    margin: 0px 0 7px 0;}
+.floor7_day .content .right .box .small p.name a,
+.floor6_drink .content .right .box .small p.name a,
+.floor5_oil .content .right .box .small p.name a,
+.floor4_milk .content .right .box .small p.name a,
+.floor1_fruit .content .right .box .small p.name a,
+.floor2_meat .content .right .box .small p.name a,
+.floor3_seafood .content .right .box .small p.name a
+{
+    color: #939494;
+    font-size: 12px;}
+.floor7_day .content .right .box .small p.name a:hover,
+.floor6_drink .content .right .box .small p.name a:hover,
+.floor5_oil .content .right .box .small p.name a:hover,
+.floor4_milk .content .right .box .small p.name a:hover,
+.floor1_fruit .content .right .box .small p.name a:hover,
+.floor2_meat .content .right .box .small p.name a:hover,
+.floor3_seafood .content .right .box .small p.name a:hover
+{
+    text-decoration: underline;
+    color: #9f1431;}
+.floor7_day .content .right .box .small p.price,
+.floor6_drink .content .right .box .small p.price,
+.floor5_oil .content .right .box .small p.price,
+.floor4_milk .content .right .box .small p.price,
+.floor1_fruit .content .right .box .small p.price,
+.floor2_meat .content .right .box .small p.price,
+.floor3_seafood .content .right .box .small p.price
+{
+    height: 18px;
+    color: #939494;
+    font-size: 14px;
+    margin: 15px 0 0 0;
+    text-align: center;}
+.floor7_day .content .right .box .small p.price span,
+.floor6_drink .content .right .box .small p.price span,
+.floor5_oil .content .right .box .small p.price span,
+.floor4_milk .content .right .box .small p.price span,
+.floor1_fruit .content .right .box .small p.price span,
+.floor2_meat .content .right .box .small p.price span,
+.floor3_seafood .content .right .box .small p.price span
+{
+    font-size:12px;}
+.floor7_day .content .right .box .small .gg,
+.floor6_drink .content .right .box .small .gg,
+.floor5_oil .content .right .box .small .gg,
+.floor4_milk .content .right .box .small .gg,
+.floor1_fruit .content .right .box .small .gg,
+.floor2_meat .content .right .box .small .gg,
+.floor3_seafood .content .right .box .small .gg
+{
+    position: absolute;
+    bottom:5px;
+    left:5px;
+    font-size:9px;
+    color: #939494;}
+
+/*特惠专区开始*/
+/*特惠专区左侧*/
+.floor7_day .content .right .tehui,
+.floor6_drink .content .right .tehui,
+.floor5_oil .content .right .tehui,
+.floor4_milk .content .right .tehui,
+.floor1_fruit .content .right .tehui,
+.floor2_meat .content .right .tehui,
+.floor3_seafood .content .right .tehui
+{
+    width:989px;
+    height:538px;
+}
+
+.floor7_day .content .right .tehui .a,
+.floor6_drink .content .right .tehui .a,
+.floor5_oil .content .right .tehui .a,
+.floor4_milk .content .right .tehui .a,
+.floor1_fruit .content .right .tehui .a,
+.floor2_meat .content .right .tehui .a,
+.floor3_seafood .content .right .tehui .a
+{
+    width:788px;
+    height:538px;
+    float: left;}
+.floor7_day .content .right .tehui .a .small,
+.floor6_drink .content .right .tehui .a .small,
+.floor5_oil .content .right .tehui .a .small,
+.floor4_milk .content .right .tehui .a .small,
+.floor1_fruit .content .right .tehui .a .small,
+.floor2_meat .content .right .tehui .a .small,
+.floor3_seafood .content .right .tehui .a .small
+{
+    width:166px;
+    height:258px;
+    border-right:1px solid #e6e6e6;
+    border-bottom:1px solid #e6e6e6;
+    padding: 10px 15px 0px 15px;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.floor7_day .content .right .tehui .a .big,
+.floor6_drink .content .right .tehui .a .big,
+.floor5_oil .content .right .tehui .a .big,
+.floor4_milk .content .right .tehui .a .big,
+.floor1_fruit .content .right .tehui .a .big,
+.floor2_meat .content .right .tehui .a .big,
+.floor3_seafood .content .right .tehui .a .big
+{
+    width:363px;
+    height:258px;
+    border-right:1px solid #e6e6e6;
+    border-bottom:1px solid #e6e6e6;
+    padding: 10px 15px 0px 15px;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.floor7_day .content .right .tehui .a .big img,
+.floor6_drink .content .right .tehui .a .big img,
+.floor5_oil .content .right .tehui .a .big img,
+.floor4_milk .content .right .tehui .a .big img,
+.floor1_fruit .content .right .tehui .a .big img,
+.floor2_meat .content .right .tehui .a .big img,
+.floor3_seafood .content .right .tehui .a .big img
+{
+    width:363px;
+    height:258px;
+    cursor: pointer;}
+.floor7_day .content .right .tehui .a .big span.gg,
+.floor6_drink .content .right .tehui .a .big span.gg,
+.floor5_oil .content .right .tehui .a .big span.gg,
+.floor4_milk .content .right .tehui .a .big span.gg,
+.floor1_fruit .content .right .tehui .a .big span.gg,
+.floor2_meat .content .right .tehui .a .big span.gg,
+.floor3_seafood .content .right .tehui .a .big span.gg
+{
+    position: absolute;
+    bottom:5px;
+    left:5px;
+    font-size:9px;
+    color: #939494;
+}
+.floor7_day .content .right .tehui .a .small img.img,
+.floor6_drink .content .right .tehui .a .small img.img,
+.floor5_oil .content .right .tehui .a .small img.img,
+.floor4_milk .content .right .tehui .a .small img.img,
+.floor1_fruit .content .right .tehui .a .small img.img,
+.floor2_meat .content .right .tehui .a .small img.img,
+.floor3_seafood .content .right .tehui .a .small img.img
+{
+    width:165px;
+    height:165px;
+    cursor: pointer;
+}
+.floor7_day .content .right .tehui .a .small p.name,
+.floor6_drink .content .right .tehui .a .small p.name,
+.floor5_oil .content .right .tehui .a .small p.name,
+.floor4_milk .content .right .tehui .a .small p.name,
+.floor1_fruit .content .right .tehui .a .small p.name,
+.floor2_meat .content .right .tehui .a .small p.name,
+.floor3_seafood .content .right .tehui .a .small p.name
+{height: 40px;
+    overflow: hidden;
+    line-height: 20px;
+    margin: 0px 0 7px 0;}
+.floor7_day .content .right .tehui .a .small p.name a,
+.floor6_drink .content .right .tehui .a .small p.name a,
+.floor5_oil .content .right .tehui .a .small p.name a,
+.floor4_milk .content .right .tehui .a .small p.name a,
+.floor1_fruit .content .right .tehui .a .small p.name a,
+.floor2_meat .content .right .tehui .a .small p.name a,
+.floor3_seafood .content .right .tehui .a .small p.name a
+{
+    color: #939494;
+    font-size: 12px;}
+.floor7_day .content .right .tehui .a .small p.name a:hover,
+.floor6_drink .content .right .tehui .a .small p.name a:hover,
+.floor5_oil .content .right .tehui .a .small p.name a:hover,
+.floor4_milk .content .right .tehui .a .small p.name a:hover,
+.floor1_fruit .content .right .tehui .a .small p.name a:hover,
+.floor2_meat .content .right .tehui .a .small p.name a:hover,
+.floor3_seafood .content .right .tehui .a .small p.name a:hover
+{
+    text-decoration: underline;
+    color: #9f1431;}
+.floor7_day .content .right .tehui .a .small p.price,
+.floor6_drink .content .right .tehui .a .small p.price,
+.floor5_oil .content .right .tehui .a .small p.price,
+.floor4_milk .content .right .tehui .a .small p.price,
+.floor1_fruit .content .right .tehui .a .small p.price,
+.floor2_meat .content .right .tehui .a .small p.price,
+.floor3_seafood .content .right .tehui .a .small p.price
+{
+    height: 18px;
+    color: #939494;
+    font-size: 14px;
+    margin: 15px 0 0 0;
+    text-align: center;}
+.floor7_day .content .right .tehui .a .small p.price span,
+.floor6_drink .content .right .tehui .a .small p.price span,
+.floor5_oil .content .right .tehui .a .small p.price span,
+.floor4_milk .content .right .tehui .a .small p.price span,
+.floor1_fruit .content .right .tehui .a .small p.price span,
+.floor2_meat .content .right .tehui .a .small p.price span,
+.floor3_seafood .content .right .tehui .a .small p.price span
+{
+    font-size:12px;}
+.floor7_day .content .right .tehui .a .small .gg,
+.floor6_drink .content .right .tehui .a .small .gg,
+.floor5_oil .content .right .tehui .a .small .gg,
+.floor4_milk .content .right .tehui .a .small .gg,
+.floor1_fruit .content .right .tehui .a .small .gg,
+.floor2_meat .content .right .tehui .a .small .gg,
+.floor3_seafood .content .right .tehui .a .small .gg
+{
+    position: absolute;
+    bottom:5px;
+    left:5px;
+    font-size:9px;
+    color: #939494;}
+.floor7_day .content .right .tehui .a .small img.hot,
+.floor6_drink .content .right .tehui .a .small img.hot,
+.floor5_oil .content .right .tehui .a .small img.hot,
+.floor4_milk .content .right .tehui .a .small img.hot,
+.floor1_fruit .content .right .tehui .a .small img.hot,
+.floor2_meat .content .right .tehui .a .small img.hot,
+.floor3_seafood .content .right .tehui .a .small img.hot
+{
+    position: absolute;
+    top:3px;
+    right:5px;}
+/*特惠专区右侧*/
+
+.floor7_day .content .right .tehui .b,
+.floor6_drink .content .right .tehui .b,
+.floor5_oil .content .right .tehui .b,
+.floor4_milk .content .right .tehui .b,
+.floor1_fruit .content .right .tehui .b,
+.floor2_meat .content .right .tehui .b,
+.floor3_seafood .content .right .tehui .b
+{
+    width:200px;
+    height:537px;
+    float: left;
+    border-bottom:1px solid #e6e6e6;
+    border-right:1px solid #e6e6e6;}
+.floor7_day .content .right .tehui .b .top,
+.floor6_drink .content .right .tehui .b .top,
+.floor5_oil .content .right .tehui .b .top,
+.floor4_milk .content .right .tehui .b .top,
+.floor1_fruit .content .right .tehui .b .top,
+.floor2_meat .content .right .tehui .b .top,
+.floor3_seafood .content .right .tehui .b .top
+{
+    width:180px;
+    height:396px;
+    padding:15px 10px 0;}
+.floor7_day .content .right .tehui .b .top .top1 .top_img,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img
+{
+    position: relative;
+    width:180px;
+    height:249px;
+    border-bottom:1px solid #e6e6e6 ;}
+.floor7_day .content .right .tehui .b .top .top1 .top_img img,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img img,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img img,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img img,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img img,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img img,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img img
+{
+    width:180px;
+    height:169px;
+    margin-top:5px;
+    cursor: pointer;}
+.floor7_day .content .right .tehui .b .top .top1 .top_img span.top_bg,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img span.top_bg,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img span.top_bg,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img span.top_bg,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img span.top_bg,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img span.top_bg,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img span.top_bg
+{
+    display: inline-block;
+    width:67px;
+    height:64px;
+    position: absolute;
+    top:5px;
+    right:-2px;}
+.floor7_day .content .right .tehui .b .top .top1 .top_img span.gg,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img span.gg,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img span.gg,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img span.gg,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img span.gg,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img span.gg,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img span.gg
+{
+    position: absolute;
+    bottom:5px;
+    right:5px;
+    font-size:9px;
+    color: #939494;
+}
+.floor7_day .content .right .tehui .b .top .top1 .top_img span.span1,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img span.span1,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img span.span1,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img span.span1,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img span.span1,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img span.span1,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img span.span1
+{
+    background: url("../images/floor2/top.png") no-repeat 0 0 ;
+}
+.floor7_day .content .right .tehui .b .top .top1 .top_img span.span2,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img span.span2,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img span.span2,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img span.span2,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img span.span2,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img span.span2,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img span.span2
+{
+    background: url("../images/floor2/top.png") no-repeat 0 -62px ;
+}
+.floor7_day .content .right .tehui .b .top .top1 .top_img span.span3,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img span.span3,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img span.span3,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img span.span3,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img span.span3,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img span.span3,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img span.span3,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img span.span3
+{
+    background: url("../images/floor2/top.png") no-repeat 0 -127px ;
+}
+
+
+.floor7_day .content .right .tehui .b .top .top1 .top_img span.span4,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img span.span4,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img span.span4,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img span.span4,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img span.span4,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img span.span4,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img span.span4
+{
+    background: url("../images/floor2/top.png") no-repeat 0 -190px ;
+}
+.floor7_day .content .right .tehui .b .top .top1 .top_img span.span5,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img span.span5,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img span.span5,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img span.span5,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img span.span5,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img span.span5,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img span.span5
+{
+    background: url("../images/floor2/top.png") no-repeat 0 -256px ;
+}
+.floor7_day .content .right .tehui .b .top .top1 .top_img p.name,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img p.name,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img p.name,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img p.name,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img p.name,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img p.name,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img p.name
+{
+    width:180px;
+    height:40px;}
+.floor7_day .content .right .tehui .b .top .top1 .top_img p.name a,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img p.name a,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img p.name a,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img p.name a,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img p.name a,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img p.name a,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img p.name a
+{
+    line-height:20px;
+    font-size:12px;
+    color: #d1a26c;}
+.floor7_day .content .right .tehui .b .top .top1 .top_img p.price,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img p.price,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img p.price,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img p.price,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img p.price,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img p.price,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img p.price
+{
+    color: #d1a26c;
+    font-size:14px;}
+.floor7_day .content .right .tehui .b .top .top1 .top_img p.price span,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img p.price span,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img p.price span,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img p.price span,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img p.price span,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img p.price span,
+.floor3_seafood .content .right .tehuii .b .top .top1 .top_img p.price span
+{
+    font-size:12px;}
+
+
+.floor7_day .content .right .tehui .b .top .top1 .font,
+.floor6_drink .content .right .tehui .b .top .top1 .font,
+.floor5_oil .content .right .tehui .b .top .top1 .font,
+.floor4_milk .content .right .tehui .b .top .top1 .font,
+.floor1_fruit .content .right .tehui .b .top .top1 .font,
+.floor2_meat .content .right .tehui .b .top .top1 .font,
+.floor3_seafood .content .right .tehui .b .top .top1 .font
+{
+    height:36px;
+    border-bottom:1px solid #e6e6e6;}
+.floor7_day .content .right .tehui .b .top .top_bottom .font,
+.floor6_drink .content .right .tehui .b .top .top_bottom .font,
+.floor5_oil .content .right .tehui .b .top .top_bottom .font,
+.floor4_milk .content .right .tehui .b .top .top_bottom .font,
+.floor1_fruit .content .right .tehui .b .top .top_bottom .font,
+.floor2_meat .content .right .tehui .b .top .top_bottom .font,
+.floor3_seafood .content .right .tehui .b .top .top_bottom .font
+{
+    border-bottom:none;}
+.floor7_day .content .right .tehui .b .top .top1 .font span.num,
+.floor6_drink .content .right .tehui .b .top .top1 .font span.num,
+.floor5_oil .content .right .tehui .b .top .top1 .font span.num,
+.floor4_milk .content .right .tehui .b .top .top1 .font span.num,
+.floor1_fruit .content .right .tehui .b .top .top1 .font span.num,
+.floor2_meat .content .right .tehui .b .top .top1 .font span.num,
+.floor3_seafood .content .right .tehui .b .top .top1 .font span.num
+{
+    display: inline-block;
+    width:15px;
+    height:15px;
+    border-radius:100%;
+    background: #d1a26c;
+    text-align: center;
+    line-height:15px;
+    color: #fff;
+    font-size:14px;}
+.floor7_day .content .right .tehui .b .top .top1 .font span.num_right,
+.floor6_drink .content .right .tehui .b .top .top1 .font span.num_right,
+.floor5_oil .content .right .tehui .b .top .top1 .font span.num_right,
+.floor4_milk .content .right .tehui .b .top .top1 .font span.num_right,
+.floor1_fruit .content .right .tehui .b .top .top1 .font span.num_right,
+.floor2_meat .content .right .tehui .b .top .top1 .font span.num_right,
+.floor3_seafood .content .right .tehui .b .top .top1 .font span.num_right
+{
+    font-size:12px;
+    color: #999;
+    line-height:36px;}
+.floor7_day .content .right .tehui .b .top .top1 .font,
+.floor6_drink .content .right .tehui .b .top .top1 .font,
+.floor5_oil .content .right .tehui .b .top .top1 .font,
+.floor4_milk .content .right .tehui .b .top .top1 .font,
+.floor1_fruit .content .right .tehui .b .top .top1 .font,
+.floor2_meat .content .right .tehui .b .top .top1 .font,
+.floor3_seafood .content .right .tehui .b .top .top1 .font
+{
+    position: relative;}
+.floor7_day .content .right .tehui .b .top .top1 .font span.gg,
+.floor6_drink .content .right .tehui .b .top .top1 .font span.gg,
+.floor5_oil .content .right .tehui .b .top .top1 .font span.gg,
+.floor4_milk .content .right .tehui .b .top .top1 .font span.gg,
+.floor1_fruit .content .right .tehui .b .top .top1 .font span.gg,
+.floor2_meat .content .right .tehui .b .top .top1 .font span.gg,
+.floor3_seafood .content .right .tehui .b .top .top1 .font span.gg
+{
+    font-size:9px;
+    color: #ccc;
+    position: absolute;
+    right:0;
+    bottom:0;}
+.floor7_day .content .right .tehui .b .top .font_1,
+.floor6_drink .content .right .tehui .b .top .font_1,
+.floor5_oil .content .right .tehui .b .top .font_1,
+.floor4_milk .content .right .tehui .b .top .font_1,
+.floor1_fruit .content .right .tehui .b .top .font_1,
+.floor2_meat .content .right .tehui .b .top .font_1,
+.floor3_seafood .content .right .tehui .b .top .font_1
+{
+    display: none;}
+.floor7_day .content .right .tehui .b .top .top1 .top_img,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img
+{
+    display: none;}
+.floor7_day .content .right .tehui .b .top .top1 .top_img1,
+.floor6_drink .content .right .tehui .b .top .top1 .top_img1,
+.floor5_oil .content .right .tehui .b .top .top1 .top_img1,
+.floor4_milk .content .right .tehui .b .top .top1 .top_img1,
+.floor1_fruit .content .right .tehui .b .top .top1 .top_img1,
+.floor2_meat .content .right .tehui .b .top .top1 .top_img1,
+.floor3_seafood .content .right .tehui .b .top .top1 .top_img1
+{
+    display: block;}
+
+
+.floor7_day .content .right .tab_change,
+.floor6_drink .content .right .tab_change,
+.floor5_oil .content .right .tab_change,
+.floor4_milk .content .right .tab_change,
+.floor1_fruit .content .right .tab_change,
+.floor2_meat .content .right .tab_change,
+.floor3_seafood .content .right .tab_change
+{
+    position: absolute;}
+.floor7_day .content .right .tab_change2,
+.floor6_drink .content .right .tab_change2,
+.floor5_oil .content .right .tab_change2,
+.floor4_milk .content .right .tab_change2,
+.floor1_fruit .content .right .tab_change2,
+.floor2_meat .content .right .tab_change2,
+.floor3_seafood .content .right .tab_change2
+{
+    display: none;}
+.floor7_day .content .right .tab_change3,
+.floor6_drink .content .right .tab_change3,
+.floor5_oil .content .right .tab_change3,
+.floor4_milk .content .right .tab_change3,
+.floor1_fruit .content .right .tab_change3,
+.floor2_meat .content .right .tab_change3,
+.floor3_seafood .content .right .tab_change3
+{
+    display: none;}
+.floor7_day .content .right .tab_change4,
+.floor6_drink .content .right .tab_change4,
+.floor5_oil .content .right .tab_change4,
+.floor4_milk .content .right .tab_change4,
+.floor1_fruit .content .right .tab_change4,
+.floor2_meat .content .right .tab_change4,
+.floor3_seafood .content .right .tab_change4{
+    display: none;}
+
+
+.floor7_day .content .right .tehui .b .bottom,
+.floor6_drink .content .right .tehui .b .bottom,
+.floor5_oil .content .right .tehui .b .bottom,
+.floor4_milk .content .right .tehui .b .bottom,
+.floor1_fruit .content .right .tehui .b .bottom,
+.floor2_meat .content .right .tehui .b .bottom,
+.floor3_seafood .content .right .tehui .b .bottom
+{
+    width:200px;
+    height:125px;
+    border-top:1px solid #e6e6e6;
+    cursor: pointer;
+    position: relative;}
+
+.floor7_day .content .right .tehui .b .bottom span.gg,
+.floor6_drink .content .right .tehui .b .bottom span.gg,
+.floor5_oil .content .right .tehui .b .bottom span.gg,
+.floor4_milk .content .right .tehui .b .bottom span.gg,
+.floor1_fruit .content .right .tehui .b .bottom span.gg,
+.floor2_meat .content .right .tehui .b .bottom span.gg,
+.floor3_seafood .content .right .tehui .b .bottom span.gg
+{
+    font-size:9px;
+    color: #ccc;
+    position: absolute;
+    left:3px;
+    bottom:3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
