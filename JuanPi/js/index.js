@@ -33,7 +33,7 @@ $(function() {
 });
 
 function turnPic() {
-		var i=0;
+	var i=0;
 	var _timer=0;
 	function delay(){
 		$("#btn span").eq(i).css("border-color","transparent");
@@ -149,6 +149,7 @@ function djsClock() {
 }
 function getGoodList() {
 	var _s=10;
+	var _state=1;//控制异步同步。
 	window.onscroll=function(){
 		var scrollh=$(document).scrollTop()//滚动条高度
 		var pmh=$(window).height();//页面（屏幕）高度
@@ -164,24 +165,31 @@ function getGoodList() {
 			$(".returntop").css("display","none");
 		}
 		if(scrollh+pmh+360>=conh){
-			readGood(_s,_s+30);//读取图片
-			_s=_s+35;
+			if (_state!=0) {
+				_state=0;
+				readGood(_s,_s+30);//读取图片
+				_s=_s+30;
+			}
 		}
 	}
 	readGood(0,10);//加载goods
 	function readGood(_min,_max){
-		$.ajax({
-			url: '../api/goodsList.json',
-			type: 'POST',
-			dataType: 'json',
-			data: null,
-		})
-		.done(function (data) {
-			goodsload(data,_min,_max);
-		})
-		.fail(function() {
-			console.log("error");
-		})
+		if (_min<_max) {
+			$.ajax({
+				url: '../api/goodsList.json',
+				type: 'POST',
+				dataType: 'json',
+				data: null,
+			})
+			.done(function (data) {
+				goodsload(data,_min,_max);
+				_state=1;
+
+			})
+			.fail(function() {
+				console.log("error");
+			})
+		}
 	}
 	//请求回来的json数据处理
 	function goodsload(data,_min,_max) {
@@ -190,7 +198,7 @@ function getGoodList() {
 		for (var key in data) {
 			_length++;
 		}
-		// console.log(_min+"-"+(_max<_length?_max:_length));
+		console.log(_min+"-"+(_max<_length?_max:_length));
 		for (var key=_min;key<_max && _min<_length;key++,_min++) {
 			str+='<li class='+key+'>';
 			str+='<a href="../tpl/details.html?n='+key+'" target="_blank"><div class="'+data[key]["img_icon"]+'"></div>';

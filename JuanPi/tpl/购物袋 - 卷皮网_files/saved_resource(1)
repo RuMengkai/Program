@@ -1,0 +1,469 @@
+@charset "utf-8";
+/** CSS Document 
+* Dec: mid-autumn style 
+* Date: 2014-12-01;
+* Author: mumian@juanpi.com;
+**/
+/*goods-list by mumian start*/
+/*
+.goods-list li .good-price .des-other .icon-gai,.goods-list li .good-price .des-other .icon-fan,.goods-list li .good-price .btn a em,.goods-list li.hover .good-price .btn a,.goods-list li .good-price .btn.start a,.goods-list li .good-price .btn.start_1 a,.goods-list li .like-ceng .iphone-ico{background:url(../images/list/list-total.png) no-repeat;}
+*/
+.goods-list li .good-price .des-other .icon-gai,.goods-list li .good-price .des-other .icon-fan,.goods-list li .good-price .btn a em,.goods-list li.hover .good-price .btn a,.goods-list li .good-price .btn.start a,.goods-list li .good-price .btn.start_1 a,.goods-list li .like-ceng .iphone-ico,.goods-list li .good-price .btn.start_clock,.goods-list li .good-price .btn.start_clock .icon-clock-start,.goods-list li .tom-box  em.phone{background:url(../images/list/list-total.png?20160112) no-repeat;}
+
+.goods-list{ margin: 0px auto 0;width:915px;*margin-bottom:20px;_margin-bottom:0;}
+
+.goods-list li{width:285px;background:#FFF;float:left;margin:0 18px 18px 0;border:#f6f6f6 solid 1px;}
+.goods-list li .good-pic {width:285px; margin:auto 0; position: relative; height: 285px;}
+.goods-list li .good-pic.other{height:370px;}
+.goods-list li .good-pic.other .pic-img{height:370px;}
+.goods-list li .good-pic.other .pic-img img{max-height:370px;_height:370px;}
+.goods-list li .pic-img{ height:285px; overflow:hidden; text-align:center; width:285px; display:table-cell; vertical-align:middle;_display:block;}
+.goods-list li .pic-img img{ max-width:285px;max-height:285px;_height:285px;_width:285px;}
+.goods-list li .pic-img:hover{ text-decoration:none; cursor:pointer;}
+.goods-list li .buy-over{cursor:pointer;position:relative;display:block;position:absolute;top:80px;left:80px;background:url(../images/list/buy-over.png) no-repeat;height:0;width:120px;padding-top:120px;overflow:hidden;z-index:15;}
+
+.goods-list li .buy-over.brand{background:#000; opacity:0.7;filter:alpha(opacity=70);height: 40px; width:275px; position: absolute; left: 0; padding: 0 0 0 10px;top:245px;line-height:40px; color: #fff; }
+.goods-list li .buy-over.brand a{ position: relative; display: inline; bottom:0; color: #ffff66;  left: 15px; text-decoration: underline;}
+.goods-list li .buy-over a{display:block;position:absolute;bottom:25px;left:30px;color:#ffff66;}
+.goods-list li .list-good {position: relative; width:285px; height:auto; z-index:1;}
+.goods-list li .good-title {width:270px;height:18px; line-height:18px;overflow: hidden;margin:10px 10px 9px 5px; position:relative; font-weight:normal;color:#333;}
+.goods-list li .good-title a{ display: inline;color:#333;letter-spacing:1px;}
+.goods-list li .good-title a:hover{ text-decoration:underline; color:#333;}
+.goods-list li .good-title span.sold{display:block;color:#bbb;position:absolute;top:0;right:0;background:#fff;width:60px;height:18px;text-align:right;}
+.brand{background:url(../images/list/brand.png?20160115) no-repeat 0 0}
+.brand-new{background:url(../img/list/float-icon.png) no-repeat 0 0; padding-top:2px; height:35px; width: 37px; color:#fff; text-align:center; line-height:14px;position:absolute;top:0; left:0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='crop',src="//jp.juancdn.com/juanpi/images/list/float-icon.png");}
+.brand-new.brand{background:url(../img/list/brand-icon.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='crop',src="//jp.juancdn.com/juanpi/images/list/brand-icon.png");}
+/*this is good-price by mumian*/
+.goods-list li .good-price { width:270px; height:48px;line-height:40px; position: relative;padding:0 10px 0px 5px;background:#fff; z-index:10;}
+.goods-list li .good-price .price-current,.goods-list li .good-price .des-other{ display:block; float:left;}
+.goods-list li .good-price .price-current {font-size:40px;font-family:Arial;}
+.goods-list li .good-price .price-current em {font-size: 14px; font-family:"微软雅黑","verdana"; vertical-align:1px; margin-left:1px;}
+.goods-list li .list-good.buy .good-price .price-current{ color:#ff464e;}
+.goods-list li .list-good.start .good-price .price-current{ color:#008800;}
+.goods-list li .list-good.gone .good-price .price-current{ color:#ccc;}
+/*this is tom-box by mumian end*/
+.goods-list li .tom-box{visibility:hidden;opacity:0;cursor:pointer;}
+.goods-list li.hover .tom-box{visibility:visible;opacity:1;filter:alpha(opacity=100);
+  transition: all 0.2s linear 0s;
+	-moz-transition:all 0.2s linear 0s;
+	-webkit-transition:all 0.2s linear 0s;
+	-o-transition:all 0.2s linear 0s;}
+.goods-list li .tom-box .tom-ceng{width:285px;height:285px;background:#000;position:absolute;top:0;left:0;opacity:.5;filter:alpha(opacity=50);}
+.goods-list li .tom-box .tom-con{width:285px;height:285px;position:absolute;top:0;left:0;}
+.goods-list li .tom-box .tom-con .code{background:url(../images/global/app-code.png?20150610) no-repeat 5px 5px #fff;height:120px;width:120px;margin:45px auto 10px;padding:5px;border-radius:5px;box-shadow:0 0 5px #333;}
+.goods-list li .tom-box .tom-con .code.juan_code{background:url(../images/global/app-code-juan.png?20150610) no-repeat 5px 5px #fff;}
+.goods-list li .tom-box .tom-con .code.juan_other{background:url(../images/global/app-code-other.png?20150610) no-repeat 5px 5px #fff;}
+.goods-list li .tom-box .tom-con .app-tips{width:200px;height:auto;position:relative;margin:0 auto;border-top:#999 dashed 1px;}
+.goods-list li .tom-box .tom-con .app-tips .app-ceng{position:absolute;top:10px;left:0;width:200px;height:50px;background:#000;opacity:.2;filter:alpha(opacity=20);border-radius:5px;}
+.goods-list li .tom-box .tom-con .app-tips .app-btn{position:absolute;top:10px;left:0;width:200px;height:50px;z-index:10;color:#fff;font-size:14px;}
+.goods-list li .tom-box .tom-con .app-tips .app-btn em.phone{display:block;background-position:right -215px;margin:10px 12px 0 25px;width:18px;height:32px;}
+.goods-list li .tom-box .tom-con .app-tips .app-btn span{ line-height: 20px;margin-top: 5px;}
+.goods-list li .tom-box .tom-con .app-tips .app-btn.other span{margin-top:15px;}
+/*this is tom-box by mumian end*/
+/*this is des-other by mumian*/
+.goods-list li .good-price .des-other{margin:2px 0 0 5px; height:40px; line-height:18px;}
+.goods-list li .good-price .des-other strong{ width:auto; height:16px; display:block;}
+.goods-list li .good-price .des-other .icon-gai,.goods-list li .good-price .des-other .icon-fan,.goods-list li .good-price .des-other .icon-temai{display:block;  height:0;  overflow:hidden;float:left;}
+.goods-list li .good-price .des-other .icon-gai{ background-position:-151px 0;width:49px;padding-top:16px;}
+.goods-list li .good-price .des-other .icon-fan{ background-position:-159px -17px; width:41px; padding-top:18px;margin-right:3px;}
+.goods-list li .good-price .des-other .price-old {color: #bbb; text-decoration: line-through;font-size:14px;}
+.goods-list li .good-price .des-other .price-old em{ font-family:"微软雅黑","verdana";font-size:12px;}
+.goods-list li .good-price .des-other .discount { color: #bbb; vertical-align:top;}
+.goods-list li .good-price .btn{position: absolute;top:11px;right:10px;}
+.goods-list li .good-price .btn a{ font-family:"宋体";display:block;text-align:center;font-size: 14px;cursor:pointer; color:#ff464e;width:70px;height:30px; line-height:30px;overflow:hidden;}
+.goods-list li .good-price .btn a em{display:inline;float:left;width:15px;height:15px;margin:8px -4px 0 12px;margin:7px -4px 0 12px \9;_margin:7px -4px 0 12px;vertical-align:-2px;}
+.goods-list li .good-price .btn a .m-icon{background-position:right -71px;}
+.goods-list li .good-price .btn a .b-icon{background-position:right -37px;}
+.goods-list li .good-price .btn a .j-icon{background-position:right -54px;}
+.goods-list li .good-price .btn a .t-icon{background-position:right -88px;}
+.goods-list li .good-price .btn.m-buy span{color:#c40000;}
+.goods-list li .good-price .btn.t-buy span{color:#ff5400;}
+.goods-list li .good-price .btn.buy,.goods-list li .good-price .btn.gone{right:0;}
+/*
+.goods-list li .good-price .btn.start,.goods-list li .good-price .btn.start_1{right:-3px;top:3px;}
+*/
+.goods-list li .good-price .btn.start,.goods-list li .good-price .btn.start_1,.goods-list li .good-price .btn.start_clock{right:-3px;top:3px;}
+.goods-list li .good-price .btn.start a,.goods-list li .good-price .btn.start_1 a,.goods-list li .good-price .btn.start_clock{width:83px;height:32px;padding-left:4px;background-position:0 -61px;color:#fff;line-height:34px;line-height:36px \9;_line-height:36px;}
+.goods-list li .good-price .btn.start_clock{width:106px;background-position:0 -97px;cursor:pointer;}
+.goods-list li .good-price .btn.start_clock a{color:#fff;line-height:34px;line-height:36px \9;_line-height:36px;text-align: left;}
+.goods-list li.hover .good-price .btn.start_clock a:hover,.goods-list li .good-price .btn.start_clock a{background: none;} /* 重置鼠标经过li事件样式 */
+.goods-list li .good-price .btn.start_clock .icon-clock-start{background-position:-3px -133px; width: 30px; height: 30px;display: inline-block;float: left;}
+
+.goods-list li .good-price .btn.start a,.goods-list li .good-price .btn.start_1 a{width:83px;height:32px;padding-left:4px;background-position:0 -61px;color:#fff;line-height:34px;line-height:36px \9;_line-height:36px;}
+.goods-list li .good-price .btn.gone a{cursor:default;}
+.goods-list li .good-price .btn a:hover{text-decoration:none;}
+.goods-list li.hover .good-price .btn.buy a:hover{background-position:0 -31px;}
+/*this is my-like*/
+.my-like{ display: none; width:26px; height:26px; border: 1px solid #f4f4f4; background: #f4f4f4; border-radius:15px; position: absolute; top: 10px; right: 10px; cursor: pointer;z-index:15;}
+.my-like i,.my-like .like-big,.unliked span{background: url(../images/list/my-like.png?20160115) no-repeat;_background: url(../images/list/my-like.gif) no-repeat}
+.my-like i{background-position: -26px 0; width:14px; height:11px; position: absolute; top: 50%; left: 50%; }
+.my-like .like-ico{background-position: 0 0;margin-top: -5px; margin-left:-7px; }
+.my-like .del-ico{background-position: -26px 0;  width: 14px; height: 15px;margin-top: -7px; margin-left:-7px;}
+.del-ico:hover{  background-position: -26px -19px; }
+.my-like:hover .like-ico{background-position:0 -72px;}
+.my-like:hover .like-ico.l-active{background-position:0 -89px;}
+.my-like .l-active{background-position:0 -20px;}
+.my-like .like-big{ margin-top: -40px; margin-left: -8px; width: 45px; height: 37px; background-position:-55px 0;}
+.demo1 {
+        -webkit-animation-name:'like_poof';
+        -webkit-animation-duration: .6s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: .1s;
+        -webkit-animation-iteration-count: none;
+        -webkit-animation-direction: alternate;
+
+        -moz-animation: like_poof .6s linear;
+        -ms-animation: like_poof .6s linear;
+        animation: like_poof .6s linear;
+
+        -moz-animation: like_poof .6s linear;
+    }
+    @-webkit-keyframes like_poof {
+        0% {
+            margin-top: -40px;
+            opacity: 1;
+            -webkit-transform: rotate(0deg)
+        }
+        25% {
+            opacity: 1;
+            -webkit-transform: rotate(-20deg)
+        }
+        75% {
+            -webkit-transform: rotate(20deg)
+        }
+        100% {
+            margin-top: -90px;
+
+            opacity: 0;
+            -webkit-transform: rotate(0deg)
+        }
+    }
+
+    
+
+    @-ms-keyframes like_poof {
+        0% {
+            margin-top: -40px;
+            opacity: 1;
+            -ms-transform: rotate(0deg)
+        }
+        25% {
+            opacity: 1;
+            -ms-transform: rotate(-20deg)
+        }
+        75% {
+            -ms-transform: rotate(20deg)
+        }
+        100% {
+            margin-top: -90px;
+
+            opacity: 0;
+            -ms-transform: rotate(0deg)
+        }
+    }
+
+    @keyframes like_poof {
+        0% {
+            margin-top: -40px;
+            opacity: 1;
+            transform: rotate(0deg)
+        }
+        25% {
+            opacity: 1;
+            transform: rotate(-20deg)
+        }
+        75% {
+            transform: rotate(20deg)
+        }
+        100% {
+            margin-top: -90px;
+
+            opacity: 0;
+            transform: rotate(0deg)
+        }
+    }
+    @-webkit-keyframes unlike_heartbreak_left {
+        0% {
+            opacity: 1;
+            margin-top: -50px;
+            -webkit-transform: rotate(0deg)
+        }
+        30% {
+            opacity: 1;
+            margin-top: -55px;
+        }
+        80% {
+            opacity: 0;
+            margin-top: -10px;
+            -webkit-transform: rotate(-15deg)
+        }
+        100% {
+            opacity: 0;
+            margin-top: -10px;
+            -webkit-transform: rotate(-15deg)
+        }
+    }
+    @-webkit-keyframes unlike_heartbreak_right {
+        0% {
+            opacity: 1;
+            margin-top: -50px;
+            -webkit-transform: rotate(0deg)
+        }
+        30% {
+            opacity: 1;
+            margin-top: -55px;
+        }
+        80% {
+            opacity: 0;
+            margin-top: -10px;
+            -webkit-transform: rotate(15deg)
+        }
+        100% {
+            opacity: 0;
+            margin-top: -10px;
+            -webkit-transform: rotate(15deg)
+        }
+    }
+
+   
+
+    @-ms-keyframes unlike_heartbreak_left {
+        0% {
+            opacity: 1;
+            margin-top: -50px;
+            -ms-transform: rotate(0deg)
+        }
+        30% {
+            opacity: 1;
+            margin-top: -55px;
+        }
+        80% {
+            opacity: 0;
+            margin-top: -10px;
+            -ms-transform: rotate(-15deg)
+        }
+        100% {
+            opacity: 0;
+            margin-top: -10px;
+            -ms-transform: rotate(-15deg)
+        }
+    }
+    @-ms-keyframes unlike_heartbreak_right {
+        0% {
+            opacity: 1;
+            margin-top: -50px;
+            -ms-transform: rotate(0deg)
+        }
+        30% {
+            opacity: 1;
+            margin-top: -55px;
+        }
+        80% {
+            opacity: 0;
+            margin-top: -10px;
+            -ms-transform: rotate(15deg)
+        }
+        100% {
+            opacity: 0;
+            margin-top: -10px;
+            -ms-transform: rotate(15deg)
+        }
+    }
+
+    @keyframes unlike_heartbreak_left {
+        0% {
+            opacity: 1;
+            margin-top: -50px;
+            transform: rotate(0deg)
+        }
+        30% {
+            opacity: 1;
+            margin-top: -55px;
+        }
+        80% {
+            opacity: 0;
+            margin-top: -10px;
+            transform: rotate(-15deg)
+        }
+        100% {
+            opacity: 0;
+            margin-top: -10px;
+            transform: rotate(-15deg)
+        }
+    }
+    @keyframes unlike_heartbreak_right {
+        0% {
+            opacity: 1;
+            margin-top: -50px;
+            transform: rotate(0deg)
+        }
+        30% {
+            opacity: 1;
+            margin-top: -55px;
+        }
+        80% {
+            opacity: 0;
+            margin-top: -10px;
+            transform: rotate(15deg)
+        }
+        100% {
+            opacity: 0;
+            margin-top: -10px;
+            transform: rotate(15deg)
+        }
+    }
+    .unliked span {
+        background-position:-45px -63px;
+        display: block;
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        margin-top: -56px;
+    }
+    .unliked span.heart_left {
+        background-position: -45px -63px;
+        margin-left: -25px;
+        width: 27px;
+        height: 38px;
+        opacity: 0;
+        -webkit-transform-origin: 26px 54px;
+        
+        -ms-transform-origin: 26px 54px;
+        -o-transform-origin: 26px 54px;
+        transform-origin: 26px 54px;
+        -webkit-animation: unlike_heartbreak_left .6s ease-out;
+      
+        -ms-animation: unlike_heartbreak_left .6s ease-out;
+        -o-animation: unlike_heartbreak_left .6s ease-out;
+        animation: unlike_heartbreak_left .6s ease-out
+    }
+    .unliked span.heart_right {
+        background-position: -77px -63px;
+        width: 27px;
+        height: 38px;
+        opacity: 0;
+        -webkit-transform-origin: 0 54px;
+       
+        -ms-transform-origin: 0 54px;
+        -o-transform-origin: 0 54px;
+        transform-origin: 0 54px;
+        -webkit-animation: unlike_heartbreak_right .6s ease-out;
+        
+        -ms-animation: unlike_heartbreak_right .6s ease-out;
+        -o-animation: unlike_heartbreak_right .6s ease-out;
+        animation: unlike_heartbreak_right .6s ease-out
+    }
+/*this is like-ceng*/
+.goods-list li .like-ceng{ height: 48px;background: rgba(0,0,0,.5);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);zoom:1;position: absolute;top:237px;width:265px;
+left:0; padding: 0 0 0 20px; display: none; z-index: 99;}
+:root #aaa{filter:none\9;}/*for IE9*/
+.goods-list li .like-ceng .iphone-ico{ width: 20px; height: 29px;background-position:right -185px; display: block; float: left; margin: 9px 0;}
+.goods-list li .like-ceng .tips{ float: left; color: #fff; padding: 5px 0 7px 20px;}
+.goods-list li .like-ceng p{line-height: 18px;}
+.goods-list li .like-ceng .tips em{ background: #ff3838; padding: 2px 5px; border-radius: 2px;}
+.goods-list li:hover{border:#ebebeb solid 1px;}
+.goods-list li.hover .my-like{display:block;}
+.goods-list li.hover1 .my-like{display:block;}
+.goods-list li.hover .good-price .btn.buy span{color:#fff;}
+.goods-list li.hover .good-price .btn.buy a .b-icon{background-position:right -105px;}
+.goods-list li.hover .good-price .btn.buy{right:10px;top:3px;}
+.goods-list li.hover .good-price .btn.start{right: -3px;top: 3px;}
+.goods-list li.hover .good-price .btn.gone a{background:none;color:#f8285c;}
+.goods-list li.hover .good-price .btn.buy .j-icon,.goods-list li.hover .good-price .btn.buy .b-icon,.goods-list li.hover .good-price .btn.buy .m-icon,.goods-list li.hover .good-price .btn.buy .t-icon{display:none;}
+.goods-list li.hover .quan-hd{display:block;}
+.quan-hd,.box-hd{display:none;}
+.quan-hd .mask-bg{cursor:default;}
+.go-quan{ display:block; position:absolute; top:110px; left:83px; width:120px; height:80px;cursor:pointer; text-decoration:none; background:url(../images/list/quan_tag_wait.png) no-repeat;z-index:12;}
+.go-quan-red{background:url(../images/list/quan_tag_buy.png) no-repeat;}
+.go-quan em.other{ top:12px; font-size:20px;}
+.go-quan em{ position:absolute; top:5px; left:15px; width:50px; height:30px; font-size:26px; color:#fff; font-family:"微软雅黑","verdana";  overflow:hidden;}
+.go-quan em i{ font-size:12px; font-style:normal;}
+.mask-bg{cursor:pointer; display:block;position: absolute; top:0; left:0;width:285px; height:285px;background:#fff;  opacity: .5; filter:alpha(opacity=50);z-index:10;}
+/*goods-list by mumian end*/
+/*brand-list-h by mumian start*/
+.brand-list-h{width:1005px;height:auto;overflow:hidden;}
+.brand-list-h ul li{float:left;width:310px;height:auto;margin:0 25px 25px 0;}
+.brand-list-h ul li .pic a{display:block;width:310px;height:100px;overflow:hidden;}
+.brand-list-h ul li .detail{height:40px;background:#fff;line-height:40px;padding:0 10px;}
+.brand-list-h ul li .detail .title{width:250px;height:40px;overflow:hidden;}
+.brand-list-h ul li .detail .title a{font-size:14px;font-weight:bold;color:#333;}
+.brand-list-h ul li .detail a.go{background:url(../images/total/brand-total.gif) no-repeat 0 5px;width:28px;height:15px;margin-top:7px;padding:5px 0;}
+/*brand-list-h by mumian end*/
+/*brand-list by mumian strart*/
+.main .brand-list{ width:915px; height:248px;overflow:hidden; margin:0 auto; clear:both;}
+.main .brand-list li{ float:left; width:285px; display:inline; height:auto;background:#fff; margin:0 20px 20px 0; padding-bottom:10px;}
+.main .brand-list li .list{ width:285px; height:auto; position:relative;}
+.main .brand-list li .list .pic img{width:285px; height:150px;}
+.main .brand-list li .list .left-show{width:150px;}
+.main .brand-list li .list .discount{text-align:right;margin:15px 15px 0 0;color:#666;font-weight:normal;}
+.main .brand-list li .list .title{ font-weight:normal; height:16px; line-height:16px;padding:0 0 10px 10px; margin:10px 0 0; border-bottom:#e2e2e2 dashed 1px;}
+.main .brand-list li .list .title a{ color:#333; font-size:14px;}
+.main .brand-list li .list .right-show{ width:80px; height:40px;margin:20px 10px 0 0;}
+.main .brand-list li .list .start-time{ width:200px; padding:10px 0 0 10px;color:#ababab;}
+.main .brand-list li .list .start-time b{ color:#a2d378; margin:0 2px;}
+.main .brand-list li .list .start-time .icon-clock{ background:url(../images/list/clock.png) no-repeat; height:16px; width:16px; display:inline-block; float:left; margin-top:2px;}
+.hot-brand .brand-list{height:auto;overflow:auto;}
+/*brand-list by mumian end*/
+.main .brand-box{width:100%;}
+.main .normal-title{height:40px;line-height:40px;background:#fff;margin:20px 0;}
+.main .normal-title .title {
+    background: url(../images/brand/normal-title-bg.gif) no-repeat right #ff464e;
+	font-size:20px;font-family:"微软雅黑","宋体";color:#fff;
+	display:inline-block;
+	padding:0 20px;
+	float:left;
+}
+.main .normal-title .title h3{font-weight:normal;}
+.main .normal-title .txt{font-size:14px;color:#666;margin-right:10px;}
+/*advance-nav by mumian start
+.advance-nav{ height:20px; width:980px; margin:20px auto 0;padding: 10px 0; background:#fff;}
+.advance-nav ul li{ float:left; line-height:20px;}
+.advance-nav ul li a{ color:#666; display:block; padding:0 35px;}
+.advance-nav ul li a:hover{ text-decoration:underline;}
+.advance-nav ul li a.active{ font-weight:bold; color:#ff464e; background:#fff;}
+.advance-nav ul li a.active:hover{ text-decoration:none;}
+.advance-nav .tips{ margin-right:30px;font-size:14px; font-family:"微软雅黑","宋体";}
+.advance-nav .tips .time{ background:#c7c7c7; display:inline-block; padding:0 5px;border-radius:3px; color:#fff;}
+.advance-nav .tips .icon-tips{ background:url(../images/list/clock.gif) no-repeat; height:14px; width:14px; display:inline-block; vertical-align:middle; margin-right:3px;}
+.advance-nav ul .r-border{border-right: 1px solid #e2e2e2}*/
+
+/*advance-nav by longyi 20160706 start*/
+.advance-nav{ margin:0 auto;padding: 10px 0;text-align: center;}
+/*advance-nav by longyi 20160706 end*/
+
+
+/*zhe-list by mumian end*/
+.main .zhe-more{ width:976px; text-align:center; font-size:16px; height:38px;  border:#fff solid 2px; overflow:hidden; line-height:38px;margin:0 auto;*margin-top:25px;_margin-top:0;}
+.main .zhe-more a{ color:#0289cd; display:block; text-decoration:underline;background:#f9f9f9;}
+.main .zhe-more a em{ color:#ff3838;}
+.main .zhe-more a:hover{ text-decoration:none; background:#fefefe;}
+/*this is hot_goods*/
+.hot_goods h3 {  margin-bottom: 30px;position: relative; }
+.hot_goods h3 .line{border-bottom: 1px solid #fff;margin: 0 auto;border-top: 1px solid #2a142b;height: 0;overflow: hidden;}
+.hot_goods h3 .line-txt{ position: absolute; top:-14px; left: 50%;margin-left: -65px; width: 130px; height:30px;line-height:30px; text-align: center; background: #f6f6f6; color: #2a142b;font-size: 18px; font-family: "微软雅黑"; }
+/*this is brand-all-box start*/
+.brand-all-box{border:#fff solid 1px;height:105px;width:248px;position:absolute;bottom:20px;left:50%;margin-left:-124px;}
+.brand-all-box .inside-box{position:absolute;top:4px;left:4px;width:200px;height:77px;padding:10px 20px;z-index:10;}
+.brand-all-box .inside-ceng{background:#fff;position:absolute;width:240px;height:97px;top:4px;left:4px;opacity:.8;filter:alpha(opacity=80);}
+.brand-all-box .inside-box .brand-name,.brand-all-box .inside-box .dis{text-align:center;}
+.brand-all-box .inside-box .brand-name{position:relative;width:200px;}
+.brand-all-box .inside-box .brand-name img{width:80px;height:40px !important;min-height:0 !important;min-width:0 !important;}
+.brand-all-box .inside-box .brand-name em.cur{display:block;position:absolute;top:9px;right:0;background:url(../images/brand/brand-cur.gif) no-repeat right bottom;width:14px;height:22px;}
+.brand-all-box .inside-box .dis{border-top:#666 solid 1px;padding-top:5px;margin-top:5px;font-size:14px;font-family:"微软雅黑","宋体";color:#333;}
+.brand-all-box .inside-box .dis em{font-size:22px;font-family:arial;color:#ff464e;}
+/*this is brand-all-box end*/
+/*8 start*/
+.top_type{width:100%;height:auto;line-height:20px;font-size:16px;margin-bottom:20px;}
+.top_type i{margin:0 10px 0 20px;width:45px;height:20px;background:#555;text-align:center;font-family:"Arial";color:#fff;}
+.top_type span{color:#333;}
+/*8 end*/
+/*this is alert_app by mumian start*/
+#alert_app .alert_top,#alert_app .alert_content{width:350px;}
+#alert_app .alert_content{padding:30px 0;}
+#alert_app .alert_top span{
+    color: #3e3e3e;
+    font-size: 14px;}
+#alert_app .alert_content .right-app{width:180px;margin:0 auto;text-align:center;}
+#alert_app .alert_content .right-app span{color:#333;font-size:14px;}
+/*this is alert_app by mumian end*/

@@ -12,10 +12,12 @@ body{
 	display: inline;
 }
 .main{
+	padding-bottom: 100px;
 	width: 1200px;
 	margin: 0px auto;
 	position: relative;
 	margin-top: 20px;
+	background-color: #fff;
 	.place-show {
 		margin: 0 0 20px 20px;
 		width: auto;
@@ -351,7 +353,7 @@ body{
 							font: bold 18px/26px "微软雅黑";
 							height: 28px;
 							text-align: center;
-							width: 26px;
+							width: 25px;
 						}
 					}
 				}
@@ -413,6 +415,31 @@ body{
 						background-position: -103px 2px;
 					}
 				}
+			}
+		}
+	}
+	.fimg{
+		border-top: 1px dotted #ccc;
+		overflow: hidden;
+		&:hover{
+			cursor: pointer;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.detail_2{
+		>img{
+			width: 100%;
+
+		}
+		.img-show{
+			float:right;
+			margin-right:100px;
+			margin-top: 20px;
+			img{
+				display: block;
+				
 			}
 		}
 	}
